@@ -1,6 +1,7 @@
 ﻿using GraphicTree;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 namespace BehaviorTree
 {
@@ -90,11 +91,15 @@ namespace BehaviorTree
             get { return _runTimeInvalidSubTreeHash; }
         }
 
+        private string languageTypeKey = "LanguageTypeKey";
         private LanguageType _languageType = LanguageType.EN;
         public LanguageType LanguageType
         {
             get {  return _languageType; }
-            set {  _languageType = value;}
+            set {  _languageType = value;
+                BehaviorNodeDrawInfoController.GetInstance().InitInfoList();
+                EditorPrefs.SetInt(languageTypeKey, (int)value);
+            }
         }
 
         public BehaviorDataController()
@@ -108,6 +113,11 @@ namespace BehaviorTree
             _runTimeInvalidSubTreeHash.Clear();
             ConfigDataDic.Clear();
             _playState = BehaviorPlayType.STOP;
+
+            if(EditorPrefs.HasKey(languageTypeKey))
+            {
+                LanguageType = (LanguageType)EditorPrefs.GetInt(languageTypeKey);
+            }
 
             _filePath = CommonUtils.FileUtils.CombinePath(new string[] { "Assets", "BehaviorTree", "GameData", "BehaviorTree" });
 

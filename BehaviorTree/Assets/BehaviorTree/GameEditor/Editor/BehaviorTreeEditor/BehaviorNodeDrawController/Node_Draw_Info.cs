@@ -66,8 +66,10 @@ namespace BehaviorTree
             InitInfoList();
         }
 
-        private void InitInfoList()
+        public void InitInfoList()
         {
+            infoList.Clear();
+
             #region Node
             string addNode = Localization.GetInstance().Format("Add Node");
             // 组合节点
@@ -104,25 +106,27 @@ namespace BehaviorTree
             {
                 CustomIdentification customIdentification = kv.Value;
                 NODE_TYPE nodeType = (NODE_TYPE)customIdentification.NodeType;
+
+                string name = Localization.GetInstance().Format(customIdentification.Name);
                 if ((int)nodeType >= (int)NODE_TYPE.SUB_TREE)
                 {
-                    subTreeDrawInfo.AddNodeType(nodeType, customIdentification.Name, customIdentification.IdentificationName);
+                    subTreeDrawInfo.AddNodeType(nodeType, name, customIdentification.IdentificationName);
                 }
                 else if ((int)nodeType >= (int)NODE_TYPE.ACTION)
                 {
-                    actionDrawInfo.AddNodeType(nodeType, customIdentification.Name, customIdentification.IdentificationName);
+                    actionDrawInfo.AddNodeType(nodeType, name, customIdentification.IdentificationName);
                 }
                 else if ((int)nodeType >= (int)NODE_TYPE.CONDITION)
                 {
-                    conditionDrawInfo.AddNodeType(nodeType, customIdentification.Name, customIdentification.IdentificationName);
+                    conditionDrawInfo.AddNodeType(nodeType, name, customIdentification.IdentificationName);
                 }
                 else if ((int)nodeType >= (int)NODE_TYPE.DECORATOR_INVERTER)
                 {
-                    decoratorDrawInfo.AddNodeType(nodeType, customIdentification.Name, customIdentification.IdentificationName);
+                    decoratorDrawInfo.AddNodeType(nodeType, name, customIdentification.IdentificationName);
                 }
                 else if ((int)nodeType >= (int)NODE_TYPE.SELECT)
                 {
-                    compositeDrawInfo.AddNodeType(nodeType, customIdentification.Name, customIdentification.IdentificationName);
+                    compositeDrawInfo.AddNodeType(nodeType, name, customIdentification.IdentificationName);
                 }
             }
             #endregion

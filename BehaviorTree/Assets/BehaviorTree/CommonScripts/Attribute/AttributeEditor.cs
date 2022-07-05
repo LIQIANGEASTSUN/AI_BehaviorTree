@@ -51,6 +51,12 @@ public class EnumNames
         return value;
     }
 
+    public static string GetEnumName<T>(T t)
+    {
+        int index = GetEnumIndex<T>(t);
+        return GetEnumName<T>(index);
+    }
+
     public static int GetEnumIndex<T>(T t)
     {
         int enumIndex = 0;
@@ -75,4 +81,5 @@ public class EnumNames
         T t = (T)System.Enum.Parse(typeof(T), selectName);
         return t;
     }
+
 }

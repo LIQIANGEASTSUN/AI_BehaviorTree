@@ -115,14 +115,6 @@ namespace BehaviorTree
             return color;
         }
 
-        public static string GetTitle(NODE_TYPE nodeType)
-        {
-            int index = EnumNames.GetEnumIndex<NODE_TYPE>(nodeType);
-            string title = EnumNames.GetEnumName<NODE_TYPE>(index);
-            title = Localization.GetInstance().Format(title);
-            return title;
-        }
-
         private static int GetHight(NodeValue nodeValue)
         {
             //int height = 60;

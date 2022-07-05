@@ -57,29 +57,30 @@ namespace BehaviorTree
         protected override void PrimaryNode()
         {
             #region 组合节点
-            Config<NodeSelect>("选择节点", (int)NODE_TYPE.SELECT);
-            Config<NodeSequence>("顺序节点", (int)NODE_TYPE.SEQUENCE);
-            Config<NodeRandomSelect>("随机选择节点", (int)NODE_TYPE.RANDOM);
-            Config<NodeRandomSequence>("随机顺序节点", (int)NODE_TYPE.RANDOM_SEQUEUECE);
-            Config<NodeRandomPriority>("随机权重节点", (int)NODE_TYPE.RANDOM_PRIORITY);
-            Config<NodeParallel>("并行节点", (int)NODE_TYPE.PARALLEL);
-            Config<NodeParallelSelect>("并行选择节点", (int)NODE_TYPE.PARALLEL_SELECT);
-            Config<NodeParallelAll>("并行执行所有节点", (int)NODE_TYPE.PARALLEL_ALL);
-            Config<NodeIfJudgeParallel>("IF 判断并行节点", (int)NODE_TYPE.IF_JUDEG_PARALLEL);
-            Config<NodeIfJudgeSequence>("IF 判断顺序节点", (int)NODE_TYPE.IF_JUDEG_SEQUENCE);
+            
+            Config<NodeSelect>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.SELECT), (int)NODE_TYPE.SELECT);
+            Config<NodeSequence>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.SEQUENCE), (int)NODE_TYPE.SEQUENCE);
+            Config<NodeRandomSelect>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.RANDOM), (int)NODE_TYPE.RANDOM);
+            Config<NodeRandomSequence>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.RANDOM_SEQUEUECE), (int)NODE_TYPE.RANDOM_SEQUEUECE);
+            Config<NodeRandomPriority>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.RANDOM_PRIORITY), (int)NODE_TYPE.RANDOM_PRIORITY);
+            Config<NodeParallel>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.PARALLEL), (int)NODE_TYPE.PARALLEL);
+            Config<NodeParallelSelect>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.PARALLEL_SELECT), (int)NODE_TYPE.PARALLEL_SELECT);
+            Config<NodeParallelAll>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.PARALLEL_ALL), (int)NODE_TYPE.PARALLEL_ALL);
+            Config<NodeIfJudgeParallel>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.IF_JUDEG_PARALLEL), (int)NODE_TYPE.IF_JUDEG_PARALLEL);
+            Config<NodeIfJudgeSequence>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.IF_JUDEG_SEQUENCE), (int)NODE_TYPE.IF_JUDEG_SEQUENCE);
             #endregion
 
             #region 修饰节点
-            Config<NodeDecoratorInverter>("修饰节点_取反", (int)NODE_TYPE.DECORATOR_INVERTER);
-            Config<NodeDecoratorRepeat>("修饰节点_重复", (int)NODE_TYPE.DECORATOR_REPEAT);
-            Config<NodeDecoratorReturnFail>("修饰_返回Fail", (int)NODE_TYPE.DECORATOR_RETURN_FAIL);
-            Config<NodeDecoratorReturnSuccess>("修饰_返回Success", (int)NODE_TYPE.DECORATOR_RETURN_SUCCESS);
-            Config<NodeDecoratorUntilFail>("修饰_直到Fail", (int)NODE_TYPE.DECORATOR_UNTIL_FAIL);
-            Config<NodeDecoratorUntilSuccess>("修饰_直到Success", (int)NODE_TYPE.DECORATOR_UNTIL_SUCCESS);
+            Config<NodeDecoratorInverter>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.DECORATOR_INVERTER), (int)NODE_TYPE.DECORATOR_INVERTER);
+            Config<NodeDecoratorRepeat>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.DECORATOR_REPEAT), (int)NODE_TYPE.DECORATOR_REPEAT);
+            Config<NodeDecoratorReturnFail>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.DECORATOR_RETURN_FAIL), (int)NODE_TYPE.DECORATOR_RETURN_FAIL);
+            Config<NodeDecoratorReturnSuccess>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.DECORATOR_RETURN_SUCCESS), (int)NODE_TYPE.DECORATOR_RETURN_SUCCESS);
+            Config<NodeDecoratorUntilFail>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.DECORATOR_UNTIL_FAIL), (int)NODE_TYPE.DECORATOR_UNTIL_FAIL);
+            Config<NodeDecoratorUntilSuccess>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.DECORATOR_UNTIL_SUCCESS), (int)NODE_TYPE.DECORATOR_UNTIL_SUCCESS);
             #endregion
 
             #region SubTree
-            Config<NodeSubTree>("子树", (int)NODE_TYPE.SUB_TREE);
+            Config<NodeSubTree>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.SUB_TREE), (int)NODE_TYPE.SUB_TREE);
             #endregion
         }
     }

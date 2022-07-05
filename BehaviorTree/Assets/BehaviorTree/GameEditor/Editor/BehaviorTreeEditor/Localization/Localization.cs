@@ -43,7 +43,6 @@ namespace BehaviorTree
             LocalizationData data;
             if (!DataDic.TryGetValue(key, out data))
             {
-                UnityEngine.Debug.LogError(key);
                 return key;
             }
 
@@ -68,6 +67,11 @@ namespace BehaviorTree
 
         private void LoadLocalization()
         {
+            if (null == BehaviorDataController.Instance)
+            {
+                return;
+            }
+            _dataDic.Clear();
             string csvPath = BehaviorDataController.Instance.GetCsvPath();
             TableRead.Instance.ReadCustomPath(csvPath);
             List<int> idList = TableRead.Instance.GetKeyList(tableName);

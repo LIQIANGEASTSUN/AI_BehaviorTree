@@ -22,6 +22,7 @@ namespace BehaviorTree
                 NodeValue nodeValue = _nodeList[i];
                 GUIEnableTool.Enable = !BehaviorDataController.Instance.CurrentOpenConfigSubTree();
                 string name = string.Format("{0}", nodeValue.nodeName);
+                name = Localization.GetInstance().Format(name);
                 Rect rect = GUI.Window(i, RectTool.RectTToRect(nodeValue.position), DrawNodeWindow, new GUIContent(name, name));
                 if (!BehaviorDataController.Instance.CurrentOpenConfigSubTree())
                 {
