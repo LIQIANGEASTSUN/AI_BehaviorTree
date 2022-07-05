@@ -77,3 +77,21 @@
 76,NotEqual,不等于,Not Equal
 77,GreaterOrEqual,大于等于,GreaterOrEqual
 78,LessOrEqual,小于等于,LessOrEqual
+79,SelectNode,选择节点,SelectNode
+80,SequenceNode,顺序节点,SequenceNode
+81,RandomNode,随机节点,RandomNode
+82,RandomSequeuece,随机顺序节点,RandomSequeuece
+83,RandomPriority,随机权重节点,RandomPriority
+84,ParallelNode,并行节点,ParallelNode
+85,ParalleSelect,并行选择节点,ParalleSelect
+86,ParalleAll,并行执行所有节点,ParalleAll
+87,IfJudgeParallel,IF 判断并行节点,IfJudgeParallel
+88,IfJudgeSequence,IF 判断顺序节点,IfJudgeSequence
+89,DecoratorInverter,修饰节点_取反,DecoratorInverter
+90,DecoratorRepeat,修饰节点_重复,DecoratorRepeat
+91,DecoratorReturnSuccess,修饰_返回Success,DecoratorReturnSuccess
+92,DecoratorUntilFail,修饰_直到Fail,DecoratorUntilFail
+93,DecoratorUntilSuccess,修饰_直到Success,DecoratorUntilSuccess
+94,Condition,条件节点,Condition
+95,Action,行为节点,Action
+96,SubTreeNode,SubTree,SubTreeNode

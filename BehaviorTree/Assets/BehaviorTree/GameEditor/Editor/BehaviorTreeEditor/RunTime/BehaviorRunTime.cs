@@ -35,7 +35,9 @@ namespace BehaviorTree
             {
                 NodeValue nodeValue = behaviorTreeData.nodeList[i];
                 int index = EnumNames.GetEnumIndex<NODE_TYPE>((NODE_TYPE)nodeValue.NodeType);
-                nodeValue.nodeName = EnumNames.GetEnumName<NODE_TYPE>(index);
+                string name = EnumNames.GetEnumName<NODE_TYPE>(index);
+                nodeValue.nodeName = Localization.GetInstance().Format(name);
+
                 behaviorTreeData.nodeDic.Add(nodeValue.id, nodeValue);
             }
 

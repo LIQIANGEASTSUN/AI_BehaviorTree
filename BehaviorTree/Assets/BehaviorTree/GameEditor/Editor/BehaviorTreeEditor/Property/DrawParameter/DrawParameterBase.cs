@@ -117,7 +117,9 @@ namespace BehaviorTree
             for (int i = 0; i < compareEnumArr.Length; ++i)
             {
                 int index = EnumNames.GetEnumIndex<ParameterCompare>(compareEnumArr[i]);
-                compareArr[i] = EnumNames.GetEnumName<ParameterCompare>(index);
+                string name = EnumNames.GetEnumName<ParameterCompare>(index);
+                compareArr[i] = Localization.GetInstance().Format(name);
+
                 //compareArr[i] = System.Enum.GetName(typeof(ParameterCompare), compareEnumArr[i]);
                 if ((ParameterCompare)behaviorParameter.compare == compareEnumArr[i])
                 {

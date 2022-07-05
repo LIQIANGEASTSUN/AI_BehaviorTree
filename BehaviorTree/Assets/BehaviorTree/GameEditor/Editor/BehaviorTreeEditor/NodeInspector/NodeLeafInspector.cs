@@ -20,6 +20,7 @@ namespace BehaviorTree
         {
             int index = EnumNames.GetEnumIndex<NODE_TYPE>((NODE_TYPE)nodeValue.NodeType);
             string name = EnumNames.GetEnumName<NODE_TYPE>(index);
+            name = Localization.GetInstance().Format(name);
             name = string.Format("{0}_{1}", name, nodeValue.id);
             EditorGUILayout.LabelField(name);
             base.NodeName();

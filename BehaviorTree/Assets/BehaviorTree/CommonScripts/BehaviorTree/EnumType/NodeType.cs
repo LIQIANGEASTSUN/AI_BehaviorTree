@@ -6,75 +6,75 @@
     public enum NODE_TYPE
     {
         /// <summary>
-        /// 选择节点
+        /// SelectNode
         /// </summary>
-        [EnumAttirbute("选择节点")]
+        [EnumAttirbute("SelectNode")]
         SELECT = 0,
 
         /// <summary>
-        /// 顺序节点
+        /// SequenceNode
         /// </summary>
-        [EnumAttirbute("顺序节点")]
+        [EnumAttirbute("SequenceNode")]
         SEQUENCE = 1,
 
         /// <summary>
-        /// 随机节点
+        /// RandomNode
         /// </summary>
-        [EnumAttirbute("随机节点")]
+        [EnumAttirbute("RandomNode")]
         RANDOM = 2,
 
         /// <summary>
-        /// 随机顺序节点
+        /// RandomSequeuece
         /// </summary>
-        [EnumAttirbute("随机顺序节点")]
+        [EnumAttirbute("RandomSequeuece")]
         RANDOM_SEQUEUECE = 3,
 
         /// <summary>
-        /// 随机权重节点
+        /// RandomPriority
         /// </summary>
-        [EnumAttirbute("随机权重节点")]
+        [EnumAttirbute("RandomPriority")]
         RANDOM_PRIORITY = 4,
 
         /// <summary>
-        /// 并行节点
+        /// ParallelNode
         /// </summary>
-        [EnumAttirbute("并行节点")]
+        [EnumAttirbute("ParallelNode")]
         PARALLEL = 5,
 
         /// <summary>
-        /// 并行选择节点
+        /// ParalleSelect
         /// </summary>
-        [EnumAttirbute("并行选择节点")]
+        [EnumAttirbute("ParalleSelect")]
         PARALLEL_SELECT = 6,
 
         /// <summary>
-        /// 并行执行所有节点
+        /// ParalleAll
         /// </summary>
-        [EnumAttirbute("并行执行所有节点")]
+        [EnumAttirbute("ParalleAll")]
         PARALLEL_ALL = 7,
 
         /// <summary>
-        /// IF 判断并行节点
+        /// IfJudgeParallel
         /// </summary>
-        [EnumAttirbute("IF 判断并行节点")]
+        [EnumAttirbute("IfJudgeParallel")]
         IF_JUDEG_PARALLEL = 8,
 
         /// <summary>
-        /// IF 判断顺序节点
+        /// IfJudgeSequence
         /// </summary>
-        [EnumAttirbute("IF 判断顺序节点")]
+        [EnumAttirbute("IfJudgeSequence")]
         IF_JUDEG_SEQUENCE = 9,
 
         /// <summary>
-        /// 修饰节点_取反
+        /// DecoratorInverter
         /// </summary>
-        [EnumAttirbute("修饰节点_取反")]
+        [EnumAttirbute("DecoratorInverter")]
         DECORATOR_INVERTER = 100,
 
         /// <summary>
-        /// 修饰节点_重复
+        /// DecoratorRepeat
         /// </summary>
-        [EnumAttirbute("修饰节点_重复")]
+        [EnumAttirbute("DecoratorRepeat")]
         DECORATOR_REPEAT = 101,
 
         /// <summary>
@@ -84,39 +84,39 @@
         DECORATOR_RETURN_FAIL = 102,
 
         /// <summary>
-        /// 修饰节点_返回Success
+        /// DecoratorReturnSuccess
         /// </summary>
-        [EnumAttirbute("修饰_返回Success")]
+        [EnumAttirbute("DecoratorReturnSuccess")]
         DECORATOR_RETURN_SUCCESS = 103,
 
         /// <summary>
-        /// 修饰节点_直到Fail
+        /// DecoratorUntilFail
         /// </summary>
-        [EnumAttirbute("修饰_直到Fail")]
+        [EnumAttirbute("DecoratorUntilFail")]
         DECORATOR_UNTIL_FAIL = 104,
 
         /// <summary>
-        /// 修饰节点_直到Success
+        /// DecoratorUntilSuccess
         /// </summary>
-        [EnumAttirbute("修饰_直到Success")]
+        [EnumAttirbute("DecoratorUntilSuccess")]
         DECORATOR_UNTIL_SUCCESS = 105,
 
         /// <summary>
-        /// 条件节点
+        /// Condition
         /// </summary>
-        [EnumAttirbute("条件节点")]
+        [EnumAttirbute("Condition")]
         CONDITION = 200,
 
         /// <summary>
-        /// 行为节点
+        /// Action
         /// </summary>
-        [EnumAttirbute("行为节点")]
+        [EnumAttirbute("Action")]
         ACTION = 300,
 
         /// <summary>
-        /// 子树
+        /// SubTreeNode
         /// </summary>
-        [EnumAttirbute("子树")]
+        [EnumAttirbute("SubTreeNode")]
         SUB_TREE = 1000,
     }
 

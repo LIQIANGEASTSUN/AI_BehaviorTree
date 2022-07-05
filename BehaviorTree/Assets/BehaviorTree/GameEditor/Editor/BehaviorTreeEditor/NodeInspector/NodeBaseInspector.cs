@@ -64,7 +64,7 @@ namespace BehaviorTree
             EditorGUILayout.BeginHorizontal();
             {
                 string remark = Localization.GetInstance().Format("Remark");
-                EditorGUILayout.LabelField(remark, GUILayout.Width(30));
+                EditorGUILayout.LabelField(remark, GUILayout.Width(60));
                 nodeValue.descript = EditorGUILayout.TextArea(nodeValue.descript, GUILayout.ExpandWidth(true));
             }
             EditorGUILayout.EndHorizontal();

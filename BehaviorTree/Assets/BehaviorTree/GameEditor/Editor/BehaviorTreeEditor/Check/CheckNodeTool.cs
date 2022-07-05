@@ -56,6 +56,7 @@ namespace BehaviorTree
             {
                 int index = EnumNames.GetEnumIndex<NODE_TYPE>((NODE_TYPE)invalidNodeValue.NodeType);
                 string name = EnumNames.GetEnumName<NODE_TYPE>(index);
+                name = Localization.GetInstance().Format(name);
                 string content = Localization.GetInstance().Format("NodeCannotHaveChilds");
                 meg = string.Format(content, invalidNodeValue.id, name);
             }
