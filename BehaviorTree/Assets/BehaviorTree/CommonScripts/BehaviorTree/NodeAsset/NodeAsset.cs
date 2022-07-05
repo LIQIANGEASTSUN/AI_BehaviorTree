@@ -18,11 +18,11 @@ namespace BehaviorTree
     {
         public string identificationName = string.Empty;
         public int id = 0;
-        public bool isRootNode = false;                    // 根节点
-        public int NodeType = (int)(NODE_TYPE.SELECT);     // 节点类型 // NODE_TYPE NodeType = NODE_TYPE.SELECT;
-        public int priority = 1;                          // 权重
-        public int parentNodeID = -1;                      // 父节点
-        public List<int> childNodeList = new List<int>();  // 子节点集合
+        public bool isRootNode = false;                    
+        public int NodeType = (int)(NODE_TYPE.SELECT);   
+        public int priority = 1;                          
+        public int parentNodeID = -1;                      
+        public List<int> childNodeList = new List<int>();  
         public List<NodeParameter> parameterList = new List<NodeParameter>();
         public int repeatTimes = 0;
         public string nodeName = string.Empty;
@@ -54,11 +54,11 @@ namespace BehaviorTree
 
             nodeValue.identificationName = identificationName;
             nodeValue.id = this.id;
-            nodeValue.isRootNode = isRootNode;                    // 根节点
-            nodeValue.NodeType = NodeType;     // 节点类型 // NODE_TYPE NodeType = NODE_TYPE.SELECT;
-            nodeValue.priority = priority;                          // 权重
-            nodeValue.parentNodeID = parentNodeID;                      // 父节点
-            nodeValue.childNodeList.AddRange(childNodeList);  // 子节点集合
+            nodeValue.isRootNode = isRootNode;                   
+            nodeValue.NodeType = NodeType; 
+            nodeValue.priority = priority;                        
+            nodeValue.parentNodeID = parentNodeID;                     
+            nodeValue.childNodeList.AddRange(childNodeList);  
 
             for (int i = 0; i < parameterList.Count; ++i)
             {
@@ -89,9 +89,9 @@ namespace BehaviorTree
             nodeValue.subTreeValue = subTreeValue;
             #endregion
 
-            #region 编辑器用
-            nodeValue.position = position.Clone(); // 节点位置（编辑器显示使用）
-            nodeValue.moveWithChild = moveWithChild;  // 同步移动子节点
+            #region Editor use
+            nodeValue.position = position.Clone(); // Node position）
+            nodeValue.moveWithChild = moveWithChild;  // sync move child
             #endregion
             return nodeValue;
         }

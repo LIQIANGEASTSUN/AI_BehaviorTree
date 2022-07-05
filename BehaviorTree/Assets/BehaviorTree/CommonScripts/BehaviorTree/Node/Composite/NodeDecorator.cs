@@ -25,20 +25,3 @@
         }
     }
 }
-
-/*
-     // Unitl Failure、Until Success 伪代码如下
-     defaultResult = 期望结果
-
-     do
-     Node node = GetChild(0)
-     result = node.Execute();
-    
-     if result != defaultResult then
-         return running
-     end
-
-     return defaultResult
-     end
-
-*/
