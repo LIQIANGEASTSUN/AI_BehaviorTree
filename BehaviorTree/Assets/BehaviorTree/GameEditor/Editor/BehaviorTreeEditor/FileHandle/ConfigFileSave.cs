@@ -17,7 +17,10 @@ namespace BehaviorTree
 
             if (string.IsNullOrEmpty(fileName))
             {
-                if (EditorUtility.DisplayDialog("警告", "文件名不能为空", "确定"))
+                string warning = Localization.GetInstance().Format("Warning");
+                string fileNameCannotEmpty = Localization.GetInstance().Format("FileNameCannotEmpty");
+                string ok = Localization.GetInstance().Format("OK");
+                if (EditorUtility.DisplayDialog(warning, fileNameCannotEmpty, ok))
                 {
                     return;
                 }
@@ -25,7 +28,10 @@ namespace BehaviorTree
 
             if (fileName.Length > 30)
             {
-                if (EditorUtility.DisplayDialog("警告", "文件名过长，不能大于20个字符", "确定"))
+                string warning = Localization.GetInstance().Format("Warning");
+                string ok = Localization.GetInstance().Format("OK");
+                string fileNameTooLong = Localization.GetInstance().Format("FileNameTooLong");
+                if (EditorUtility.DisplayDialog(warning, fileNameTooLong, ok))
                 {
                     return;
                 }
@@ -34,7 +40,10 @@ namespace BehaviorTree
             string path = BehaviorDataController.Instance.GetFilePath(fileName);
             if (File.Exists(path))
             {
-                if (!EditorUtility.DisplayDialog("已存在文件", "是否替换新文件", "替换", "取消"))
+                string replace = Localization.GetInstance().Format("Replace");
+                string cancel = Localization.GetInstance().Format("Cancel");
+                string fileExistWantReplace = Localization.GetInstance().Format("FileExistWantReplace");
+                if (!EditorUtility.DisplayDialog(fileExistWantReplace, replace, cancel))
                 {
                     return;
                 }

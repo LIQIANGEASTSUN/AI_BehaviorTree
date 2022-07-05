@@ -16,12 +16,15 @@ namespace BehaviorTree
 
         private void SubTree()
         {
-            nodeValue.subTreeValue = EditorGUILayout.LongField("SubTreeValue:", nodeValue.subTreeValue);
+            string subTreeValue = Localization.GetInstance().Format("SubTreeValue");
+            nodeValue.subTreeValue = EditorGUILayout.LongField(subTreeValue, nodeValue.subTreeValue);
             string[] nameArr = EnumNames.GetEnumNames<SUB_TREE_TYPE>();
             int index = EnumNames.GetEnumIndex<SUB_TREE_TYPE>((SUB_TREE_TYPE)nodeValue.subTreeType);
-            int result = EditorGUILayout.Popup("子树类型", index, nameArr);
+            string subTreeType = Localization.GetInstance().Format("SubTreeType");
+            int result = EditorGUILayout.Popup(subTreeType, index, nameArr);
             nodeValue.subTreeType = (int)(EnumNames.GetEnum<SUB_TREE_TYPE>(result));
-            nodeValue.subTreeConfig = EditorGUILayout.TextField(new GUIContent("配置文件"), nodeValue.subTreeConfig);
+            string configFile = Localization.GetInstance().Format("ConfigFile");
+            nodeValue.subTreeConfig = EditorGUILayout.TextField(new GUIContent(configFile), nodeValue.subTreeConfig);
             GUILayout.Space(5);
 
             if (nodeValue.subTreeType == (int)SUB_TREE_TYPE.CONFIG)
@@ -29,7 +32,8 @@ namespace BehaviorTree
                 DataHandler dataHandler = new DataHandler();
                 dataHandler.DeleteSubTreeChild(nodeValue.id);
 
-                if (GUILayout.Button("选择子树配置文件"))
+                string selectSubTreeConfig = Localization.GetInstance().Format("SelectSubTreeConfig");
+                if (GUILayout.Button(selectSubTreeConfig))
                 {
                     ConfigFileSelect configFileSelect = new ConfigFileSelect();
                     nodeValue.subTreeConfig = configFileSelect.Select();
@@ -37,7 +41,8 @@ namespace BehaviorTree
             }
             else
             {
-                if (GUILayout.Button("将子树存储为配置文件"))
+                string changeSubtreeToConfig = Localization.GetInstance().Format("ChangeSubtreeToConfig");
+                if (GUILayout.Button(changeSubtreeToConfig))
                 {
                     ConfigFileSaveSubTree configFileSaveSubTree = new ConfigFileSaveSubTree();
                     configFileSaveSubTree.SaveSubTree(nodeValue.subTreeConfig, nodeValue.id);

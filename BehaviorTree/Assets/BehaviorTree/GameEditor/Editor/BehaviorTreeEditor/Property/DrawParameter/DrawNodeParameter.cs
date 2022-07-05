@@ -106,12 +106,12 @@ namespace BehaviorTree
 
         private bool ParameterCompareEnableHandle()
         {
-            return ParameterNameSelectEnableHandle(); // 跟参数名一样
+            return ParameterNameSelectEnableHandle(); 
         }
 
         private bool ParameterValueEnableHandle()
         {
-            return ParameterNameSelectEnableHandle(); // 跟参数名一样
+            return ParameterNameSelectEnableHandle();
         }
 
     }

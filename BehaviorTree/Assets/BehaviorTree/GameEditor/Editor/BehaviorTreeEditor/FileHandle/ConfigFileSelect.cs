@@ -17,7 +17,8 @@ namespace BehaviorTree
             }
             GUILayout.Space(8);
 
-            string filePath = EditorUtility.OpenFilePanel("选择技能ID文件", path, "bytes");
+            string selectConfigFile = Localization.GetInstance().Format("SelectConfigFile");
+            string filePath = EditorUtility.OpenFilePanel(selectConfigFile, path, "bytes");
             return filePath;
         }
 

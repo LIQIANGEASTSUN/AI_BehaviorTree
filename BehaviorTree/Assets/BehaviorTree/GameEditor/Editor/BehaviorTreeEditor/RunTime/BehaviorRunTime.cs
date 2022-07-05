@@ -121,7 +121,6 @@ namespace BehaviorTree
 }
 
 
-// 编辑器模式下如果所有物体都静止  Time.realtimeSinceStartup 有时候会出bug，数值一直不变
 public class RunTimeRotateGo
 {
     private GameObject go;

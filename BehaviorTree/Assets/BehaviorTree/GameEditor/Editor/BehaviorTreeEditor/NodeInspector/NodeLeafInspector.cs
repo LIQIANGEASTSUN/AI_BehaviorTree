@@ -48,7 +48,8 @@ namespace BehaviorTree
             GUIEnableTool.Enable = !BehaviorDataController.Instance.CurrentOpenConfigSubTree();
             EditorGUILayout.BeginVertical("box", GUILayout.ExpandWidth(true));
             {
-                EditorGUILayout.LabelField("参数");
+                string parameter = Localization.GetInstance().Format("Parameter");
+                EditorGUILayout.LabelField(parameter);
 
                 int height = (nodeValue.parameterList.Count * 58);
                 height = height <= 400 ? height : 400;
@@ -114,7 +115,8 @@ namespace BehaviorTree
             EditorGUILayout.BeginVertical("box");
             {
                 GUIEnableTool.Enable = !BehaviorDataController.Instance.CurrentOpenConfigSubTree();
-                if (GUILayout.Button("添加条件"))
+                string addCondition = Localization.GetInstance().Format("AddCondition");
+                if (GUILayout.Button(addCondition))
                 {
                     AddParameter(nodeValue);
                 }
@@ -129,8 +131,8 @@ namespace BehaviorTree
             {
                 if (TreeNodeWindow.window != null)
                 {
-                    string msg = "没有参数可添加，请先添加参数";
-                    TreeNodeWindow.window.ShowNotification(msg);
+                    string noParameterCanBeAdd = Localization.GetInstance().Format("NoParameterCanBeAdd");
+                    TreeNodeWindow.window.ShowNotification(noParameterCanBeAdd);
                 }
                 return;
             }
@@ -143,7 +145,8 @@ namespace BehaviorTree
             }
             else
             {
-                TreeNodeWindow.window.ShowNotification("无可添加的参数");
+                string noParameter = Localization.GetInstance().Format("NoParameter");
+                TreeNodeWindow.window.ShowNotification(noParameter);
             }
         }
 

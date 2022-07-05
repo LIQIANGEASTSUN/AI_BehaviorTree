@@ -47,7 +47,8 @@ namespace BehaviorTree
             string cnName = EditorGUILayout.TextField(behaviorParameter.CNName);
             if (cnName.CompareTo(behaviorParameter.CNName) != 0)
             {
-                TreeNodeWindow.window.ShowNotification("此处字段名只支持查看，不能修改");
+                string fileNameReadOnly = Localization.GetInstance().Format("FileNameReadOnly");
+                TreeNodeWindow.window.ShowNotification(fileNameReadOnly);
             }
         }
 

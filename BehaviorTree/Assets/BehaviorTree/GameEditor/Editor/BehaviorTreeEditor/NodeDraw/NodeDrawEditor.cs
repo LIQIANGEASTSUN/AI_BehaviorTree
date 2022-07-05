@@ -23,17 +23,20 @@ namespace BehaviorTree
                 string idMsg = string.Empty;
                 if (nodeValue.NodeType == (int)NODE_TYPE.SUB_TREE)
                 {
-                    idMsg = string.Format("子树ID:{0}", nodeValue.id);
+                    string subTreeId = Localization.GetInstance().Format("ID");
+                    idMsg = string.Format(subTreeId, nodeValue.id);
                 }
                 else
                 {
                     if (nodeValue.NodeType == (int)NODE_TYPE.CONDITION)
                     {
-                        idMsg = string.Format("条件ID:{0}", nodeValue.id);
+                        string conditionId = Localization.GetInstance().Format("ID");
+                        idMsg = string.Format(conditionId, nodeValue.id);
                     }
                     else if (nodeValue.NodeType == (int)NODE_TYPE.ACTION)
                     {
-                        idMsg = string.Format("行为ID:{0}", nodeValue.id);
+                        string actionId = Localization.GetInstance().Format("ID");
+                        idMsg = string.Format(actionId, nodeValue.id);
                     }
                     else
                     {

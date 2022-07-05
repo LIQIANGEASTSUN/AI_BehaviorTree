@@ -49,7 +49,8 @@ namespace BehaviorTree
 
         protected void DrawDelBtn(Action DelCallBack)
         {
-            if (GUILayout.Button("Del"))
+            string deleteFile = Localization.GetInstance().Format("DeleteFile");
+            if (GUILayout.Button(deleteFile))
             {
                 if (null != DelCallBack)
                 {

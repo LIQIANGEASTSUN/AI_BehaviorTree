@@ -43,6 +43,7 @@ namespace BehaviorTree
             LocalizationData data;
             if (!DataDic.TryGetValue(key, out data))
             {
+                UnityEngine.Debug.LogError(key);
                 return string.Empty;
             }
 

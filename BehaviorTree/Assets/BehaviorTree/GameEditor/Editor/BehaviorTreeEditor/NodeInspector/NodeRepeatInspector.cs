@@ -15,7 +15,8 @@ namespace BehaviorTree
 
         private void Repeat()
         {
-            nodeValue.repeatTimes = EditorGUILayout.IntField("重复执行次数", nodeValue.repeatTimes);
+            string repetitionsTimes = Localization.GetInstance().Format("RepetitionsTimes");
+            nodeValue.repeatTimes = EditorGUILayout.IntField(repetitionsTimes, nodeValue.repeatTimes);
         }
 
     }

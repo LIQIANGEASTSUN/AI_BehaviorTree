@@ -59,8 +59,10 @@ namespace BehaviorTree
         {
             EditorGUILayout.BeginHorizontal();
             {
-                EditorGUILayout.LabelField("全部变量", GUILayout.Width(100));
-                if (GUILayout.Button("导入变量"))
+                string globalParameter = Localization.GetInstance().Format("GlobalParameter");
+                EditorGUILayout.LabelField(globalParameter, GUILayout.Width(100));
+                string importParameter = Localization.GetInstance().Format("ImportParameter");
+                if (GUILayout.Button(importParameter))
                 {
                     BehaviorDataImportParameter behaviorDataImportParameter = new BehaviorDataImportParameter();
                     behaviorDataImportParameter.ImportParameter(BehaviorDataController.Instance.BehaviorTreeData);
@@ -70,7 +72,8 @@ namespace BehaviorTree
 
             EditorGUILayout.BeginVertical("box", GUILayout.ExpandWidth(true));
             {
-                EditorGUILayout.LabelField("条件参数");
+                string conditionParameters = Localization.GetInstance().Format("ConditionParameters");
+                EditorGUILayout.LabelField(conditionParameters);
                 scrollPos = EditorGUILayout.BeginScrollView(scrollPos, GUILayout.ExpandHeight(true));
                 {
                     GUI.backgroundColor = new Color(0.85f, 0.85f, 0.85f, 1f);
@@ -124,7 +127,8 @@ namespace BehaviorTree
             EditorGUILayout.EndVertical();
             GUILayout.Space(5);
 
-            if (GUILayout.Button("添加条件"))
+            string addCondition = Localization.GetInstance().Format("AddCondition");
+            if (GUILayout.Button(addCondition))
             {
                 DataHandler dataHandler = new DataHandler();
                 dataHandler.DataAddGlobalParameter(newAddParameter);

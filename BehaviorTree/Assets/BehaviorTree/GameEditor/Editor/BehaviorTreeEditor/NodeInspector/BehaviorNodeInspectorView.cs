@@ -41,7 +41,7 @@ namespace BehaviorTree
         {
             if (null == nodeValue)
             {
-                EditorGUILayout.LabelField("未选择节点");
+                EditorGUILayout.LabelField("no select node");
                 return;
             }
 
@@ -62,8 +62,10 @@ namespace BehaviorTree
         private void ParentInfo()
         {
             GUILayout.Space(20);
-            _nodeID = EditorGUILayout.IntField("节点ID", _nodeID);
-            if (GUILayout.Button("打印节点所有父节点路径"))
+            string nodeId = Localization.GetInstance().Format("NodeId");
+            _nodeID = EditorGUILayout.IntField(nodeId, _nodeID);
+            string printParentPaths = Localization.GetInstance().Format("PrintParentPaths");
+            if (GUILayout.Button(printParentPaths))
             {
                 DebugNodeParentInfoTool debugNodeParentInfoTool = new DebugNodeParentInfoTool();
                 debugNodeParentInfoTool.DebugNodeParentInfo(_nodeID);

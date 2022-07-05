@@ -62,7 +62,7 @@ namespace BehaviorTree
                 {
                     if (parameterDic[EnName].parameterType != type)
                     {
-                        Debug.LogError("已经存在参数:" + EnName + "   type:" + (ParameterType)parameterDic[EnName].parameterType + "   newType:" + (ParameterType)type);
+                        Debug.LogError("Exist parameter:" + EnName + "   type:" + (ParameterType)parameterDic[EnName].parameterType + "   newType:" + (ParameterType)type);
                     }
 
                     parameterDic[EnName].CloneFrom(parameter);

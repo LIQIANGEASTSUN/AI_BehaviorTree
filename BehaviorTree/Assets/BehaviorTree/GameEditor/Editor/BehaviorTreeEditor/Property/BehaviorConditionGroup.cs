@@ -48,7 +48,8 @@ namespace BehaviorTree
                 GUI.Box(rect, string.Empty);
                 GUI.backgroundColor = Color.white;
 
-                if (GUILayout.Button("选择", GUILayout.Width(50)))
+                string selectLocalization = Localization.GetInstance().Format("Select");
+                if (GUILayout.Button(selectLocalization, GUILayout.Width(50)))
                 {
                     selectIndex = group.index;
                 }
@@ -98,7 +99,8 @@ namespace BehaviorTree
                 GUIEnableTool.Enable = true;
 
                 GUIEnableTool.Enable = !BehaviorDataController.Instance.CurrentOpenConfigSubTree();
-                if (GUILayout.Button("删除"))
+                string deleteFile = Localization.GetInstance().Format("DeleteFile");
+                if (GUILayout.Button(deleteFile))
                 {
                     DataNodeHandler dataNodeHandler = new DataNodeHandler();
                     dataNodeHandler.NodeDelConditionGroup(nodeValue.id, group.index);

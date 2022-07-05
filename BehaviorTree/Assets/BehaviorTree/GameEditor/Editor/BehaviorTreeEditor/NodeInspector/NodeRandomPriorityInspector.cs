@@ -23,7 +23,8 @@ namespace BehaviorTree
                 for (int i = 0; i < nodeValue.childNodeList.Count; ++i)
                 {
                     NodeValue childNode = BehaviorDataController.Instance.GetNode(nodeValue.childNodeList[i]);
-                    string nodeMsg = string.Format("子节点:{0} 权值:", childNode.id);
+                    string childNodePriority = Localization.GetInstance().Format("ChildNodePriority");
+                    string nodeMsg = string.Format(childNodePriority, childNode.id);
                     childNode.priority = EditorGUILayout.IntField(nodeMsg, childNode.priority);
                     childNode.priority = Mathf.Max(1, childNode.priority);
                 }

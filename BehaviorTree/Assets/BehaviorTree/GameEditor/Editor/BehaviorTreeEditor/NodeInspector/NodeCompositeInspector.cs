@@ -23,10 +23,11 @@ namespace BehaviorTree
 
         private void ConfigNode()
         {
-            bool value = EditorGUILayout.Toggle(new GUIContent("根节点"), nodeValue.isRootNode/*, GUILayout.Width(50)*/);
+            string rootNode = Localization.GetInstance().Format("RootNode");
+            bool value = EditorGUILayout.Toggle(new GUIContent(rootNode), nodeValue.isRootNode/*, GUILayout.Width(50)*/);
             if (value && !nodeValue.isRootNode)
             {
-                Debug.LogError("跟节点");
+                Debug.LogError(rootNode);
                 nodeValue.isRootNode = true;
                 DataHandler dataHandler = new DataHandler();
                 dataHandler.ChangeRootNode(nodeValue.id);
@@ -36,10 +37,11 @@ namespace BehaviorTree
 
         private void SubTreeChildNode()
         {
-            bool value = EditorGUILayout.Toggle(new GUIContent("子树入口节点"), nodeValue.subTreeEntry/*, GUILayout.Width(50)*/);
+            string subTreeEntryNode = Localization.GetInstance().Format("SubTreeEntryNode");
+            bool value = EditorGUILayout.Toggle(new GUIContent(subTreeEntryNode), nodeValue.subTreeEntry/*, GUILayout.Width(50)*/);
             if (value && !nodeValue.subTreeEntry)
             {
-                Debug.LogError("子树入口节点");
+                Debug.LogError(subTreeEntryNode);
                 nodeValue.subTreeEntry = value;
                 DataHandler dataHandler = new DataHandler();
                 dataHandler.ChangeSubTreeEntryNode(nodeValue.parentSubTreeNodeId, nodeValue.id);
@@ -57,7 +59,8 @@ namespace BehaviorTree
         {
             if (nodeValue.childNodeList.Count > 0)
             {
-                nodeValue.moveWithChild = EditorGUILayout.Toggle(new GUIContent("同步移动子节点"), nodeValue.moveWithChild);
+                string syncMoveChild = Localization.GetInstance().Format("SyncMoveChild");
+                nodeValue.moveWithChild = EditorGUILayout.Toggle(new GUIContent(syncMoveChild), nodeValue.moveWithChild);
             }
         }
 
@@ -66,7 +69,8 @@ namespace BehaviorTree
             if ((nodeValue.NodeType != (int)NODE_TYPE.CONDITION && nodeValue.NodeType != (int)NODE_TYPE.ACTION))
             {
                 GUILayout.Space(5);
-                EditorGUILayout.LabelField("组合节点功能描述");
+                string functionComposite = Localization.GetInstance().Format("FunctionComposite");
+                EditorGUILayout.LabelField(functionComposite);
                 nodeValue.function = EditorGUILayout.TextArea(nodeValue.function, GUILayout.Height(250), GUILayout.Width(300));
             }
         }

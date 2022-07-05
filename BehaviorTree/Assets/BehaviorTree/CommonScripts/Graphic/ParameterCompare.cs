@@ -8,39 +8,39 @@ namespace GraphicTree
     {
         INVALID = 0,
         /// <summary>
-        /// 大于
+        /// Greater
         /// </summary>
-        [EnumAttirbute("大于")]
+        [EnumAttirbute("Greater")]
         GREATER = 1 << 0,
 
         /// <summary>
-        /// 小于
+        /// Less
         /// </summary>
-        [EnumAttirbute("小于")]
+        [EnumAttirbute("Less")]
         LESS = 1 << 1,
 
         /// <summary>
-        /// 等于
+        /// Equal
         /// </summary>
-        [EnumAttirbute("等于")]
+        [EnumAttirbute("Equal")]
         EQUALS = 1 << 2,
 
         /// <summary>
-        /// 不等于
+        /// NotEqual
         /// </summary>
-        [EnumAttirbute("不等于")]
+        [EnumAttirbute("NotEqual")]
         NOT_EQUAL = 1 << 3,
 
         /// <summary>
-        /// 大于等于
+        /// GreaterOrEqual
         /// </summary>
-        [EnumAttirbute("大于等于")]
+        [EnumAttirbute("GreaterOrEqual")]
         GREATER_EQUALS = 1 << 4,
 
         /// <summary>
-        /// 小于等于
+        /// LessOrEqual
         /// </summary>
-        [EnumAttirbute("小于等于")]
+        [EnumAttirbute("LessOrEqual")]
         LESS_EQUAL = 1 << 5,
     }
 

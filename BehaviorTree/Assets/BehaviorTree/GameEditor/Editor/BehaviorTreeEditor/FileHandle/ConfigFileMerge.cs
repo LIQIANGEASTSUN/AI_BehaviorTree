@@ -30,7 +30,7 @@ namespace BehaviorTree
                 string fileName = System.IO.Path.GetFileNameWithoutExtension(fullName);
                 if (byteData.Length <= 0)
                 {
-                    Debug.LogError("无效得配置文件");
+                    Debug.LogError("Invalid config file");
                     return;
                 }
 

@@ -51,8 +51,11 @@ namespace BehaviorTree
                 string filePath = BehaviorDataController.Instance.GetFilePath(name);
                 if (warningWhenExist && !File.Exists(filePath))
                 {
-                    string msg = string.Format("文件不存在:{0}", filePath);
-                    if (!EditorUtility.DisplayDialog("提示", msg, "yes"))
+                    string tips = Localization.GetInstance().Format("Tips");
+                    string content = Localization.GetInstance().Format("FileDoesNotExist");
+                    string fileDoesNotExist = string.Format(content, filePath);
+                    string yes = Localization.GetInstance().Format("Yes");
+                    if (!EditorUtility.DisplayDialog(tips, fileDoesNotExist, yes))
                     {
                         continue;
                     }
