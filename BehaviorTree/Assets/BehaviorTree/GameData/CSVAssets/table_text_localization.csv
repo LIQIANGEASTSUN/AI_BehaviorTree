@@ -1,97 +1,98 @@
 ﻿ID,Key,CN,EN
-1,SelectFile,选择文件,SelectFile
-2,SaveFile,保存,Save
-3,DeleteFile,删除,Delete
-4,UpdateFile,更新,Update
-5,MergeFile,合并,MergeFile
-6,FileName,文件名,FileName
-7,Descript,描述,Descript
-8,Inspect,视图面板,Inspect
-9,Make Transition,连线,Make Transition
-10,Delete Node,删除节点,Delete Node
-11,Remove Parent,移除父节点,Remove Parent
-12,Tips,提示,tips
-13,DeleteNodeConfirm,确定要删除节点吗？,Are you sure you want to delete the node？
-14,Yes,是的,Yes
-15,No,取消,No
-16,DeleteParentConfirm,确定要删除父节点吗？,Are you sure you want to remove the parent node?
-17,CompositeNode,组合节点,CompositeNode
-18,DecoratorNode,修饰节点,DecoratorNode
-19,ConditionsNode,条件节点,ConditionsNode
-20,ActionNode,行为节点,ActionNode
-21,Add Node,添加节点,Add Node
-22,AddSubTree,添加子树,AddSubTree
-23,MultipleRootNode,有多个根节点,There are multiple root nodes
-24,MustBeARootNode,必须有一个根节点,There must be a root node
-25,RootCannotHaveParent,跟节点 ： {0}  不能有父节点,The root node: {0} can't have a parent node
-26,NodeCannotHaveChilds,节点：{0} {1} 不能有子节点,The node: {0} {1}  cannot have child nodes
-27,FileDoesNotExist,文件不存在：{0},File does not exist:{0}
-28,Warning,警告,Warning
-29,FileNameCannotEmpty,文件名不能为空,The file name cannot be empty
-30,OK,好的,OK
-31,FileNameTooLong,文件名过长，不能大于20个字符,The file name is too long and cannot exceed 20 characters
-32,Cancel,取消,Cancel
-33,Replace,替换,Replace
-34,FileExistWantReplace,"文件已存在, 是否替换新文件",The file already exists. Do you want to replace the file
-35,SelectConfigFile,选择配置文件,Select a config file
-36,ID,ID:{0},ID:{0}
-37,NodeId,节点ID,NodeID
-38,PrintParentPaths,打印节点所有父节点路径,Prints all parent paths
-39,ClassIdentification,类标识_{0},Class identification _ {0}
-40,ParentNode,父节点_{0},ParentNode_{0}
-41,BelongSubTree,所属子树ID:{0},Belong to SubTreeID:{0}
-42,Remark,备注,Remark
-43,RootNode,根节点,RootNode
-44,SubTreeEntryNode,子树入口节点,SubTree entry node
-45,SyncMoveChild,同步移动子节点,Move the child node synchronously
-46,FunctionComposite,组合节点功能描述,Function description of the composite node
-47,AddGroup,添加组,AddGroup
-48,IfNodeMaxChild,判断节点 {0} 最多只能有三个子节点,If Node {0} can have a maximum of three child nodes
-49,NodeType,节点类型,NodeType
-50,ExecuteConditional,执行条件,Execute conditional
-51,DefaultResult,默认返回结果,Default return result
-52,Parameter,参数,Parameter
-53,AddCondition,添加条件,AddCondition
-54,NoParameterCanBeAdd,没有参数可添加，请先添加参数,"No parameters can be added, please add parameters"
-55,NoParameter,无可添加的参数,No parameters can be added
-56,ChildNodePriority,子节点:{0} 权值:,Child node :{0}  priority
-57,RepetitionsTimes,重复执行次数,Number of repetitions
-58,SubTreeValue,子树值,SubTreeValue
-59,SubTreeType,子树类型,SubTreeType
-60,ConfigFile,配置文件,Config File
-61,SelectSubTreeConfig,选择子树配置文件,Select the subtree config file
-62,ChangeSubtreeToConfig,将子树存储为配置文件,Change the subtree to config file
-63,English,英文:,English:
-64,Chinese,中文:,Chinese
-65,ParameterNameRules,参数名只能包含:数字、字母、下划线，且数字不能放在第一个字符位置,"The parameter name can contain only digits, letters, and underscores (_), and cannot start with a digit"
-66,FileNameReadOnly,此处字段名只读,The field name is read only
-67,Select,选择,Select
-68,GlobalParameter,全局变量,Global parameter
-69,ImportParameter,导入变量,Import parameter
-70,ConditionParameters,条件参数,Condition parameters
-71,AddCondition,添加条件,Add Condition
-72,RuntimeParameter,运行时变量,Runtime parameter
-73,Greater,大于,Greater 
-74,Less,小于,Less
-75,Equal,等于,Equal
-76,NotEqual,不等于,Not Equal
-77,GreaterOrEqual,大于等于,GreaterOrEqual
-78,LessOrEqual,小于等于,LessOrEqual
-79,SelectNode,选择节点,SelectNode
-80,SequenceNode,顺序节点,SequenceNode
-81,RandomNode,随机节点,RandomNode
-82,RandomSequeuece,随机顺序节点,RandomSequeuece
-83,RandomPriority,随机权重节点,RandomPriority
-84,ParallelNode,并行节点,ParallelNode
-85,ParalleSelect,并行选择节点,ParalleSelect
-86,ParalleAll,并行执行所有节点,ParalleAll
-87,IfJudgeParallel,IF 判断并行节点,IfJudgeParallel
-88,IfJudgeSequence,IF 判断顺序节点,IfJudgeSequence
-89,DecoratorInverter,修饰节点_取反,DecoratorInverter
-90,DecoratorRepeat,修饰节点_重复,DecoratorRepeat
-91,DecoratorReturnSuccess,修饰_返回Success,DecoratorReturnSuccess
-92,DecoratorUntilFail,修饰_直到Fail,DecoratorUntilFail
-93,DecoratorUntilSuccess,修饰_直到Success,DecoratorUntilSuccess
-94,Condition,条件节点,Condition
-95,Action,行为节点,Action
-96,SubTreeNode,SubTree,SubTreeNode
+1,"SelectFile","选择文件","SelectFile"
+2,"SaveFile","保存","Save"
+3,"DeleteFile","删除","Delete"
+4,"UpdateFile","更新","Update"
+5,"MergeFile","合并","MergeFile"
+6,"FileName","文件名","FileName"
+7,"Descript","描述","Descript"
+8,"Inspect","视图面板","Inspect"
+9,"Make Transition","连线","Make Transition"
+10,"Delete Node","删除节点","Delete Node"
+11,"Remove Parent","移除父节点","Remove Parent"
+12,"Tips","提示","tips"
+13,"DeleteNodeConfirm","确定要删除节点吗？","Are you sure you want to delete the node？"
+14,"Yes","是的","Yes"
+15,"No","取消","No"
+16,"DeleteParentConfirm","确定要删除父节点吗？","Are you sure you want to remove the parent node?"
+17,"CompositeNode","组合节点","CompositeNode"
+18,"DecoratorNode","修饰节点","DecoratorNode"
+19,"ConditionsNode","条件节点","ConditionsNode"
+20,"ActionNode","行为节点","ActionNode"
+21,"Add Node","添加节点","Add Node"
+22,"AddSubTree","添加子树","AddSubTree"
+23,"MultipleRootNode","有多个根节点","There are multiple root nodes"
+24,"MustBeARootNode","必须有一个根节点","There must be a root node"
+25,"RootCannotHaveParent","跟节点 ： {0}  不能有父节点","The root node: {0} can't have a parent node"
+26,"NodeCannotHaveChilds","节点：{0} {1} 不能有子节点","The node: {0} {1}  cannot have child nodes"
+27,"FileDoesNotExist","文件不存在：{0}","File does not exist:{0}"
+28,"Warning","警告","Warning"
+29,"FileNameCannotEmpty","文件名不能为空","The file name cannot be empty"
+30,"OK","好的","OK"
+31,"FileNameTooLong","文件名过长，不能大于20个字符","The file name is too long and cannot exceed 20 characters"
+32,"Cancel","取消","Cancel"
+33,"Replace","替换","Replace"
+34,"FileExistWantReplace","文件已存在, 是否替换新文件","The file already exists. Do you want to replace the file"
+35,"SelectConfigFile","选择配置文件","Select a config file"
+36,"ID","ID:{0}","ID:{0}"
+37,"NodeId","节点ID","NodeID"
+38,"PrintParentPaths","打印节点所有父节点路径","Prints all parent paths"
+39,"ClassIdentification","类标识_{0}","Class identification _ {0}"
+40,"ParentNode","父节点_{0}","ParentNode_{0}"
+41,"BelongSubTree","所属子树ID:{0}","Belong to SubTreeID:{0}"
+42,"Remark","备注","Remark"
+43,"RootNode","根节点","RootNode"
+44,"SubTreeEntryNode","子树入口节点","SubTree entry node"
+45,"SyncMoveChild","同步移动子节点","Move the child node synchronously"
+46,"FunctionComposite","组合节点功能描述","Function description of the composite node"
+47,"AddGroup","添加组","AddGroup"
+48,"IfNodeMaxChild","判断节点 {0} 最多只能有三个子节点","If Node {0} can have a maximum of three child nodes"
+49,"NodeType","节点类型","NodeType"
+50,"ExecuteConditional","执行条件","Execute conditional"
+51,"DefaultResult","默认返回结果","Default return result"
+52,"Parameter","参数","Parameter"
+53,"AddCondition","添加条件","AddCondition"
+54,"NoParameterCanBeAdd","没有参数可添加，请先添加参数","No parameters can be added, please add parameters"
+55,"NoParameter","无可添加的参数","No parameters can be added"
+56,"ChildNodePriority","子节点:{0} 权值:","Child node :{0}  priority"
+57,"RepetitionsTimes","重复执行次数","Number of repetitions"
+58,"SubTreeValue","子树值","SubTreeValue"
+59,"SubTreeType","子树类型","SubTreeType"
+60,"ConfigFile","配置文件","Config File"
+61,"SelectSubTreeConfig","选择子树配置文件","Select the subtree config file"
+62,"ChangeSubtreeToConfig","将子树存储为配置文件","Change the subtree to config file"
+63,"English","英文:","English:"
+64,"Chinese","中文:","Chinese"
+65,"ParameterNameRules","参数名只能包含:数字、字母、下划线，且数字不能放在第一个字符位置","The parameter name can contain only digits, letters, and underscores (_), and cannot start with a digit"
+66,"FileNameReadOnly","此处字段名只读","The field name is read only"
+67,"Select","选择","Select"
+68,"GlobalParameter","全局变量","Global parameter"
+69,"ImportParameter","导入变量","Import parameter"
+70,"ConditionParameters","条件参数","Condition parameters"
+71,"AddCondition","添加条件","Add Condition"
+72,"RuntimeParameter","运行时变量","Runtime parameter"
+73,"Greater","大于","Greater "
+74,"Less","小于","Less"
+75,"Equal","等于","Equal"
+76,"NotEqual","不等于","Not Equal"
+77,"GreaterOrEqual","大于等于","GreaterOrEqual"
+78,"LessOrEqual","小于等于","LessOrEqual"
+79,"SelectNode","选择节点","SelectNode"
+80,"SequenceNode","顺序节点","SequenceNode"
+81,"RandomNode","随机节点","RandomNode"
+82,"RandomSequeuece","随机顺序节点","RandomSequeuece"
+83,"RandomPriority","随机权重节点","RandomPriority"
+84,"ParallelNode","并行节点","ParallelNode"
+85,"ParalleSelect","并行选择节点","ParalleSelect"
+86,"ParalleAll","并行执行所有节点","ParalleAll"
+87,"IfJudgeParallel","IF 判断并行节点","IfJudgeParallel"
+88,"IfJudgeSequence","IF 判断顺序节点","IfJudgeSequence"
+89,"DecoratorInverter","修饰节点_取反","DecoratorInverter"
+90,"DecoratorRepeat","修饰节点_重复","DecoratorRepeat"
+91,"DecoratorReturnFail","修饰_返回Fail","DecoratorReturnFail"
+92,"DecoratorReturnSuccess","修饰_返回Success","DecoratorReturnSuccess"
+93,"DecoratorUntilFail","修饰_直到Fail","DecoratorUntilFail"
+94,"DecoratorUntilSuccess","修饰_直到Success","DecoratorUntilSuccess"
+95,"Condition","条件节点","Condition"
+96,"Action","行为节点","Action"
+97,"SubTreeNode","子树节点","SubTreeNode"

@@ -78,9 +78,9 @@
         DECORATOR_REPEAT = 101,
 
         /// <summary>
-        /// 修饰节点_返回Fail
+        /// DecoratorReturnFail
         /// </summary>
-        [EnumAttirbute("修饰_返回Fail")]
+        [EnumAttirbute("DecoratorReturnFail")]
         DECORATOR_RETURN_FAIL = 102,
 
         /// <summary>
