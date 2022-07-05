@@ -1,0 +1,27 @@
+﻿ID,Key,CN,EN
+1,SelectFile,选择文件,SelectFile
+2,SaveFile,保存,Save
+3,DeleteFile,删除,Delete
+4,UpdateFile,更新,Update
+5,MergeFile,合并,MergeFile
+6,FileName,文件名,FileName
+7,Descript,描述,Descript
+8,Inspect,视图面板,Inspect
+9,Make Transition,连线,Make Transition
+10,Delete Node,删除节点,Delete Node
+11,Remove Parent,移除父节点,Remove Parent
+12,Tips,提示,tips
+13,DeleteNodeConfirm,确定要删除节点吗？,Are you sure you want to delete the node？
+14,Yes,是的,Yes
+15,No,取消,No
+16,DeleteParentConfirm,确定要删除父节点吗？,Are you sure you want to remove the parent node?
+17,CompositeNode,组合节点,CompositeNode
+18,DecoratorNode,修饰节点,DecoratorNode
+19,ConditionsNode,条件节点,ConditionsNode
+20,ActionNode,行为节点,ActionNode
+21,Add Node,添加节点,Add Node
+22,AddSubTree,添加子树,AddSubTree
+23,MultipleRootNode,有多个根节点,There are multiple root nodes
+24,MustBeARootNode,必须有一个根节点,There must be a root node
+25,RootCannotHaveParent,跟节点 ： {0}  不能有父节点,The root node: {0} can't have a parent node
+26,NodeCannotHaveChilds,节点：{0} {1} 不能有子节点,The node: {0} {1}  cannot have child nodes

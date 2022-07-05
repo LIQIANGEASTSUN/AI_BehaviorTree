@@ -69,27 +69,34 @@ namespace BehaviorTree
         private void InitInfoList()
         {
             #region Node
+            string addNode = Localization.GetInstance().Format("Add Node");
             // 组合节点
-            string compositeName = string.Format("{0}/{1}", "Add Node", "组合节点");
+            string compositeNode = Localization.GetInstance().Format("CompositeNode");
+            string compositeName = string.Format("{0}/{1}", addNode, compositeNode);
             Node_Draw_Info compositeDrawInfo = new Node_Draw_Info(compositeName);
             infoList.Add(compositeDrawInfo);
 
             // 修饰节点
-            string decoratorName = string.Format("{0}/{1}", "Add Node", "修饰节点");
+            string decoratorNode = Localization.GetInstance().Format("DecoratorNode");
+            string decoratorName = string.Format("{0}/{1}", addNode, decoratorNode);
             Node_Draw_Info decoratorDrawInfo = new Node_Draw_Info(decoratorName);
             infoList.Add(decoratorDrawInfo);
 
             // 条件节点
-            string conditionName = string.Format("{0}/{1}", "Add Node", "条件节点");
+            string conditionsNode = Localization.GetInstance().Format("ConditionsNode");
+            string conditionName = string.Format("{0}/{1}", addNode, conditionsNode);
             Node_Draw_Info conditionDrawInfo = new Node_Draw_Info(conditionName);
             infoList.Add(conditionDrawInfo);
 
             // 行为节点
-            string actionName = string.Format("{0}/{1}", "Add Node", "行为节点");
+            string actionNode = Localization.GetInstance().Format("ActionNode");
+            string actionName = string.Format("{0}/{1}", addNode, actionNode);
             Node_Draw_Info actionDrawInfo = new Node_Draw_Info(actionName);
             infoList.Add(actionDrawInfo);
 
-            Node_Draw_Info subTreeDrawInfo = new Node_Draw_Info("AddSubTree");
+            string sddSubTree = Localization.GetInstance().Format("AddSubTree");
+            string addSubTree = Localization.GetInstance().Format(sddSubTree);
+            Node_Draw_Info subTreeDrawInfo = new Node_Draw_Info(addSubTree);
             infoList.Add(subTreeDrawInfo);
 
             Dictionary<string, CustomIdentification> nodeDic = BehaviorConfigNode.Instance.GetNodeDic();

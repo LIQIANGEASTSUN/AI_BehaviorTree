@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace BehaviorTree
 {
+
     public class BehaviorDataController
     {
 
@@ -87,6 +88,13 @@ namespace BehaviorTree
         public HashSet<int> RunTimeInvalidSubTreeHash
         {
             get { return _runTimeInvalidSubTreeHash; }
+        }
+
+        private LanguageType _languageType = LanguageType.EN;
+        public LanguageType LanguageType
+        {
+            get {  return _languageType; }
+            set {  _languageType = value;}
         }
 
         public BehaviorDataController()

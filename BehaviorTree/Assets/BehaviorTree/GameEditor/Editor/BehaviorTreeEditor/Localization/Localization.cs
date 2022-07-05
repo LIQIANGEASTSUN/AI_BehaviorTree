@@ -2,6 +2,12 @@
 
 namespace BehaviorTree
 {
+    public enum LanguageType
+    {
+        CN,
+        EN,
+    }
+
     public struct LocalizationData
     {
         public string cn;
@@ -11,11 +17,11 @@ namespace BehaviorTree
     public class Localization
     {
         private static Localization Instance;
-        private const string fileName = "table_text_localization";
+        private const string tableName = "table_text_localization";
         private Dictionary<string, LocalizationData> _dataDic = new Dictionary<string, LocalizationData>();
 
-        private object lockObj = new object();
-        public Localization GetInstance()
+        private static object lockObj = new object();
+        public static Localization GetInstance()
         {
             if (null == Instance)
             {
@@ -29,22 +35,49 @@ namespace BehaviorTree
 
         private Localization()
         {
-            string csvPath = BehaviorDataController.Instance.GetCsvPath();
-            TableRead.Instance.ReadCustomPath(csvPath);
-            List<int> keyList = TableRead.Instance.GetKeyList(fileName);
-            foreach(var key in keyList)
-            {
-
-            }
+            
         }
 
         public string Format(string key)
         {
+            LocalizationData data;
+            if (!DataDic.TryGetValue(key, out data))
+            {
+                return string.Empty;
+            }
 
+            if (BehaviorDataController.Instance.LanguageType == LanguageType.CN)
+            {
+                return data.cn;
+            }
+            return data.en;
+        }
 
-            // Debug.LogError(filePath + "   " + fileName);
+        private Dictionary<string, LocalizationData> DataDic
+        {
+            get
+            {
+                if (_dataDic.Count <= 0)
+                {
+                    LoadLocalization();
+                }
+                return _dataDic;
+            }
+        }
 
-            return key;
+        private void LoadLocalization()
+        {
+            string csvPath = BehaviorDataController.Instance.GetCsvPath();
+            TableRead.Instance.ReadCustomPath(csvPath);
+            List<int> idList = TableRead.Instance.GetKeyList(tableName);
+            foreach (var id in idList)
+            {
+                LocalizationData data = new LocalizationData();
+                string key = TableRead.Instance.GetData(tableName, id, "Key");
+                data.cn = TableRead.Instance.GetData(tableName, id, "CN");
+                data.en = TableRead.Instance.GetData(tableName, id, "EN");
+                _dataDic[key] = data;
+            }
         }
 
     }

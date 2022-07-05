@@ -16,28 +16,35 @@ namespace BehaviorTree
             {
                 EditorGUILayout.BeginHorizontal();
                 {
-                    if (GUILayout.Button("选择文件"))
+                    string selectFile = Localization.GetInstance().Format("SelectFile");
+                    if (GUILayout.Button(selectFile))
                     {
                         SelectFile();
                     }
 
-                    if (GUILayout.Button("保存"))
+                    string save = Localization.GetInstance().Format("SaveFile");
+                    if (GUILayout.Button(save))
                     {
                         CreateSaveFile(BehaviorDataController.Instance.FileName);
                         AssetDatabase.Refresh();
                     }
 
-                    if (GUILayout.Button("删除"))
+                    string delete = Localization.GetInstance().Format("DeleteFile");
+                    if (GUILayout.Button(delete))
                     {
                         DeleteFile(BehaviorDataController.Instance.FileName);
                         AssetDatabase.Refresh();
                     }
-                    if (GUILayout.Button("批量更新"))
+
+                    string update = Localization.GetInstance().Format("UpdateFile");
+                    if (GUILayout.Button(update))
                     {
                         UpdateAllFile(BehaviorDataController.Instance.FilePath);
                         AssetDatabase.Refresh();
                     }
-                    if (GUILayout.Button("合并"))
+
+                    string merge = Localization.GetInstance().Format("MergeFile");
+                    if (GUILayout.Button(merge))
                     {
                         MergeFile(BehaviorDataController.Instance.FilePath);
                     }
@@ -47,7 +54,8 @@ namespace BehaviorTree
 
                 EditorGUILayout.BeginHorizontal();
                 {
-                    EditorGUILayout.LabelField("文件名", GUILayout.Width(80));
+                    string fileName = Localization.GetInstance().Format("FileName");
+                    EditorGUILayout.LabelField(fileName, GUILayout.Width(80));
                     BehaviorDataController.Instance.FileName = EditorGUILayout.TextField(BehaviorDataController.Instance.FileName);
                 }
                 EditorGUILayout.EndHorizontal();

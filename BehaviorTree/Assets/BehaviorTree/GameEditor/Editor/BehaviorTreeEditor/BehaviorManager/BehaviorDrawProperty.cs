@@ -71,10 +71,17 @@ namespace BehaviorTree
     public class BehaviorPropertyOption
     {
         private int option = 1;
-        private readonly string[] optionArr = new string[] { "Descript", "Inspect", "Parameter" };
+        private readonly string[] optionArrKey = new string[] { "Descript", "Inspect", "Parameter" };
 
+        private string[] optionArr = new string[3] { "", "", ""};
         public int OnGUI()
         {
+            for (int i = 0; i < optionArr.Length; ++i)
+            {
+                string msg = Localization.GetInstance().Format(optionArrKey[i]);
+                optionArr[i] = msg;
+            }
+
             int index = option;
             option = GUILayout.Toolbar(option, optionArr, EditorStyles.toolbarButton);
             return option;
@@ -84,6 +91,7 @@ namespace BehaviorTree
         {
 
         }
+
     }
 }
 
