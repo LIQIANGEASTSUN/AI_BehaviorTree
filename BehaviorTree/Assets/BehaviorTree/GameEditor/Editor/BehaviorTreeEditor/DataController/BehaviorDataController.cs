@@ -1,5 +1,6 @@
 ﻿using GraphicTree;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace BehaviorTree
 {
@@ -27,6 +28,12 @@ namespace BehaviorTree
             fileName = string.Format("{0}.bytes", fileName);
             string path = CommonUtils.FileUtils.CombinePath(FilePath, fileName);
             return path;
+        }
+
+        public string GetCsvPath()
+        {
+            string csvPath = CommonUtils.FileUtils.CombinePath(new string[] { Application.dataPath, "BehaviorTree", "GameData", "CSVAssets" });
+            return csvPath;
         }
 
         private BehaviorTreeData _behaviorTreeData;

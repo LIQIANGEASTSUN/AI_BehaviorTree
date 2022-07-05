@@ -11,7 +11,7 @@ namespace BehaviorTree
             string fileName = "table_behaviortree";
             TableRead.Instance.Init();
 
-            string csvPath = CommonUtils.FileUtils.CombinePath(new string[] { Application.dataPath, "BehaviorTree", "GameData", "CSVAssets" });
+            string csvPath = BehaviorDataController.Instance.GetCsvPath();
             TableRead.Instance.ReadCustomPath(csvPath);
 
             // Debug.LogError(filePath + "   " + fileName);
