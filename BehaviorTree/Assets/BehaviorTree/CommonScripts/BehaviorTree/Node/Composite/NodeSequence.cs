@@ -9,16 +9,7 @@ namespace BehaviorTree
     public class NodeSequence : NodeComposite
     {
         private NodeBase lastRunningNode;
-        public static string descript = "顺序节点：依次执行子节点 \n" +
-                                        "当前执行节点返回 Success，就继续执行后续节点 \n\n" +
-
-                                        "当前执行节点返回 Fail，退出停止，向父节点 \n" +
-                                        "返回 Fail，下次执行直接从第一个节点开始 \n\n" +
-
-                                        "当前执行节点返回 Running, 记录当前节点，向父节 \n" +
-                                        "点返回 Running，下次执行直接从该节点开始 \n\n" +
-
-                                        "如果所有节点都返回 Success，向父节点返回 Success \n";
+        public static string descript = "SequenceNodeFunctionDescript";
 
         public NodeSequence() : base(NODE_TYPE.SEQUENCE)
         { }

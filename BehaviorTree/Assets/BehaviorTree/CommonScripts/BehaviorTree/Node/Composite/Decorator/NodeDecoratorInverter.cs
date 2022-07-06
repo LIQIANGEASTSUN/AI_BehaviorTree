@@ -8,8 +8,7 @@ namespace BehaviorTree
     /// </summary>
     public class NodeDecoratorInverter : NodeDecorator
     {
-        public static string descript = "取反修饰节点 Inverter    对子节点执行结果取反";
-
+        public static string descript = "DecoratorInverterNodeFunctionDescript";
         private int _runningNode = 0;
 
         public NodeDecoratorInverter() : base(NODE_TYPE.DECORATOR_INVERTER)

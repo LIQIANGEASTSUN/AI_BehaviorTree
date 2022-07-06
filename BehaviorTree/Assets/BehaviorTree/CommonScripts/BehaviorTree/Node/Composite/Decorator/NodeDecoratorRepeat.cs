@@ -11,12 +11,7 @@ namespace BehaviorTree
         private int _repeatCount = 0;
         private int _executeCount = 0;
 
-        public static string descript = "修饰节点_重复: \n" +
-                                        "开始执行该节点时，将记录次数清零 \n" +
-                                        "顺序执行所有子节点(记为 1 次)，不关心节点返回结果 \n\n" +
-                                        "如果 执行次数 < 配置执行次数 向父节点返回 Running \n" +
-                                        "如果 执行次数 >= 配置执行次数 向父节点返回 Success \n";
-
+        public static string descript = "DecoratorRepeatNodeFunctionDescript";
         private int _runningNode = 0;
 
         public NodeDecoratorRepeat() : base(NODE_TYPE.DECORATOR_REPEAT)

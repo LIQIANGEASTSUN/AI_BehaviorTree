@@ -71,7 +71,12 @@ namespace BehaviorTree
                 GUILayout.Space(5);
                 string functionComposite = Localization.GetInstance().Format("FunctionComposite");
                 EditorGUILayout.LabelField(functionComposite);
-                nodeValue.function = EditorGUILayout.TextArea(nodeValue.function, GUILayout.Height(250), GUILayout.Width(300));
+                //nodeValue.function = EditorGUILayout.TextArea(nodeValue.function, GUILayout.Height(250), GUILayout.Width(300));
+
+                string functionDescript = NodeDescript.GetFunction((NODE_TYPE)nodeValue.NodeType);
+                functionDescript = Localization.GetInstance().Format(functionDescript);
+                functionDescript = functionDescript.Replace("\\n", "\n");
+                EditorGUILayout.TextArea(functionDescript, GUILayout.Height(350), GUILayout.Width(300));
             }
         }
 

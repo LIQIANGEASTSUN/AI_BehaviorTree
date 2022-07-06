@@ -8,16 +8,8 @@ namespace BehaviorTree
     /// </summary>
     public class NodeParallelAll : NodeComposite
     {
-        public static string descript = "并行执行所有节点：依次从头顺次遍历执行所有子节点 \n\n" +
 
-                                        "当前执行节点返回 Success、 Fail、Running 都继续 \n" +
-                                        "执行下一个节点，分别记录返回三种结果的节点个数 \n\n" +
-
-                                        "执行完所有节点后 \n" +
-                                        "如果所有节点都返回 Success 向父节点返回 Success \n" +
-                                        "如果所有节点都返回 Fail 向父节点返回 Fail \n" +
-                                        "否则一定有节点返回了Running 向父节点返回 Running \n";
-
+        public static string descript = "ParallelAllNodeFunctionDescript";
         private int _runningNode = 0;
 
         public NodeParallelAll() : base(NODE_TYPE.PARALLEL_ALL)

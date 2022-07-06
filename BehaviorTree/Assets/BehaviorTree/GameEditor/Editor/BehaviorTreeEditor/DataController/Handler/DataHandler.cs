@@ -25,7 +25,6 @@ namespace BehaviorTree
             newNodeValue.identificationName = info._identificationName;
             newNodeValue.NodeType = (int)info._nodeType;
             newNodeValue.parentNodeID = -1;
-            newNodeValue.function = NodeDescript.GetFunction((NODE_TYPE)info._nodeType);
 
             RectT rectT = new RectT();
             Rect rect = new Rect(mousePosition.x, mousePosition.y, rectT.width, rectT.height);

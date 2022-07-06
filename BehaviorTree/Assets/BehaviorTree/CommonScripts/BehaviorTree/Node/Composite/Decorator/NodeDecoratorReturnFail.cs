@@ -8,10 +8,7 @@ namespace BehaviorTree
     /// </summary>
     public class NodeDecoratorReturnFail : NodeDecoratorReturnConst
     {
-        public static string descript = "修饰_返回Fail：\n" +
-                                        "执行节点，无论节点返回 Success、Fail、Running \n" +
-                                        "执行结束后永远向父节点返回 Fail  \n";
-
+        public static string descript = "DecoratorReturnFailNodeFunctionDescript";
         private int _runningNode = 0;
 
         public NodeDecoratorReturnFail() : base(NODE_TYPE.DECORATOR_RETURN_FAIL)
