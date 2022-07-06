@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using System;
 
 namespace BehaviorTree
 {
@@ -12,6 +13,7 @@ namespace BehaviorTree
         public static BehaviorDataController Instance;
 
         public static BehaviorChangeSelectId behaviorChangeSelectId;
+        public static Action languageChange;
 
         public string FileName
         {
@@ -82,6 +84,7 @@ namespace BehaviorTree
             set {
                 _playState = value;
                 NodeNotify.SetPlayState((int)value);
+                languageChange?.Invoke();
             }
         }
 
@@ -97,7 +100,6 @@ namespace BehaviorTree
         {
             get {  return _languageType; }
             set {  _languageType = value;
-                BehaviorNodeDrawInfoController.GetInstance().InitInfoList();
                 EditorPrefs.SetInt(languageTypeKey, (int)value);
             }
         }
@@ -107,7 +109,7 @@ namespace BehaviorTree
             Init();
         }
 
-        private void Init()
+        public void Init()
         {
             _behaviorTreeData = new BehaviorTreeData();
             _runTimeInvalidSubTreeHash.Clear();

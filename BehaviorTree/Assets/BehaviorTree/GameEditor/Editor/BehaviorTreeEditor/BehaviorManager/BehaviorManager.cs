@@ -27,6 +27,7 @@ namespace BehaviorTree
             _behaviorDrawController.Init();
 
             BehaviorRunTime.Instance.Init();
+            BehaviorNodeDrawInfoController.GetInstance();
         }
 
         public void OnDestroy()

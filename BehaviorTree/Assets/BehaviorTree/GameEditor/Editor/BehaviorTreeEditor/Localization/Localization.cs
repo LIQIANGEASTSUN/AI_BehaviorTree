@@ -67,10 +67,10 @@ namespace BehaviorTree
 
         private void LoadLocalization()
         {
-            if (null == BehaviorDataController.Instance)
-            {
-                return;
-            }
+            //if (null == BehaviorDataController.Instance)
+            //{
+            //    return;
+            //}
             _dataDic.Clear();
             string csvPath = BehaviorDataController.Instance.GetCsvPath();
             TableRead.Instance.ReadCustomPath(csvPath);

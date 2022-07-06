@@ -41,7 +41,8 @@ namespace BehaviorTree
         {
             if (null == nodeValue)
             {
-                EditorGUILayout.LabelField("no select node");
+                string msg = Localization.GetInstance().Format("NoSelectNode");
+                EditorGUILayout.LabelField(msg);
                 return;
             }
 
