@@ -11,6 +11,7 @@ namespace BehaviorTree
         protected override void Common()
         {
             Repeat();
+            base.Common();
         }
 
         private void Repeat()

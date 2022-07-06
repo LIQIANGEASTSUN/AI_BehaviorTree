@@ -9,6 +9,8 @@ namespace BehaviorTree
         protected override void Common()
         {
             NodeChild();
+
+            base.Common();
         }
 
         private void NodeChild()
