@@ -27,7 +27,6 @@ namespace BehaviorTree
             bool value = EditorGUILayout.Toggle(new GUIContent(rootNode), nodeValue.isRootNode/*, GUILayout.Width(50)*/);
             if (value && !nodeValue.isRootNode)
             {
-                Debug.LogError(rootNode);
                 nodeValue.isRootNode = true;
                 DataHandler dataHandler = new DataHandler();
                 dataHandler.ChangeRootNode(nodeValue.id);

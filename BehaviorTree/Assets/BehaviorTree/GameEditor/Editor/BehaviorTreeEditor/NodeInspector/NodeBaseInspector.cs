@@ -36,7 +36,7 @@ namespace BehaviorTree
             if (!string.IsNullOrEmpty(nodeValue.identificationName))
             {
                 string classIdentification = Localization.GetInstance().Format("ClassIdentification");
-                string identificationName = string.Format("classIdentification", nodeValue.identificationName);
+                string identificationName = string.Format(classIdentification, nodeValue.identificationName);
                 EditorGUILayout.LabelField(identificationName);
             }
         }

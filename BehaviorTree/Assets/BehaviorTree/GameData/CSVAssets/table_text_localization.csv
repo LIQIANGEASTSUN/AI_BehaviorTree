@@ -61,8 +61,8 @@
 60,ConfigFile,配置文件,Config File
 61,SelectSubTreeConfig,选择子树配置文件,Select the subtree config file
 62,ChangeSubtreeToConfig,将子树存储为配置文件,Change the subtree to config file
-63,English,英文:,English:
-64,Chinese,中文:,Chinese
+63,English,英文,English
+64,Chinese,中文,Chinese
 65,ParameterNameRules,参数名只能包含:数字、字母、下划线，且数字不能放在第一个字符位置,"The parameter name can contain only digits, letters, and underscores (_), and cannot start with a digit"
 66,FileNameReadOnly,此处字段名只读,The field name is read only
 67,Select,选择,Select

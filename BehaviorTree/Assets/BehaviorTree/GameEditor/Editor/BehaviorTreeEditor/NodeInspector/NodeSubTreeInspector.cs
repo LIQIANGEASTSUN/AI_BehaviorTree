@@ -36,7 +36,8 @@ namespace BehaviorTree
                 if (GUILayout.Button(selectSubTreeConfig))
                 {
                     ConfigFileSelect configFileSelect = new ConfigFileSelect();
-                    nodeValue.subTreeConfig = configFileSelect.Select();
+                    string filePath = configFileSelect.Select();
+                    nodeValue.subTreeConfig = System.IO.Path.GetFileNameWithoutExtension(filePath);
                 }
             }
             else

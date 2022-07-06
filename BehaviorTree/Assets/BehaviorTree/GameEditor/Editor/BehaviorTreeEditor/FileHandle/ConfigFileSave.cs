@@ -41,9 +41,9 @@ namespace BehaviorTree
             if (File.Exists(path))
             {
                 string replace = Localization.GetInstance().Format("Replace");
-                string cancel = Localization.GetInstance().Format("Cancel");
+                string yes = Localization.GetInstance().Format("Yes");
                 string fileExistWantReplace = Localization.GetInstance().Format("FileExistWantReplace");
-                if (!EditorUtility.DisplayDialog(fileExistWantReplace, replace, cancel))
+                if (!EditorUtility.DisplayDialog(fileExistWantReplace, replace, yes))
                 {
                     return;
                 }
