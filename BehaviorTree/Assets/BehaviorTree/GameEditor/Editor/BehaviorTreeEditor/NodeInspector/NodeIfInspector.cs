@@ -57,7 +57,7 @@ namespace BehaviorTree
                         string nodeId = Localization.GetInstance().Format("NodeId");
                         EditorGUILayout.IntField(nodeId, judgeData.nodeId);
                         {
-                            string[] nameArr = EnumNames.GetEnumNames<NodeIfJudgeEnum>();
+                            string[] nameArr = GetNames();
                             int index = EnumNames.GetEnumIndex<NodeIfJudgeEnum>((NodeIfJudgeEnum)judgeData.ifJudegType);
                             string nodeType = Localization.GetInstance().Format("NodeType");
                             int result = EditorGUILayout.Popup(nodeType, index, nameArr);
@@ -128,6 +128,19 @@ namespace BehaviorTree
             }
         }
 
+        private string[] GetNames()
+        {
+            string[] nameArr = EnumNames.GetEnumNames<NodeIfJudgeEnum>();
+            for (int j = 0; j < nameArr.Length; ++j)
+            {
+                nameArr[j] = Localization.GetInstance().Format(nameArr[j]);
+            }
+            return nameArr;
+        }
+
     }
+
+    
+
 }
 

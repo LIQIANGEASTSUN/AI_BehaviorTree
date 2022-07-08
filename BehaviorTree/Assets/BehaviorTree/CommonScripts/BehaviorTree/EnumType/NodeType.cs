@@ -122,17 +122,17 @@
 
 
     /// <summary>
-    /// 节点状态
+    /// Node Status
     /// </summary>
     public enum NODE_STATUS
     {
         /// <summary>
-        /// 准备状态
+        /// Ready Status
         /// </summary>
         READY = 0,
 
         /// <summary>
-        /// 运行状态
+        /// Running Status
         /// </summary>
         RUNNING = 1,
     }
@@ -143,15 +143,15 @@
     public enum SUB_TREE_TYPE
     {
         /// <summary>
-        /// 普通：可编辑子节点
+        /// CommonChildNodesCanBeEdited
         /// </summary>
-        [EnumAttirbute("普通：可编辑子节点")]
+        [EnumAttirbute("CommonChildNodesCanBeEdited")]
         NORMAL = 0,
 
         /// <summary>
-        /// 配置：单独的树配置，不可编辑子节点
+        /// ConfigReadConfigFile
         /// </summary>
-        [EnumAttirbute("配置：读取配置文件")]
+        [EnumAttirbute("ConfigReadConfigFile")]
         CONFIG = 1,
     }
 
@@ -161,15 +161,15 @@
     public enum NodeIfJudgeEnum
     {
         /// <summary>
-        /// if 判断节点
+        /// IfJudgmentNode
         /// </summary>
-        [EnumAttirbute("if 判断节点")]
+        [EnumAttirbute("IfJudgmentNode")]
         IF = 0,
 
         /// <summary>
-        /// 执行节点
+        /// ExecuteNode
         /// </summary>
-        [EnumAttirbute("执行节点")]
+        [EnumAttirbute("ExecuteNode")]
         ACTION = 1,
     }
 }

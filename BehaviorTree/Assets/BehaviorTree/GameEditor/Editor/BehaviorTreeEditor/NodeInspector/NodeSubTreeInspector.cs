@@ -19,6 +19,10 @@ namespace BehaviorTree
             string subTreeValue = Localization.GetInstance().Format("SubTreeValue");
             nodeValue.subTreeValue = EditorGUILayout.LongField(subTreeValue, nodeValue.subTreeValue);
             string[] nameArr = EnumNames.GetEnumNames<SUB_TREE_TYPE>();
+            for (int i = 0; i < nameArr.Length; ++i)
+            {
+                nameArr[i] = Localization.GetInstance().Format(nameArr[i]);
+            }
             int index = EnumNames.GetEnumIndex<SUB_TREE_TYPE>((SUB_TREE_TYPE)nodeValue.subTreeType);
             string subTreeType = Localization.GetInstance().Format("SubTreeType");
             int result = EditorGUILayout.Popup(subTreeType, index, nameArr);
