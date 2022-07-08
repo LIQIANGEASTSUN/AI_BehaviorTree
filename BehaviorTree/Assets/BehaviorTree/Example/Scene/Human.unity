@@ -147,7 +147,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 476940607}
-  m_Text: "\u80FD\u91CF\u8865\u7ED9\u7AD9"
+  m_Text: Power supply station
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -464,7 +464,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1810502052}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.11, y: 0.4, z: 6.61}
+  m_LocalPosition: {x: 8.18, y: 0.4, z: 6.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 476940610}
