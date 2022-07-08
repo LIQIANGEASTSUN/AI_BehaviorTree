@@ -84,7 +84,10 @@ namespace BehaviorTree
             set {
                 _playState = value;
                 NodeNotify.SetPlayState((int)value);
-                languageChange?.Invoke();
+                if (null != languageChange)
+                {
+                    languageChange();
+                }
             }
         }
 
