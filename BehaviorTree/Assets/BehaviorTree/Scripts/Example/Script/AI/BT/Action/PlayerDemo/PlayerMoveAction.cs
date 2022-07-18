@@ -3,7 +3,7 @@ using BehaviorTree;
 using GraphicTree;
 
 /// <summary>
-/// 行为节点：移动
+/// Action node : Move
 /// </summary>
 public class PlayerMoveAction : ActionBase
 {

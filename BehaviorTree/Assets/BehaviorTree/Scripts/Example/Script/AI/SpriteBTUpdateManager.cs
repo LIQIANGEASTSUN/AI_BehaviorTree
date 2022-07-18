@@ -7,10 +7,8 @@ public interface IBTNeedUpdate
     bool CanRunningBT();
 }
 
-//只做驱动BT用，不能做别的
 public class SpriteBTUpdateManager
 {
-    //这两个list里的项，永远对应。不用Dictionary是考虑到遍历时Remove问题
     private List<int> _AiIDList = new List<int>();
     private List<IBTNeedUpdate> _AiList = new List<IBTNeedUpdate>();
     private HashSet<int> _removeHash = new HashSet<int>();
@@ -50,6 +48,11 @@ public class SpriteBTUpdateManager
         }
     }
 
+    /// <summary>
+    /// Add it here when creating an AI
+    /// </summary>
+    /// <param name="spriteId"></param>
+    /// <param name="bTNeedUpdate"></param>
     public void AddSprite(int spriteId, IBTNeedUpdate bTNeedUpdate)
     {
         if (_AiIDList.Contains(spriteId))
@@ -64,6 +67,10 @@ public class SpriteBTUpdateManager
         }
     }
 
+    /// <summary>
+    /// Remove AI
+    /// </summary>
+    /// <param name="spriteID"></param>
     public void RemoveSprite(int spriteID)
     {
         _removeHash.Add(spriteID);

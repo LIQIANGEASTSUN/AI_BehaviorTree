@@ -22,12 +22,12 @@ namespace BehaviorTree
             }
 
             mousePosition = _event.mousePosition;
-            if (_event.button == 0)  // 鼠标左键
+            if (_event.button == 0)  // The left mouse button
             {
                 NodeValue nodeValue = GetMouseInNode(nodeList);
                 ClickNode(nodeValue);
             }
-            else if (_event.button == 1)  // 鼠标右键
+            else if (_event.button == 1)  // The right mouse button
             {
                 NodeValue nodeValue = GetMouseInNode(nodeList);
                 ShowMenu(currentNode, nodeValue);
@@ -57,7 +57,7 @@ namespace BehaviorTree
 
         private void ShowMenu(NodeValue currentNode, NodeValue nodeValue)
         {
-            if (null == nodeValue)  // 鼠标按下位置没有节点
+            if (null == nodeValue)  // There is no node in the mouse down position
             {
                 MouseRightDownEmptyNode();
             }
@@ -97,13 +97,12 @@ namespace BehaviorTree
             GenericMenu menu = new GenericMenu();
             if (null != currentNode && nodeValue.id == currentNode.id && (NODE_TYPE)nodeValue.NodeType < NODE_TYPE.CONDITION)
             {
-                // 连线子节点
                 string makeTransition = Localization.GetInstance().Format("Make Transition");
                 GenericMenuAddItem(menu, new GUIContent(makeTransition), MakeTransition, nodeValue.id);
                 menu.AddSeparator("");
             }
 
-            // 删除节点
+            // Delete nodes
             string deleteNode = Localization.GetInstance().Format("Delete Node");
             GenericMenuAddItem(menu, new GUIContent(deleteNode), DeleteNode, nodeValue.id);
 
@@ -132,7 +131,6 @@ namespace BehaviorTree
             }
         }
 
-        // 删除节点
         private void DeleteNode(object userData)
         {
             string tips = Localization.GetInstance().Format("Tips");
@@ -147,7 +145,6 @@ namespace BehaviorTree
             }
         }
 
-        // 移除父节点
         private void RemoveParentNode(object userData)
         {
             string tips = Localization.GetInstance().Format("Tips");

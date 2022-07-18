@@ -1,10 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using BehaviorTree;
+﻿using BehaviorTree;
 
 /// <summary>
-/// 补充能量
+/// Action node : replenish energy
 /// </summary>
 public class PlayerReplenishEnergyAction : ActionBase
 {

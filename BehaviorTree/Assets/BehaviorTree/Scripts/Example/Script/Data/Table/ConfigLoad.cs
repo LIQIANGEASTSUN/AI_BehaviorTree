@@ -1,6 +1,5 @@
 ﻿using CommonUtils;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System;
 
@@ -16,7 +15,7 @@ public class ConfigLoad
     private string textContent = string.Empty;
     public IEnumerator LoadConfig()
     {
-        // 行为树所有的配置文件我都合并到 BehaviorTreeConfig.bytes 文件中了
+        // All configuration files are merged into the BehaviorTreeConfig.bytes file
         //yield return GameController.Instance.StartCoroutine(LoadData("Bina", "behavior_tree_config.bytes", 1));
         LoadResourceData("behavior_tree_config.bytes");
 

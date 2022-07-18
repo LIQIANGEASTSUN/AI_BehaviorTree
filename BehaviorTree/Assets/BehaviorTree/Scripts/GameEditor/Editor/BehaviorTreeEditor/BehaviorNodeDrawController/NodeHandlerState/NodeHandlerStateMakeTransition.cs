@@ -18,10 +18,10 @@ namespace BehaviorTree
             Event _event = Event.current;
             mousePosition = _event.mousePosition;
 
-            if (_event.type == EventType.MouseDown && (_event.button == 0))  // 鼠标左键
+            if (_event.type == EventType.MouseDown && (_event.button == 0))  // The left mouse button
             {
                 NodeValue nodeValue = GetMouseInNode(nodeList);
-                // 如果按下鼠标时，选中了一个节点，则将 新选中根节点 添加为 selectNode 的子节点
+                // If you hold down the mouse and a node is selected,Add the newly selected root node as a child node of the selectNode
                 if (null != nodeValue && currentNode.id != nodeValue.id)
                 {
                     DataNodeHandler dataNodeHandler = new DataNodeHandler();

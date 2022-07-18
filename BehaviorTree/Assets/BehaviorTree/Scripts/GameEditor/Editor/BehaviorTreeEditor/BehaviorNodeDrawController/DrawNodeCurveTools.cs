@@ -8,7 +8,7 @@ namespace BehaviorTree
 {
     public class DrawNodeCurveTools
     {
-        // 绘制线
+        // Draw the line
         public static void DrawNodeCurve(RectT start, RectT end)
         {
             Handles.color = Color.black;

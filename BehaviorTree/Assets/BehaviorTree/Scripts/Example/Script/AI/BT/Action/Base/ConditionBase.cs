@@ -1,8 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using BehaviorTree;
+﻿using BehaviorTree;
 
+/// <summary>
+/// Custom Condition node extends ActionBase
+/// </summary>
 public abstract class ConditionBase : NodeCondition, IBTActionOwner
 {
     protected ISprite _owner = null;

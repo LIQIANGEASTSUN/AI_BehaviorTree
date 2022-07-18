@@ -8,29 +8,29 @@ public class GameController : MonoBehaviour
     {
         Instance = this;
         ConfigLoad configLoad = new ConfigLoad();
-        // 加载行为树配置文件回调
+        // Load the behavior tree configuration file callback
         ConfigLoad.loadEndCallBack = ConfigLoadEnd;
-        //加载配置文件
+        // Loading a Configuration File
         configLoad.Init();
     }
 
     // Update is called once per frame
     void Update()
     {
-        // 驱动 Sprite 管理器
+
         SpriteManager.GetInstance().Update();
-        // 驱动 bullet 管理器
+
         BulletManager.GetInstance().Update();
     }
 
-    // 配置文件加载结束回调
+    // Callback at the end of configuration file loading
     private void ConfigLoadEnd()
     {
-        // 创建一个 Sprite
+        // create Sprite
         Player sprite = new Player();
         sprite.Init(Vector3.zero);
         SpriteManager.GetInstance().AddSprite(sprite);
-        // 创建一个 Npc
+        // create Npc
         CheckNpc();
 
         NumberSprite numberSprite = new NumberSprite();
@@ -46,7 +46,7 @@ public class GameController : MonoBehaviour
         }
     }
 
-    // 创建Npc
+    // Create Npc
     private void CheckNpc()
     {
         GameObject npcGo = GameObject.Find("Npc");

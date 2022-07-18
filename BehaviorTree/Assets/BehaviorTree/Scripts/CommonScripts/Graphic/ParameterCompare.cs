@@ -6,6 +6,9 @@ namespace GraphicTree
 {
     public enum ParameterCompare
     {
+        /// <summary>
+        /// [EnumAttirbute("Invalid")]
+        /// </summary>
         INVALID = 0,
         /// <summary>
         /// Greater

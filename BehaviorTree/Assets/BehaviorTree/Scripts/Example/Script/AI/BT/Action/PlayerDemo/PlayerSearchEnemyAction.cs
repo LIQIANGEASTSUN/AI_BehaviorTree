@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using BehaviorTree;
 
 /// <summary>
-/// 行为节点：搜索敌人
+/// Action node : search enemy
 /// </summary>
 public class PlayerSearchEnemyAction : ActionBase
 {

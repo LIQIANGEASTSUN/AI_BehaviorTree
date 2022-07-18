@@ -9,15 +9,14 @@ public class Player : BaseSprite
         CreateSelf(position);
         base.Init(position);
 
-        // 更新环境变量 BTConstant.IsSurvial 的值 为 true
+        // Updating environment variables
         BTBase.UpdateParameter(BTConstant.IsSurvial, true);
-        // 更新环境变量 BTConstant.Energy 的值为 Energy() 返回的结果
         BTBase.UpdateParameter(BTConstant.Energy, Energy());
     }
 
     protected override string AIConfigFile()
     {
-        // Behavior配置文件名
+        // Behavior Configuration file name
         return "Player";
     }
 

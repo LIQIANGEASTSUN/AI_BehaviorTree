@@ -1,11 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using BehaviorTree;
-using UnityEngine;
+﻿using BehaviorTree;
 using GraphicTree;
 
 /// <summary>
-/// 条件节点：能量是否足够
+/// Condition node : Enougth Energy?
 /// </summary>
 public class PlayerEnougthEnergyCondition : ConditionBase
 {

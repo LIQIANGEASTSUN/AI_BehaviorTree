@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using BehaviorTree;
 
 /// <summary>
-/// 行为节点：巡逻
+/// Action node : patrol
 /// </summary>
 public class PlayerPatrolAction : ActionBase
 {

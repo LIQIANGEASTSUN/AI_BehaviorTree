@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using BehaviorTree;
+﻿using BehaviorTree;
 using UnityEngine;
 
 /// <summary>
-/// 行为节点：攻击
+/// Action node : Attack
 /// </summary>
 public class PlayerAttackAction : ActionBase
 {

@@ -3,10 +3,10 @@
 public abstract class BaseSprite : ISprite, IBTNeedUpdate
 {
     protected int _spriteId;
-    // BehaviorTree 实例
+    // BehaviorTree entity
     protected BTConcrete _bt;
 
-    // 获取Behavior Tree 实例
+    // Get Behavior Tree entity
     public BTBase BTBase
     {
         get { return _bt; }
@@ -16,7 +16,7 @@ public abstract class BaseSprite : ISprite, IBTNeedUpdate
 
     public virtual void Init(Vector3 position)
     {
-        // 初始化 BehaviorTree 实例，将 (BaseSprite)this传递进去
+        // Initialize the BehaviorTree instance
         string aiConfig = AIConfigFile();
         _bt = new BTConcrete(this, long.MaxValue, aiConfig);
     }
@@ -34,7 +34,11 @@ public abstract class BaseSprite : ISprite, IBTNeedUpdate
 
     protected abstract string AIConfigFile();
 
-    // 判断能否执行 AI，当一些情况需要暂停 AI，如打开UI面板需要暂停AI 
+    /// <summary>
+    /// Check whether the AI can be executed. The AI needs to be paused in some cases
+    /// For example, opening the UI panel requires pausing the AI
+    /// </summary>
+    /// <returns></returns>
     public virtual bool CanRunningBT()
     {
         return true;

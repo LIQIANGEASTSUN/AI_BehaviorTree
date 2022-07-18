@@ -39,7 +39,7 @@ namespace BehaviorTree
             for (int i = 0; i < nodeList.Count; i++)
             {
                 NodeValue nodeValue = nodeList[i];
-                // 如果鼠标位置 包含在 节点的 Rect 范围，则视为可以选择的节点
+                // If the mouse position is included in the Rect range of the node, it is considered a selectable node
                 if (RectTool.RectTToRect(nodeValue.position).Contains(mousePosition))
                 {
                     selectNode = nodeValue;

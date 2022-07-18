@@ -35,16 +35,16 @@ namespace BehaviorTree
             contentRect.y = rect.y;
 
             _behaviorNodeDraw.SetNodeList(nodeList);
-            //创建 scrollView  窗口  
+            //create scrollView  window  
             scrollPos = GUI.BeginScrollView(scrollRect, scrollPos, contentRect);
             {
                 _nodeHandlerStateMachine.OnExecute(currentNode, nodeList);
-                // 开始绘制节点 
-                // 注意：必须在  BeginWindows(); 和 EndWindows(); 之间 调用 GUI.Window 才能显示
+                // Start drawing nodes
+                // Note: GuI.window must be called between the BeginWindows method and the EndWindows method to display
                 TreeNodeWindow._drawWindowCallBack(_behaviorNodeDraw.DrawNodeWindowsCallBack);
                 ResetScrollPos(nodeList);
             }
-            GUI.EndScrollView();  //结束 ScrollView 窗口  
+            GUI.EndScrollView(); 
         }
 
         private void DrawTielt()

@@ -14,7 +14,7 @@ namespace BehaviorTree
             _nodeList = nodeList;
         }
 
-        // 绘制节点
+        // Draw the node
         public void DrawNodeWindowsCallBack()
         {
             for (int i = 0; i < _nodeList.Count; i++)
@@ -89,7 +89,7 @@ namespace BehaviorTree
             }
         }
 
-        /// 每帧绘制从 节点到所有子节点的连线
+        // Each frame draws lines from the node to all of its children
         private void DrawToChildCurve(NodeValue nodeValue)
         {
             for (int i = nodeValue.childNodeList.Count - 1; i >= 0; --i)

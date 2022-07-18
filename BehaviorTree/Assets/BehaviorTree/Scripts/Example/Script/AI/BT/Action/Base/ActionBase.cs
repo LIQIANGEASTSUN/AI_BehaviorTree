@@ -1,7 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using BehaviorTree;
+﻿using BehaviorTree;
 
+/// <summary>
+/// Custom Action node extends ActionBase
+/// </summary>
 public abstract class ActionBase : NodeAction, IBTActionOwner
 {
     protected ISprite _owner = null;

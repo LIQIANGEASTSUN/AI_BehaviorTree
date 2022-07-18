@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using BehaviorTree;
 
-//Character和Article公共部分
 public interface IBTActionOwner
 {
     void SetOwner(ISprite owner);

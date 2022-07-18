@@ -1,18 +1,15 @@
 ﻿using System.Collections.Generic;
 
-/// <summary>
-/// Sprite 管理器
-/// </summary>
 public class SpriteManager
 {
-    // 单例
+    // singleton
     public static SpriteManager Instance;
     private static object obj = new object();
     private static int SpriteId = 0;
 
-    // 保存所有的 Sprite
+    // Save all Sprite
     private List<BaseSprite> _spriteList = new List<BaseSprite>();
-    // AI 管理器
+    // AI Manager
     private SpriteBTUpdateManager _spriteBTUpdateManager;
 
     public static SpriteManager GetInstance()
@@ -32,12 +29,12 @@ public class SpriteManager
         _spriteBTUpdateManager = new SpriteBTUpdateManager();
     }
 
-    // 添加 Sprite
+    // add Sprite
     public void AddSprite(BaseSprite sprite)
     {
         sprite.SpriteID = SpriteId++;
         _spriteList.Add(sprite);
-        // 将 Sprite 添加到 AI管理器
+        // Add Sprite to the AI manager
         _spriteBTUpdateManager.AddSprite(sprite.SpriteID, sprite as IBTNeedUpdate);
     }
 
@@ -63,7 +60,7 @@ public class SpriteManager
         {
             _spriteList[i].Update();
         }
-        // 驱动AI管理器
+        // Execute AI manager
         _spriteBTUpdateManager.Update();
     }
 

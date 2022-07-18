@@ -28,7 +28,7 @@ namespace BehaviorTree
 
                 if (((NODE_TYPE)nodeValue.NodeType == NODE_TYPE.CONDITION || (NODE_TYPE)nodeValue.NodeType == NODE_TYPE.ACTION) && nodeValue.childNodeList.Count > 0)
                 {
-                    invalidNodeValue = nodeValue;  // 叶节点 不能有子节点
+                    invalidNodeValue = nodeValue;  // Leaf nodes cannot have children
                 }
             }
 
