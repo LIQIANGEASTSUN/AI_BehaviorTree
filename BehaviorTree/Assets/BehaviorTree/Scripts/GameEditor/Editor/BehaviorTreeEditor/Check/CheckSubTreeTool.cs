@@ -121,19 +121,19 @@ namespace BehaviorTree
     {
         public void MultipleEntryNode(int subTreeNodeId)
         {
-            string meg = string.Format("子树_{0} 只能有多个入口节点", subTreeNodeId);
+            string meg = string.Format("The subtree _{0} has multiple entry nodes", subTreeNodeId);
             TreeNodeWindow.window.ShowNotification(meg);
         }
 
         public void NotEntryNode(int subTreeNodeId)
         {
-            string meg = string.Format("子树_{0} 没有入口节点", subTreeNodeId);
+            string meg = string.Format("Subtree _{0} has no entry node", subTreeNodeId);
             TreeNodeWindow.window.ShowNotification(meg);
         }
 
         public void ParentNodeId(SubTreeEntryNodeCP entryNode, List<NodeValue> nodeValueList)
         {
-            string meg = string.Format("子树入口节点{0} 父节点 {1} 不是子树节点 {2}", entryNode.nodeId, entryNode.parentNodeId, entryNode.parentSubTreeNodeId);
+            string meg = string.Format("The parent node {1} of subtree entry node {0} is different from that of subtree node {2}", entryNode.parentNodeId, entryNode.nodeId, entryNode.parentSubTreeNodeId);
             TreeNodeWindow.window.ShowNotification(meg);
         }
     }
@@ -142,19 +142,19 @@ namespace BehaviorTree
     {
         public void MultipleEntryNode(int subTreeNodeId)
         {
-            string meg = string.Format("子树_{0} 只能有多个入口节点", subTreeNodeId);
+            string meg = string.Format("The subtree _{0} has multiple entry nodes", subTreeNodeId);
             UnityEngine.Debug.LogError(meg);
         }
 
         public void NotEntryNode(int subTreeNodeId)
         {
-            string meg = string.Format("子树_{0} 没有入口节点", subTreeNodeId);
+            string meg = string.Format("Subtree _{0} has no entry node", subTreeNodeId);
             UnityEngine.Debug.LogError(meg);
         }
 
         public void ParentNodeId(SubTreeEntryNodeCP entryNode, List<NodeValue> nodeValueList)
         {
-            string meg = string.Format("子树入口节点{0} 父节点 {1} 不是子树节点 {2}", entryNode.nodeId, entryNode.parentNodeId, entryNode.parentSubTreeNodeId);
+            string meg = string.Format("The parent node {1} of subtree entry node {0} is different from that of subtree node {2}", entryNode.parentNodeId, entryNode.nodeId, entryNode.parentSubTreeNodeId);
             UnityEngine.Debug.LogError(meg);
             if (entryNode.parentNodeId < 0)
             {

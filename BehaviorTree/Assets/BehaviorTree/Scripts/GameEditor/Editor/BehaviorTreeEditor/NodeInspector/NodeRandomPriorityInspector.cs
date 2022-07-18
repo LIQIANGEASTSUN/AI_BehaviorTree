@@ -4,7 +4,7 @@ using UnityEditor;
 namespace BehaviorTree
 {
     /// <summary>
-    /// 随机权重节点
+    /// Random priority node
     /// </summary>
     public class NodeRandomPriorityInspector : NodeCompositeInspector
     {

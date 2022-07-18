@@ -1,15 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using GraphicTree;
 
 namespace BehaviorTree
 {
-    // BehaviorData 的操作：增加节点、删除节点、修改跟节点、子树操作
+    // BehaviorData Handler：Add node、Delete node、Change root node、subtree Handler
     public class DataHandler
     {
 
-        // 添加节点
         public void AddNode(Node_Draw_Info_Item info, Vector3 mousePosition, int openSubTreeId)
         {
             NodeValue newNodeValue = new NodeValue();
@@ -66,7 +64,7 @@ namespace BehaviorTree
 
             if (null == BehaviorDataController.Instance.BehaviorTreeData.parameterList)
             {
-                Debug.LogError("没有配置参数");
+                Debug.LogError("No configuration parameters");
                 return;
             }
             foreach (var parameterName in customIdentification.DefaultParameterList)
@@ -79,14 +77,14 @@ namespace BehaviorTree
                 }
                 else
                 {
-                    Debug.LogError("变量:" + parameterName + "  not found");
+                    Debug.LogError("parameter:" + parameterName + "  not found");
                 }
             }
         }
 
         /// <summary>
-        /// NodeId 规则：文件名所有字符的 Assic码相加 * 10000 + 0 - N
-        /// 如名字 abc，则第2个ID 为 ((int)a + (int)b + (int)c) * 1000 + 2 = (61 + 62 + 63) * 1000 + 2 = 1860002
+        /// NodeId Rule: Add all characters of filename to the Assic code * 10000 + 0-N
+        /// For example: fileName: abc, NodeId = ((int)a + (int)b + (int)c) * 1000 + 2 = (61 + 62 + 63) * 1000 + 2 = 186002
         /// </summary>
         /// <returns></returns>
         private int GetNewNodeId()
@@ -112,7 +110,6 @@ namespace BehaviorTree
             return id;
         }
 
-        // 删除节点
         public void DeleteNode(int nodeId)
         {
             List<NodeValue> NodeList = BehaviorDataController.Instance.NodeList;

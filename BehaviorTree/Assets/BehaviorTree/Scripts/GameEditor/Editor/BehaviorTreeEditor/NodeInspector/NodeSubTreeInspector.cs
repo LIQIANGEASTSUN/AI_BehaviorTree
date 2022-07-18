@@ -4,7 +4,7 @@ using UnityEditor;
 namespace BehaviorTree
 {
     /// <summary>
-    /// 子树节点
+    /// subTree node
     /// </summary>
     public class NodeSubTreeInspector : NodeBaseInspector
     {

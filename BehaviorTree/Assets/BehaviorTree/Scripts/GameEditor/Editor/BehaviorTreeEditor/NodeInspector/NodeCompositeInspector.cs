@@ -4,7 +4,7 @@ using UnityEditor;
 namespace BehaviorTree
 {
     /// <summary>
-    /// 组合节点:没有特殊处理的在这里实现
+    /// Composite nodes: No special handling is implemented here
     /// </summary>
     public class NodeCompositeInspector : NodeBaseInspector
     {

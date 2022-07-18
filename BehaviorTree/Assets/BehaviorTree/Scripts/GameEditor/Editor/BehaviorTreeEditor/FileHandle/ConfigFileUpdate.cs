@@ -39,7 +39,7 @@ namespace BehaviorTree
             return treeData;
         }
 
-        // 检测子节点是否包含圈
+        // Checks whether the child node contains a circle
         private void CheckCircle(BehaviorTreeData treeData, int id)
         {
             HashSet<int> hash = new HashSet<int>();

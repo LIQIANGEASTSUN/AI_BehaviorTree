@@ -79,8 +79,8 @@ namespace BehaviorTree
 
         private void DrawWindow(Action callBack)
         {
-            // 开始绘制节点 
-            // 注意：必须在  BeginWindows(); 和 EndWindows(); 之间 调用 GUI.Window 才能显示
+            // Start drawing nodes
+            // Note: GuI.window must be called between the BeginWindows method and the EndWindows method to display
             BeginWindows();
             {
                 if (null != callBack)

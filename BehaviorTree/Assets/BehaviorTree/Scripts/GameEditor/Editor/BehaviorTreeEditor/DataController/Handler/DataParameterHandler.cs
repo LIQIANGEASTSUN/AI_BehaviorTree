@@ -10,7 +10,7 @@ namespace BehaviorTree
             bool result = true;
             if (string.IsNullOrEmpty(parameter.parameterName))
             {
-                string meg = string.Format("条件参数不能为空", parameter.parameterName);
+                string meg = string.Format("Conditional parameters cannot be empty", parameter.parameterName);
                 TreeNodeWindow.window.ShowNotification(meg);
                 result = false;
             }
@@ -20,7 +20,7 @@ namespace BehaviorTree
                 NodeParameter tempParameter = parameterList[i];
                 if (tempParameter.parameterName.CompareTo(parameter.parameterName) == 0)
                 {
-                    string meg = string.Format("条件参数:{0} 已存在", parameter.parameterName);
+                    string meg = string.Format("Conditional parameter :{0} already exists", parameter.parameterName);
                     TreeNodeWindow.window.ShowNotification(meg);
                     result = false;
                     break;

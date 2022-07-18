@@ -2,9 +2,7 @@
 
 namespace BehaviorTree
 {
-    /// <summary>
-    /// 组合：修饰重复节点
-    /// </summary>
+
     public class NodeRepeatInspector : NodeCompositeInspector
     {
 

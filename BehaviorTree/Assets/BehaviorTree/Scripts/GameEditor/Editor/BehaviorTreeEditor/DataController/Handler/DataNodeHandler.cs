@@ -1,9 +1,14 @@
 ﻿using GraphicTree;
-using System.Collections.Generic;
 
 namespace BehaviorTree
 {
-    // NodeValue 的操作：添加子节点, 节点添加/删除/修改参数
+    /// <summary>
+    ///  NodeValue Handler：
+    ///  Add child node, 
+    ///  Node add parameter, 
+    ///  Node delete parameter, 
+    ///  Node modify parameter
+    /// </summary>
     public class DataNodeHandler
     {
 
@@ -40,17 +45,17 @@ namespace BehaviorTree
                 result = false;
                 if (childNode.parentNodeID != parentId)
                 {
-                    msg = "已经有父节点";
+                    msg = "There is already a parent node";
                 }
                 else
                 {
-                    msg = "不能重复添加父节点";
+                    msg = "You cannot add a parent node repeatedly";
                 }
             }
 
             if (parentNode.parentNodeID >= 0 && parentNode.parentNodeID == childNode.id)
             {
-                msg = "不能添加父节点作为子节点";
+                msg = "You cannot add a parent node as a child node";
                 result = false;
             }
 
@@ -64,7 +69,7 @@ namespace BehaviorTree
                 return;
             }
 
-            // 修饰节点只能有一个子节点
+            // A decorator node can have only one child node
             if (parentNode.NodeType >= (int)NODE_TYPE.DECORATOR_INVERTER && parentNode.NodeType <= (int)NODE_TYPE.DECORATOR_UNTIL_SUCCESS)
             {
                 for (int i = 0; i < parentNode.childNodeList.Count; ++i)

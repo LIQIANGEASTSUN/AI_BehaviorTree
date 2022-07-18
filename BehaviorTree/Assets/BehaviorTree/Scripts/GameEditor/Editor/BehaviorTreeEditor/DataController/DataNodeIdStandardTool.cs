@@ -1,7 +1,7 @@
 ﻿
 namespace BehaviorTree
 {
-    // NodeId 标准化
+    // NodeId Standard
     public class DataNodeIdStandardTool
     {
         public static BehaviorTreeData StandardID(BehaviorTreeData data)

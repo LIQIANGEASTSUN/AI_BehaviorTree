@@ -8,7 +8,7 @@ namespace BehaviorTree
 {
 
     /// <summary>
-    /// 叶子节点
+    /// Leaf Node
     /// </summary>
     public abstract class NodeLeafInspector : NodeBaseInspector
     {

@@ -6,7 +6,7 @@ using UnityEditor;
 namespace BehaviorTree
 {
     /// <summary>
-    /// 条件节点
+    /// Condition Node
     /// </summary>
     public class NodeConditionInspector : NodeLeafInspector
     {

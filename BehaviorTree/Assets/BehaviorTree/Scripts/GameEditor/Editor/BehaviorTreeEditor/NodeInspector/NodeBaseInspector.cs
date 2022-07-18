@@ -12,7 +12,7 @@ namespace BehaviorTree
         }
 
         /// <summary>
-        /// Draw 中的方法调用顺序不能改
+        /// The order of method calls cannot be changed
         /// </summary>
         public void Draw()
         {
@@ -70,7 +70,7 @@ namespace BehaviorTree
             EditorGUILayout.EndHorizontal();
         }
 
-        // 具体节点特有的一些变量
+        // Some variables specific to the node
         protected virtual void Common()
         {
 

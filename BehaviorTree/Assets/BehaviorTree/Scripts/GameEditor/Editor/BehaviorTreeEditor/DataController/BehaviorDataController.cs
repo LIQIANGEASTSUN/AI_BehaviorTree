@@ -61,7 +61,7 @@ namespace BehaviorTree
             get { return _configDataDic; }
         }
 
-        // 当前选择的节点
+        // The currently selected node
         private int _currentSelectId = 0;
         public int CurrentSelectId
         {
@@ -69,7 +69,7 @@ namespace BehaviorTree
             set { _currentSelectId = value; }
         }
 
-        // 当前选择的子树节点
+        // The currently selected subtree node
         private int _currentOpenSubTreeId = -1;
         public int CurrentOpenSubTree
         {
