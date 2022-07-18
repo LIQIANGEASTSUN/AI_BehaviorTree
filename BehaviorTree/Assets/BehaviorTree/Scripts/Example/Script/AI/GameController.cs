@@ -36,8 +36,6 @@ public class GameController : MonoBehaviour
         NumberSprite numberSprite = new NumberSprite();
         numberSprite.Init(Vector3.zero);
         SpriteManager.GetInstance().AddSprite(numberSprite);
-
-        NumberTest.Instance.SetNumberSprite(numberSprite);
     }
 
     private void OnGUI()
