@@ -1,15 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using BehaviorTree;
+﻿using BehaviorTree;
+using System;
 
-public class NodeConditionCustom : NodeCondition
+/// <summary>
+/// Conditional parameters can be added dynamically as required
+/// </summary>
+public sealed class NodeConditionCustom : NodeCondition
 {
-
-    public NodeConditionCustom()
-    {
-
-    }
 
     public override void OnEnter()
     {
@@ -18,6 +14,7 @@ public class NodeConditionCustom : NodeCondition
 
     public override ResultType Condition()
     {
+        // Compares configured condition parameters
         bool result = _iconditionCheck.Condition(conditionParameter);
         ResultType resultType = result ? ResultType.Success : ResultType.Fail;
         return resultType;

@@ -7,7 +7,7 @@ namespace BehaviorTree
     /// <summary>
     /// 条件节点(叶节点)
     /// </summary>
-    public class NodeCondition : NodeLeaf, ICondition
+    public abstract class NodeCondition : NodeLeaf, ICondition
     {
         protected List<NodeParameter> _parameterList;
         private List<ConditionGroup> _conditionGroupList;
@@ -44,9 +44,11 @@ namespace BehaviorTree
             _conditionGroupList = conditionGroupList;
         }
 
-        public virtual ResultType Condition()
-        {
-            return ResultType.Success;
-        }
+        /// <summary>
+        /// condition node need to implement this method
+        /// </summary>
+        /// <returns></returns>
+        public abstract ResultType Condition();
+
     }
 }

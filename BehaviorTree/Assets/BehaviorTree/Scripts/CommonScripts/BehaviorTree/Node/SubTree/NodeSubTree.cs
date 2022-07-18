@@ -4,12 +4,12 @@ using GraphicTree;
 namespace BehaviorTree
 {
     /// <summary>
-    /// 子树
+    /// subtree
     /// </summary>
     public class NodeSubTree : NodeComposite
     {
         protected NodeBase lastRunningNode;
-        public static string descript = "子树";
+        public static string descript = "subtree";
 
         public NodeSubTree() : base(NODE_TYPE.SUB_TREE)
         { }

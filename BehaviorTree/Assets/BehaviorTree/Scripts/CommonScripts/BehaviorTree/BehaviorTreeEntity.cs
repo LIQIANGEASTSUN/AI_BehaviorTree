@@ -4,6 +4,9 @@ using GraphicTree;
 
 namespace BehaviorTree
 {
+    /// <summary>
+    /// behavior tree configuration file is instantiated at run time as a BehaviorTreeEntity class
+    /// </summary>
     public class BehaviorTreeEntity
     {
         private NodeBase _rootNode;
@@ -12,12 +15,15 @@ namespace BehaviorTree
         private int _entityId;
         private static int _currentDebugEntityId;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="aiFunction"></param>
+        /// <param name="data">configuration file data</param>
         public BehaviorTreeEntity(long aiFunction, BehaviorTreeData data)
         {
             _iconditionCheck = new ConditionCheck();
-            //UnityEngine.Profiling.Profiler.BeginSample("Analysis");
             _rootNode = BehaviorAnalysis.GetInstance().Analysis(aiFunction, data, _iconditionCheck, AddInvalidSubTree);
-            //UnityEngine.Profiling.Profiler.EndSample();
             if (null != _rootNode)
             {
                 _entityId = _rootNode.EntityId;
@@ -75,7 +81,6 @@ namespace BehaviorTree
             {
                 _rootNode.Postposition(ResultType.Fail);
             }
-            //ConditionCheck.InitParmeter();
         }
 
         public void Exit()

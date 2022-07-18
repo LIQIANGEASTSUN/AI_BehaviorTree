@@ -10,7 +10,7 @@ namespace BehaviorTree
         public List<NodeValue> nodeList = new List<NodeValue>();
         public List<NodeParameter> parameterList = new List<NodeParameter>();
         public string descript = string.Empty;
-        // 存储时将 dic 清空，在 RunTime 时使用
+        // nodeDic is cleared for storage and used at RunTime
         public Dictionary<int, NodeValue> nodeDic = new Dictionary<int, NodeValue>();
     }
 
@@ -43,7 +43,7 @@ namespace BehaviorTree
         public long subTreeValue = -1;
         #endregion
 
-        #region 编辑器用
+        #region Editor use
         public RectT position = new RectT(); // 节点位置（编辑器显示使用）
         public bool moveWithChild = false;  // 同步移动子节点
         #endregion

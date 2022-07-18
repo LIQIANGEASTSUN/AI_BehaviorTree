@@ -5,9 +5,8 @@ using GraphicTree;
 
 namespace BehaviorTree
 {
-
     /// <summary>
-    /// 动态子树
+    /// dynamic subtree
     /// </summary>
     public abstract class NodeSubTreeDynamicAB : NodeSubTree
     {

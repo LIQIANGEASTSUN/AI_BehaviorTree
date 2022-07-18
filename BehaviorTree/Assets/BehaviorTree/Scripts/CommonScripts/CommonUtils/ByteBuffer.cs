@@ -247,7 +247,7 @@ public class ByteBufferRead
             return value;
         }
 
-        value = BitConverter.ToChar(byteData, readIndex);// BitConverter.ToChar(byteData, readIndex);
+        value = BitConverter.ToChar(byteData, readIndex);
 
         ReadCount(length);
         return value;
@@ -262,7 +262,7 @@ public class ByteBufferRead
             return value;
         }
 
-        value = BitConverter.ToInt16(byteData, readIndex);// BitConverter.ToInt16(byteData, readIndex);
+        value = BitConverter.ToInt16(byteData, readIndex);
 
         ReadCount(length);
         return value;
@@ -277,7 +277,7 @@ public class ByteBufferRead
             return value;
         }
 
-        value = BitConverter.ToUInt16(byteData, readIndex);// BitConverter.ToUInt16(byteData, readIndex);
+        value = BitConverter.ToUInt16(byteData, readIndex);
 
         ReadCount(length);
         return value;
@@ -292,7 +292,7 @@ public class ByteBufferRead
             return value;
         }
 
-        value = BitConverter.ToInt16(byteData, readIndex);// BitConverter.ToInt16(byteData, readIndex);
+        value = BitConverter.ToInt16(byteData, readIndex);
 
         ReadCount(length);
         return value;
@@ -307,7 +307,7 @@ public class ByteBufferRead
             return value;
         }
 
-        value = BitConverter.ToUInt32(byteData, readIndex);// BitConverter.ToUInt32(byteData, readIndex);
+        value = BitConverter.ToUInt32(byteData, readIndex);
 
         ReadCount(length);
         return value;
@@ -322,7 +322,7 @@ public class ByteBufferRead
             return value;
         }
 
-        value = BitConverter.ToInt32(byteData, readIndex);// BitConverter.ToInt32(byteData, readIndex);
+        value = BitConverter.ToInt32(byteData, readIndex);
 
         ReadCount(length);
         return value;
@@ -337,7 +337,7 @@ public class ByteBufferRead
             return value;
         }
 
-        value = BitConverter.ToUInt64(byteData, readIndex);// BitConverter.ToUInt64(byteData, readIndex);
+        value = BitConverter.ToUInt64(byteData, readIndex);
 
         ReadCount(length);
         return value;
@@ -352,7 +352,7 @@ public class ByteBufferRead
             return value;
         }
 
-        value = BitConverter.ToInt64(byteData, readIndex);// BitConverter.ToInt64(byteData, readIndex);
+        value = BitConverter.ToInt64(byteData, readIndex);
 
         ReadCount(length);
         return value;
@@ -367,7 +367,7 @@ public class ByteBufferRead
             return value;
         }
 
-        value = BitConverter.ToSingle(byteData, readIndex);// BitConverter.ToSingle(byteData, readIndex);
+        value = BitConverter.ToSingle(byteData, readIndex);
 
         ReadCount(length);
         return value;

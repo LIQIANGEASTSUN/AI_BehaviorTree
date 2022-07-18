@@ -1,8 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using BehaviorTree;
 
+/// <summary>
+/// use in the Debug Mode
+/// in the runtime, select a GameObject with BehaviorTreeDebug added to it in Unity's Hierarchy panel, 
+/// then open Window->BehaviorTree: views node execution in real time
+/// </summary>
 public class BehaviorTreeDebug : MonoBehaviour
 {
     private BehaviorTreeData _behaviorTreeData;
@@ -10,10 +13,6 @@ public class BehaviorTreeDebug : MonoBehaviour
 
     public delegate void BehaviorTreeDebugEvent(BehaviorTreeData behaviorTreeData, BehaviorTreeEntity entity);
     private static BehaviorTreeDebugEvent _treeDebugEvent;
-
-    private void Awake()
-    {
-    }
 
     public void OnSelect(bool value)
     {

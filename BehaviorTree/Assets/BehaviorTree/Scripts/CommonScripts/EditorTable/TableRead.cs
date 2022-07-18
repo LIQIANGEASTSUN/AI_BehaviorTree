@@ -65,6 +65,9 @@ public class TableRead
     
 }
 
+/// <summary>
+/// analyse the CSV configuration file in editor mode
+/// </summary>
 public class TableData
 {
     private string _fileName = string.Empty;

@@ -7,7 +7,7 @@ namespace BehaviorTree
     /// <summary>
     /// Action node
     /// </summary>
-    public class NodeAction : NodeLeaf, IAction
+    public abstract class NodeAction : NodeLeaf, IAction
     {
         protected List<NodeParameter> _parameterList = new List<NodeParameter>();
 
@@ -30,9 +30,11 @@ namespace BehaviorTree
             _parameterList.AddRange(parameterList);
         }
 
-        public virtual ResultType DoAction()
-        {
-            return ResultType.Success;
-        }
+        /// <summary>
+        /// action node need to implement this method
+        /// </summary>
+        /// <returns></returns>
+        public abstract ResultType DoAction();
+
     }
 }
