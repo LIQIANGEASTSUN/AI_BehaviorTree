@@ -4,7 +4,7 @@ using GraphicTree;
 namespace BehaviorTree
 {
     /// <summary>
-    /// 重复执行修饰节点 Repeater 重复执行子节点 N 次
+    /// Repeat execution of the child node 
     /// </summary>
     public class NodeDecoratorRepeat : NodeDecorator
     {

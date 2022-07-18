@@ -4,7 +4,7 @@ using GraphicTree;
 namespace BehaviorTree
 {
     /// <summary>
-    /// 自定义节点配置
+    /// Custom node configuration
     /// </summary>
     public class BehaviorConfigNode : AbstractConfigNode
     {
@@ -18,28 +18,21 @@ namespace BehaviorTree
         public override void Init()
         {
             base.Init();
-#if true
-            #region 行为节点
-            Config<PlayerAttackAction>("Player/攻击");
-            Config<PlayerMoveAction>("Player/移动");
-            Config<PlayerPatrolAction>("Player/巡逻");
-            Config<PlayerReplenishEnergyAction>("Player/补充能量");
-            Config<PlayerSearchEnemyAction>("Player/搜索敌人");
 
+            // Add the custom node
+            Config<PlayerAttackAction>("Player/Attack");
+            Config<PlayerMoveAction>("Player/Move");
+            Config<PlayerPatrolAction>("Player/Patrol");
+            Config<PlayerReplenishEnergyAction>("Player/Replenish Energy");
+            Config<PlayerSearchEnemyAction>("Player/Search Enemy");
+            Config<PlayerEnougthEnergyCondition>("Player/Enougth Energy Condition");
 
             Config<NumberActionDo1>("Number/Do1");
             Config<NumberActionDo2>("Number/Do2");
             Config<NumberActionDo3>("Number/Do3");
             Config<NumberActionDo4>("Number/Do4");
-            #endregion
 
-            #region 条件节点
-            Config<PlayerEnougthEnergyCondition>("Player/能量是否足够判断");
-            #endregion
-#endif
-
-            Config<NodeConditionCustom>("通用条件节点");
-
+            Config<NodeConditionCustom>("Custom Condition");
 
             #region DefaultParameter
             ConfigDefaultParameter<PlayerEnougthEnergyCondition>(new List<string>() { BTConstant.Energy });
@@ -47,6 +40,11 @@ namespace BehaviorTree
             #endregion
         }
 
+        /// <summary>
+        /// Add default parameters for the node
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="parameterList">The parameters are in the behavior tree parameter list</param>
         private void ConfigDefaultParameter<T>(List<string> parameterList) where T : NodeBase, new()
         {
             string identificationName = CustomIdentification.GetIdentification<T>();
@@ -54,10 +52,12 @@ namespace BehaviorTree
             info.DefaultParameterList.AddRange(parameterList);
         }
 
+        /// <summary>
+        /// The initial composite node
+        /// </summary>
         protected override void PrimaryNode()
         {
-            #region 组合节点
-            
+            #region Composite Node
             Config<NodeSelect>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.SELECT), (int)NODE_TYPE.SELECT);
             Config<NodeSequence>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.SEQUENCE), (int)NODE_TYPE.SEQUENCE);
             Config<NodeRandomSelect>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.RANDOM), (int)NODE_TYPE.RANDOM);
@@ -70,7 +70,7 @@ namespace BehaviorTree
             Config<NodeIfJudgeSequence>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.IF_JUDEG_SEQUENCE), (int)NODE_TYPE.IF_JUDEG_SEQUENCE);
             #endregion
 
-            #region 修饰节点
+            #region Decorator Node
             Config<NodeDecoratorInverter>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.DECORATOR_INVERTER), (int)NODE_TYPE.DECORATOR_INVERTER);
             Config<NodeDecoratorRepeat>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.DECORATOR_REPEAT), (int)NODE_TYPE.DECORATOR_REPEAT);
             Config<NodeDecoratorReturnFail>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.DECORATOR_RETURN_FAIL), (int)NODE_TYPE.DECORATOR_RETURN_FAIL);

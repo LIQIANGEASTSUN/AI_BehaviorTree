@@ -4,7 +4,7 @@ using GraphicTree;
 namespace BehaviorTree
 {
     /// <summary>
-    /// 修饰节点：一直执行节点，直到达到条件
+    /// execute child node until the child node returns a fixed result
     /// </summary>
     public abstract class NodeDecoratorUntil : NodeDecorator
     {

@@ -1,7 +1,7 @@
 ﻿namespace BehaviorTree
 {
     /// <summary>
-    /// 修饰节点(组合节点)
+    /// decorator node
     /// </summary>
     public abstract class NodeDecorator : NodeComposite
     {

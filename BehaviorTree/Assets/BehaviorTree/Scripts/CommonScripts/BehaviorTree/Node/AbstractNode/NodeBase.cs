@@ -4,32 +4,33 @@ using GraphicTree;
 namespace BehaviorTree
 {
     /// <summary>
-    /// 节点超类
+    /// node abstract superclass
     /// </summary>
     public abstract class NodeBase : AbstractNode
     {
         /// <summary>
-        /// 节点类型
+        /// node type
         /// </summary>
         protected NODE_TYPE nodeType;
-
-        /// <summary>
-        /// 权重
-        /// </summary>
         private int priority;
 
+        /// <summary>
+        /// node execution status
+        /// </summary>
         protected NODE_STATUS nodeStatus = NODE_STATUS.READY;
 
         /// <summary>
-        /// 执行节点抽象方法
+        /// Execute the node abstract method
         /// </summary>
-        /// <returns>返回执行结果</returns>
+        /// <returns>Return execution result</returns>
         public virtual ResultType Execute()
         {
             return ResultType.Fail;
         }
 
-        //执行 Execute 的前置方法，在 Execute() 方法的第一行调用
+        /// <summary>
+        /// Called on the first line of the Execute() method
+        /// </summary>
         public void Preposition()
         {
             if (nodeStatus == NODE_STATUS.READY)
@@ -40,7 +41,7 @@ namespace BehaviorTree
         }
 
         /// <summary>
-        ///  执行 Execute 的后置方法，在 Execute() 方法的 returen 前调用
+        ///  Called before returen of the Execute() method
         /// </summary>
         public void Postposition(ResultType resultType)
         {

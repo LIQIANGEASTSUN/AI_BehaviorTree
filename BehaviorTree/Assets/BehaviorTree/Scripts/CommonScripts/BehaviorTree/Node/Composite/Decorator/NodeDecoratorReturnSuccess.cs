@@ -4,7 +4,7 @@ using GraphicTree;
 namespace BehaviorTree
 {
     /// <summary>
-    /// 修饰节点_返回Success
+    /// Return to success
     /// </summary>
     public class NodeDecoratorReturnSuccess : NodeDecoratorReturnConst
     {

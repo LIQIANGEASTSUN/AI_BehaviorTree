@@ -1,23 +1,23 @@
 ﻿namespace BehaviorTree
 {
     /// <summary>
-    /// 节点执行结果
+    /// node execution result
     /// </summary>
     public enum ResultType
     {
         /// <summary>
-        /// 失败
+        /// Fail
         /// </summary>
         Fail        = 0,
 
         /// <summary>
-        /// 成功
+        /// Success
         /// </summary>
-        Success     = 1,
+        Success = 1,
 
         /// <summary>
-        /// 执行中
+        /// Running
         /// </summary>
-        Running     = 2,
+        Running = 2,
     }
 }

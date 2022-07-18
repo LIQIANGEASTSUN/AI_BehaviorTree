@@ -14,7 +14,6 @@ public class NumberSprite : BaseSprite
 
     protected override string AIConfigFile()
     {
-        return "TTTTT";
         return "number_tree";
     }
 

@@ -3,13 +3,13 @@ using System;
 using System.Reflection;
 
 /// <summary>
-/// 设置枚举名称
+/// enumeration
 /// </summary>
 [AttributeUsage(AttributeTargets.Field)]
 public class EnumAttirbute : PropertyAttribute
 {
     /// <summary>
-    /// 枚举名称
+    /// The enumeration name
     /// </summary>
     public string name;
     public EnumAttirbute(string name)

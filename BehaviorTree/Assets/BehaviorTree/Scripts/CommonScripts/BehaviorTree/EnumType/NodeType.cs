@@ -1,7 +1,7 @@
 ﻿namespace BehaviorTree
 {
     /// <summary>
-    /// 行为树节点类型
+    /// Behavior Tree node type
     /// </summary>
     public enum NODE_TYPE
     {
@@ -138,7 +138,7 @@
     }
 
     /// <summary>
-    /// 子树类型
+    /// Subtree type
     /// </summary>
     public enum SUB_TREE_TYPE
     {
@@ -156,7 +156,7 @@
     }
 
     /// <summary>
-    /// 判断节点类型
+    /// If node type
     /// </summary>
     public enum NodeIfJudgeEnum
     {

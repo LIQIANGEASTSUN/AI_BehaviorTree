@@ -3,11 +3,11 @@
 namespace BehaviorTree
 {
     /// <summary>
-    /// 组合节点
+    /// composite abstract node
     /// </summary>
     public abstract class NodeComposite : NodeBase
     {
-        // 保存子节点
+        //cache child nodes
         protected List<NodeBase> nodeChildList = new List<NodeBase>();
 
         public NodeComposite(NODE_TYPE nodeType) : base()
@@ -15,6 +15,10 @@ namespace BehaviorTree
             SetNodeType(nodeType);
         }
 
+        /// <summary>
+        /// add child node
+        /// </summary>
+        /// <param name="node"></param>
         public void AddNode(NodeBase node)
         {
             int count = nodeChildList.Count;
@@ -22,6 +26,10 @@ namespace BehaviorTree
             nodeChildList.Add(node);
         }
 
+        /// <summary>
+        /// get all child nodes
+        /// </summary>
+        /// <returns></returns>
         public List<NodeBase> GetChilds()
         {
             return nodeChildList;

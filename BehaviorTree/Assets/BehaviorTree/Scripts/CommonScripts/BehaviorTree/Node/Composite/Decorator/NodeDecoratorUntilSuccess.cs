@@ -5,7 +5,7 @@ using UnityEngine;
 namespace BehaviorTree
 {
     /// <summary>
-    /// 直到为Success修饰节点， 一直执行节点，直到返回结果为 Success。
+    /// execute child node until the child node returns success
     /// </summary>
     public class NodeDecoratorUntilSuccess : NodeDecoratorUntil
     {

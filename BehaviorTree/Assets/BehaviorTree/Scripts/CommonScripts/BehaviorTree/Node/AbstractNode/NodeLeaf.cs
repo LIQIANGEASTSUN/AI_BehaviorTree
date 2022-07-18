@@ -1,9 +1,8 @@
-﻿using System.Collections.Generic;
-
+﻿
 namespace BehaviorTree
 {
     /// <summary>
-    /// 叶节点
+    /// leaf node
     /// </summary>
     [System.Serializable]
     public class NodeLeaf : NodeBase

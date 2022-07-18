@@ -4,7 +4,7 @@ using GraphicTree;
 namespace BehaviorTree
 {
     /// <summary>
-    /// 取反修饰节点 Inverter        对子节点执行结果取反
+    /// Reverse the execution result of the child node
     /// </summary>
     public class NodeDecoratorInverter : NodeDecorator
     {
