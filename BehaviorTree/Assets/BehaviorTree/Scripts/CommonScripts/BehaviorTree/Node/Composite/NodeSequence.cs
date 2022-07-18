@@ -4,7 +4,7 @@ using GraphicTree;
 namespace BehaviorTree
 {
     /// <summary>
-    /// 顺序节点(组合节点)
+    /// sequence node
     /// </summary>
     public class NodeSequence : NodeComposite
     {
@@ -70,34 +70,3 @@ namespace BehaviorTree
         }
     }
 }
-
-/*
-
-    index = 1
-    if != lastRunningNode null then
-        index = lastRunningNode.index
-    end
-
-    lastRunningNode = null
-    for i <- index to N do 
-    
-        Node node =  GetNode(i);
-
-        result = node.execute()
-        
-        if result == fail then
-           return fail;
-        end
-
-        if result == running then
-            lastRunningNode = node
-            return running
-        end
-
-    end
-
-    return success
-
-
-
-*/

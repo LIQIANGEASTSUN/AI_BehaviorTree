@@ -5,7 +5,7 @@ using GraphicTree;
 namespace BehaviorTree
 {
     /// <summary>
-    /// 行为节点(叶节点)
+    /// Action node
     /// </summary>
     public class NodeAction : NodeLeaf, IAction
     {
@@ -19,15 +19,7 @@ namespace BehaviorTree
         public override ResultType Execute()
         {
             ResultType resultType = ResultType.Fail;
-            if (!Application.isPlaying)
-            {
-                // 编辑器下预览用
-                resultType = ResultType.Running;
-            }
-            else
-            {
-                resultType = DoAction();
-            }
+            resultType = DoAction();
 
             NodeNotify.NotifyExecute(EntityId, NodeId, (int)resultType, Time.realtimeSinceStartup);
             return resultType;
@@ -36,17 +28,11 @@ namespace BehaviorTree
         public void SetParameters(List<NodeParameter> parameterList)
         {
             _parameterList.AddRange(parameterList);
-            //if (parameterList.Count > 0)
-            //{
-            //    _parameterList.AddRange(parameterList);
-            //}
         }
 
         public virtual ResultType DoAction()
         {
             return ResultType.Success;
         }
-
     }
-
 }

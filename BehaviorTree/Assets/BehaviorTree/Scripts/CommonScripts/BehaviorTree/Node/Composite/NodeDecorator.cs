@@ -9,14 +9,14 @@
         { }
 
         /// <summary>
-        /// 修饰节点不能独立存在，其作用为对子节点进行修饰，以得到我们所希望的结果
-        /// 修饰节点常用的几个类型如下：
-        /// Inverter        对子节点执行结果取反
-        /// Repeater        重复执行子节点 N 次
-        /// Return Failure  执行到此节点时返回失败
-        /// Return Success  执行到此节点时返回成功
-        /// Unitl Failure   直到失败，一直执行子节点
-        /// Until Success   直到成功，一直执行子节点
+        /// The modifier node cannot exist independently, and its function is to modify the child node to get the desired result
+        /// The common types of modifier nodes are as follows:
+        /// Inverter        Reverse the execution result of the child node
+        /// Repeater        Repeat execution of the child node 
+        /// Return Fail     Execute the child node and return Fail
+        /// Return Success  Execute the child node and return Success
+        /// Unitl Failure   Execute child node until the child node returns fail
+        /// Until Success   Execute child node until the child node returns fail
         /// </summary>
         /// <returns></returns>
         public override ResultType Execute()

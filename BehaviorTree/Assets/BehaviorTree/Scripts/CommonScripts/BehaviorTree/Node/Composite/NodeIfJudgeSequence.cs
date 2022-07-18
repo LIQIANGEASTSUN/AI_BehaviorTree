@@ -5,7 +5,7 @@ using UnityEngine;
 namespace BehaviorTree
 {
     /// <summary>
-    /// if 判断顺序节点
+    /// If sequence node
     /// </summary>
     public class NodeIfJudgeSequence : NodeIfJudge
     {
@@ -15,9 +15,6 @@ namespace BehaviorTree
         public NodeIfJudgeSequence() : base(NODE_TYPE.IF_JUDEG_SEQUENCE)
         { }
 
-        /// <summary>
-        /// NodeDescript.GetDescript(NODE_TYPE);
-        /// </summary>
         public override ResultType Execute()
         {
             if (nodeChildList.Count <= 0)
@@ -33,7 +30,7 @@ namespace BehaviorTree
             }
             else
             {
-                // 条件节点
+                // The first node is the conditional node
                 NodeBase ifNode = nodeChildList[0];
                 resultType = ExecuteNode(ifNode, true);
                 if (resultType == ResultType.Running)

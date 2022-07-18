@@ -4,7 +4,7 @@ using GraphicTree;
 namespace BehaviorTree
 {
     /// <summary>
-    /// Return to fail
+    /// Execute the child node and return Fail
     /// </summary>
     public class NodeDecoratorReturnFail : NodeDecoratorReturnConst
     {

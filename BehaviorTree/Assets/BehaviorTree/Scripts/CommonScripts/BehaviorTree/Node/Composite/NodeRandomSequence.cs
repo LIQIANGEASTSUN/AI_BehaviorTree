@@ -4,7 +4,7 @@ using GraphicTree;
 namespace BehaviorTree
 {
     /// <summary>
-    /// 随机顺序节点(组合节点)
+    /// random sequence node
     /// </summary>
     public class NodeRandomSequence : NodeRandom
     {

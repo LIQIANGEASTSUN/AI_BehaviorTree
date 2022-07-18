@@ -7,7 +7,7 @@ using GraphicTree;
 namespace BehaviorTree
 {
     /// <summary>
-    /// 随机权重节点(组合节点)
+    /// random priority node
     /// </summary>
     public class NodeRandomPriority : NodeRandom
     {

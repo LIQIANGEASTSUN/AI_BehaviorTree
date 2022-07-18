@@ -4,7 +4,7 @@ using GraphicTree;
 namespace BehaviorTree
 {
     /// <summary>
-    /// 随机选择节点(组合节点)
+    /// random select node
     /// </summary>
     public class NodeRandomSelect : NodeRandom
     {

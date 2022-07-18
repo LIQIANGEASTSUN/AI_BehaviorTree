@@ -5,7 +5,7 @@ using GraphicTree;
 namespace BehaviorTree
 {
     /// <summary>
-    /// if 判断并行节点
+    /// if node
     /// </summary>
     public abstract class NodeIfJudge : NodeComposite
     {

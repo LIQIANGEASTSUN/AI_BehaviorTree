@@ -5,7 +5,7 @@ using UnityEngine;
 namespace BehaviorTree
 {
     /// <summary>
-    /// if 判断并行节点
+    /// If parallel node
     /// </summary>
     public class NodeIfJudgeParallel : NodeIfJudge
     {
@@ -25,7 +25,7 @@ namespace BehaviorTree
             }
 
             ResultType resultType = ResultType.Fail;
-            // 条件节点
+            // The first node is the conditional node
             NodeBase ifNode = nodeChildList[0];
             resultType = ExecuteNode(ifNode, true);
             if (resultType == ResultType.Running)

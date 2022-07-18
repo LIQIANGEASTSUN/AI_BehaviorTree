@@ -4,7 +4,7 @@ using GraphicTree;
 namespace BehaviorTree
 {
     /// <summary>
-    /// 并行选择节点(组合节点)
+    /// parallel select node
     /// </summary>
     public class NodeParallelSelect : NodeComposite
     {

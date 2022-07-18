@@ -4,7 +4,7 @@ using GraphicTree;
 namespace BehaviorTree
 {
     /// <summary>
-    /// 并行节点(组合节点)
+    /// Parallel node
     /// </summary>
     public class NodeParallel : NodeComposite
     {
@@ -75,35 +75,3 @@ namespace BehaviorTree
         }
     }
 }
-
-
-/*
-    
-    successCount = 0
-
-    for i <- index to N do 
-    
-        Node node =  GetNode(i);
-
-        result = node.execute()
-        
-        if result == fail then
-           return fail;
-        end
-
-        if result == success then
-            ++successCount
-            continue
-        end
-
-        if result == running then
-            continue
-        end
-    end
-
-    if successCount >= childCount then
-        return success
-    end
-
-    return running
-*/

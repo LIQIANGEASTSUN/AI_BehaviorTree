@@ -4,7 +4,7 @@ using GraphicTree;
 namespace BehaviorTree
 {
     /// <summary>
-    /// 并行执行所有节点
+    /// Execute all nodes in parallel
     /// </summary>
     public class NodeParallelAll : NodeComposite
     {
