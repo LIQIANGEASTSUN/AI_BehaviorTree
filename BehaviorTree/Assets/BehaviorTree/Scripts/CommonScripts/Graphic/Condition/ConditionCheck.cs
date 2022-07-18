@@ -5,13 +5,24 @@ namespace GraphicTree
 
     public class ConditionCheck : IConditionCheck
     {
-        //存储所有能用到的参数，数据来源于配置，在Init时候存到_environmentParameterDic中去，如果除了初始化时没别的地方用到，可以省略
+        /// <summary>
+        /// Store all the parameters used, data from the configuration,
+        /// Save it in _environmentParameterDic when Init
+        /// </summary>
         private List<NodeParameter> _parameterList = new List<NodeParameter>();
-        //缓存当前行为树使用到的所有参数类型,保存当前世界状态中所有参数动态变化的值
+
+        /// <summary>
+        /// Saves the values of all parameters in the environment variable
+        /// </summary>
         private Dictionary<string, NodeParameter> _environmentParameterDic = new Dictionary<string, NodeParameter>();
 
         public ConditionCheck() { }
 
+        /// <summary>
+        /// Set the value of the environment variable of type bool
+        /// </summary>
+        /// <param name="parameterName"></param>
+        /// <param name="boolValue"></param>
         public void SetParameter(string parameterName, bool boolValue)
         {
             NodeParameter parameter = GetNodeParametere(parameterName);
@@ -23,6 +34,11 @@ namespace GraphicTree
             parameter.boolValue = boolValue;
         }
 
+        /// <summary>
+        /// Set the value of the environment variable of type float
+        /// </summary>
+        /// <param name="parameterName"></param>
+        /// <param name="floatValue"></param>
         public void SetParameter(string parameterName, float floatValue)
         {
             NodeParameter parameter = GetNodeParametere(parameterName);
@@ -34,6 +50,11 @@ namespace GraphicTree
             parameter.floatValue = floatValue;
         }
 
+        /// <summary>
+        /// Set the value of the environment variable of type int
+        /// </summary>
+        /// <param name="parameterName"></param>
+        /// <param name="intValue"></param>
         public void SetParameter(string parameterName, int intValue)
         {
             NodeParameter parameter = GetNodeParametere(parameterName);
@@ -45,6 +66,11 @@ namespace GraphicTree
             parameter.intValue = intValue;
         }
 
+        /// <summary>
+        /// Set the value of the environment variable of type long
+        /// </summary>
+        /// <param name="parameterName"></param>
+        /// <param name="longValue"></param>
         public void SetParameter(string parameterName, long longValue)
         {
             NodeParameter parameter = GetNodeParametere(parameterName);
@@ -56,6 +82,11 @@ namespace GraphicTree
             parameter.longValue = longValue;
         }
 
+        /// <summary>
+        /// Set the value of the environment variable of type string
+        /// </summary>
+        /// <param name="parameterName"></param>
+        /// <param name="stringValue"></param>
         public void SetParameter(string parameterName, string stringValue)
         {
             NodeParameter parameter = GetNodeParametere(parameterName);
@@ -75,6 +106,10 @@ namespace GraphicTree
             return nodeParameter;
         }
 
+        /// <summary>
+        /// Add environment variables
+        /// </summary>
+        /// <param name="parameter"></param>
         public void AddParameter(NodeParameter parameter)
         {
             NodeParameter cache = GetNodeParametere(parameter.parameterName);
@@ -84,6 +119,11 @@ namespace GraphicTree
             }
         }
 
+        /// <summary>
+        /// Get the environment variable based on the parameter name
+        /// </summary>
+        /// <param name="parameterName"></param>
+        /// <returns></returns>
         private NodeParameter GetNodeParametere(string parameterName)
         {
             NodeParameter parameter = null;
@@ -91,6 +131,12 @@ namespace GraphicTree
             return parameter;
         }
 
+        /// <summary>
+        /// Get the value of the environment variable based on the parameter name
+        /// </summary>
+        /// <param name="parameterName"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public bool GetParameterValue(string parameterName, ref int value)
         {
             NodeParameter parameter = GetNodeParametere(parameterName);
@@ -102,6 +148,12 @@ namespace GraphicTree
             return false;
         }
 
+        /// <summary>
+        /// Get the value of the environment variable based on the parameter name
+        /// </summary>
+        /// <param name="parameterName"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public bool GetParameterValue(string parameterName, ref long value)
         {
             NodeParameter parameter = GetNodeParametere(parameterName);
@@ -113,6 +165,12 @@ namespace GraphicTree
             return false;
         }
 
+        /// <summary>
+        /// Get the value of the environment variable based on the parameter name
+        /// </summary>
+        /// <param name="parameterName"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public bool GetParameterValue(string parameterName, ref float value)
         {
             NodeParameter parameter = GetNodeParametere(parameterName);
@@ -124,6 +182,12 @@ namespace GraphicTree
             return false;
         }
 
+        /// <summary>
+        /// Get the value of the environment variable based on the parameter name
+        /// </summary>
+        /// <param name="parameterName"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public bool GetParameterValue(string parameterName, ref bool value)
         {
             NodeParameter parameter = GetNodeParametere(parameterName);
@@ -135,6 +199,12 @@ namespace GraphicTree
             return false;
         }
 
+        /// <summary>
+        /// Get the value of the environment variable based on the parameter name
+        /// </summary>
+        /// <param name="parameterName"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public bool GetParameterValue(string parameterName, ref string value)
         {
             NodeParameter parameter = GetNodeParametere(parameterName);
@@ -146,7 +216,6 @@ namespace GraphicTree
             return false;
         }
 
-        //将配置好的Parameter存到环境dic中
         public void InitParmeter()
         {
 

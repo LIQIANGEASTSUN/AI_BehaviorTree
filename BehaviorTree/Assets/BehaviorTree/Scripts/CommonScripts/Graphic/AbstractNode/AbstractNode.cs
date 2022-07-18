@@ -5,21 +5,14 @@ namespace GraphicTree
     public abstract class AbstractNode
     {
 
-        /// <summary>
-        /// 节点序列
-        /// </summary>
         private int nodeIndex;
 
-        /// <summary>
-        /// 节点Id
-        /// </summary>
         private int nodeId;
 
         /// <summary>
-        /// EntityId
+        /// Entity ID of a node
         /// </summary>
         private int entityId;
-
 
         public AbstractNode()
         {
@@ -46,19 +39,19 @@ namespace GraphicTree
         public abstract int NodeType();
 
         /// <summary>
-        /// 进入节点
+        /// Node entry, which executes the first method of a node
         /// </summary>
         public virtual void OnEnter()
         {
-            //ProDebug.Logger.LogError("OnEnter:" + NodeId);
+
         }
 
         /// <summary>
-        /// 退出节点
+        /// Node exit, which is called when the node exits execution
         /// </summary>
         public virtual void OnExit()
         {
-            //ProDebug.Logger.LogError("OnExit:" + NodeId);
+
         }
 
     }
