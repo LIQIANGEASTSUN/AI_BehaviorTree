@@ -84,10 +84,6 @@ namespace BehaviorTree
             set {
                 _playState = value;
                 NodeNotify.SetPlayState((int)value);
-                if (null != languageChange)
-                {
-                    languageChange();
-                }
             }
         }
 
@@ -104,6 +100,10 @@ namespace BehaviorTree
             get {  return _languageType; }
             set {  _languageType = value;
                 EditorPrefs.SetInt(languageTypeKey, (int)value);
+                if (null != languageChange)
+                {
+                    languageChange();
+                }
             }
         }
 

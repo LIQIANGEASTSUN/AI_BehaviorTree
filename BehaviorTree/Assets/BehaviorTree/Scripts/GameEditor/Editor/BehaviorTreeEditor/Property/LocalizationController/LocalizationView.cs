@@ -7,7 +7,7 @@ namespace BehaviorTree
     public class LocalizationView
     {
 
-        private readonly string[] optionArrKey = new string[] { "Chinese", "English" };
+        private readonly string[] optionArrKey = new string[] { "English" , "Chinese",};
         private string[] optionArr = new string[2] { "", ""};
         public void Draw()
         {

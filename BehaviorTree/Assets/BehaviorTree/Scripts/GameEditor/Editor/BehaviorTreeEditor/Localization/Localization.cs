@@ -4,8 +4,8 @@ namespace BehaviorTree
 {
     public enum LanguageType
     {
-        CN = 0,
-        EN = 1,
+        EN = 0,
+        CN = 1,
     }
 
     public struct LocalizationData
