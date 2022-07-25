@@ -21,6 +21,10 @@ namespace BehaviorTree
             if (index != (int)BehaviorDataController.Instance.LanguageType)
             {
                 BehaviorDataController.Instance.LanguageType = (LanguageType)index;
+                if (null != BehaviorDataController.languageChange)
+                {
+                    BehaviorDataController.languageChange();
+                }
             }
         }
 
