@@ -25,6 +25,8 @@ public class Npc : MonoBehaviour
 
         Vector3 forward = (_movePos - transform.position).normalized;
         transform.position += forward * _speed * Time.deltaTime;
+
+        transform.LookAt(_movePos);
     }
 
     private void CheckMovePos()
@@ -35,7 +37,10 @@ public class Npc : MonoBehaviour
         }
         _lastTime = Time.realtimeSinceStartup;
 
-        _movePos = _position + new Vector3(Random.Range(-5, 5), 0, Random.Range(-5, 5));
+        float angle = Random.Range(0, 360);
+        float rad = angle * Mathf.Deg2Rad;
+
+        _movePos = _position + new Vector3(Mathf.Sin(rad), 0, Mathf.Cos(rad)) * 3.5f;
     }
 
     public Vector3 Position()

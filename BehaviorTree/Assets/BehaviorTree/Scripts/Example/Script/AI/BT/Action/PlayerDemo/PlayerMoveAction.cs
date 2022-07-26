@@ -10,7 +10,7 @@ public class PlayerMoveAction : ActionBase
     private IMove _iMove;
     private TargetTypeEnum _targetType = TargetTypeEnum.ENEMY;
     private Player _player;
-
+    private Transform _model;
     public override void OnEnter()
     {
         base.OnEnter();
@@ -19,6 +19,8 @@ public class PlayerMoveAction : ActionBase
 
         string msg = string.Format("GoTo:{0}", System.Enum.GetName(typeof(TargetTypeEnum), _targetType));
         _player.SetText(msg);
+
+        _model = _player.SpriteGameObject.transform.Find("Model");
     }
 
     public override ResultType DoAction()
@@ -76,8 +78,7 @@ public class PlayerMoveAction : ActionBase
         }
 
         _player.Position = Vector3.MoveTowards(_player.Position, targetPos, speed * Time.deltaTime);
-
-        _player.SpriteGameObject.transform.LookAt(targetPos);
+        _model.LookAt(targetPos);
         return ResultType.Running;
     }
 
