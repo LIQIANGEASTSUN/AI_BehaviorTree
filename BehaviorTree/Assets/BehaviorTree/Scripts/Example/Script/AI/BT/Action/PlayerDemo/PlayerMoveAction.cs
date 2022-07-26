@@ -76,6 +76,8 @@ public class PlayerMoveAction : ActionBase
         }
 
         _player.Position = Vector3.MoveTowards(_player.Position, targetPos, speed * Time.deltaTime);
+
+        _player.SpriteGameObject.transform.LookAt(targetPos);
         return ResultType.Running;
     }
 

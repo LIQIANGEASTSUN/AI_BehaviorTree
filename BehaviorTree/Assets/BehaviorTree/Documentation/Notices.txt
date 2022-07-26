@@ -1,0 +1,13 @@
+
+A third-party library, LitJSON, is included with this plug-in，In this directory, Assets\BehaviorTree\Scripts\Libary\litJson
+
+This is a free open source JSON parsing library
+The download link is https://litjson.net/
+
+
+
+
+本插件引入了一个第三方库 LitJSON，第三方库目录为  Assets\BehaviorTree\Scripts\Libary\litJson
+
+这是一个开源的 JSON 解析库
+下载地址是：https://litjson.net/

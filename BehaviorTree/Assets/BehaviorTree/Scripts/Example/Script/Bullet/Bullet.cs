@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BulletData
 {
@@ -20,8 +18,9 @@ public class Bullet
     {
         _bulletData = data;
 
-        _go = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-        _go.transform.localScale = Vector3.one * 0.3f;
+        GameObject go = Resources.Load<GameObject>("Bullet");
+        _go = GameObject.Instantiate(go);
+        _go.transform.localScale = Vector3.one;
         _go.transform.position = _bulletData.startPos;
         _go.name = "Bullet";
     }
