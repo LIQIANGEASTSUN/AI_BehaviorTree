@@ -1,0 +1,1700 @@
+Using pre-set license
+Built from '2022.1/china_unity/release' branch; Version is '2022.1.2f1c1 (1705c5f36fa3) revision 1508805'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.14393) 64bit EnterpriseS' Language: 'zh' Physical Memory: 32719 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+E:\Unity\Unity2022.1.2f1c1\Unity 2022.1.2f1c1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+G:/Project/Git/AI_BehaviorTree/BehaviorTree
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+10609
+Successfully changed project path to: G:/Project/Git/AI_BehaviorTree/BehaviorTree
+G:/Project/Git/AI_BehaviorTree/BehaviorTree
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 28.35 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.1.2f1c1 (1705c5f36fa3)
+[Subsystems] Discovering subsystems at path E:/Unity/Unity2022.1.2f1c1/Unity 2022.1.2f1c1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path G:/Project/Git/AI_BehaviorTree/BehaviorTree/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1080 (ID=0x1b80)
+    Vendor:   NVIDIA
+    VRAM:     8084 MB
+    Driver:   25.21.14.1722
+Initialize mono
+Mono path[0] = 'E:/Unity/Unity2022.1.2f1c1/Unity 2022.1.2f1c1/Editor/Data/Managed'
+Mono path[1] = 'E:/Unity/Unity2022.1.2f1c1/Unity 2022.1.2f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'E:/Unity/Unity2022.1.2f1c1/Unity 2022.1.2f1c1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56100
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: E:/Unity/Unity2022.1.2f1c1/Unity 2022.1.2f1c1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002425 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 30.67 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.530 seconds
+Domain Reload Profiling:
+	ReloadAssembly (530ms)
+		BeginReloadAssembly (60ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (379ms)
+			LoadAssemblies (58ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (110ms)
+				TypeCache.Initialize (109ms)
+					TypeCache.ScanAssembly (108ms)
+				ResolveRequiredComponents (0ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (25ms)
+			SetupLoadedEditorAssemblies (200ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (6ms)
+				RefreshPlugins (31ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (116ms)
+				ProcessInitializeOnLoadMethodAttributes (41ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.003489 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.750 seconds
+Domain Reload Profiling:
+	ReloadAssembly (751ms)
+		BeginReloadAssembly (95ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (557ms)
+			LoadAssemblies (54ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (172ms)
+				TypeCache.Initialize (170ms)
+					TypeCache.ScanAssembly (167ms)
+				ResolveRequiredComponents (2ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (37ms)
+			SetupLoadedEditorAssemblies (247ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (5ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (42ms)
+				ProcessInitializeOnLoadAttributes (169ms)
+				ProcessInitializeOnLoadMethodAttributes (23ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Refreshing native plugins compatible for Editor in 0.35 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1886 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (57.6 KB). Loaded Objects now: 2353.
+Memory consumption went from 307.8 MB to 307.7 MB.
+Total: 2.460229 ms (FindLiveObjects: 0.237714 ms CreateObjectMapping: 0.089183 ms MarkObjects: 2.072379 ms  DeleteObjects: 0.059990 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 55f8c8538cf0483ab7069ead6b737db2 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 123598.834251 seconds.
+  path: Assets/BehaviorTree/Resources/Bullet.prefab
+  artifactKey: Guid(9e32fe96610e63147a1e78b331725ccc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Resources/Bullet.prefab using Guid(9e32fe96610e63147a1e78b331725ccc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2f1438093b00e0d188508c48e2e6e6a') in 0.092324 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.686590 seconds.
+  path: Assets/BehaviorTree/Resources/Bullet.prefab
+  artifactKey: Guid(9e32fe96610e63147a1e78b331725ccc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Resources/Bullet.prefab using Guid(9e32fe96610e63147a1e78b331725ccc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2774fe1b1bbfd39981cacb537f3b0d5') in 0.005650 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 44.495101 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/DataController/Handler
+  artifactKey: Guid(4d6362f4e7ad32149a59511d4afa2fb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/DataController/Handler using Guid(4d6362f4e7ad32149a59511d4afa2fb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9aa7950d09c61f58adf9a02660f277b') in 0.000971 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000984 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/AbstractNode/NodeLeaf.cs
+  artifactKey: Guid(01500297a7555f3478850ac2cc3cb8f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/AbstractNode/NodeLeaf.cs using Guid(01500297a7555f3478850ac2cc3cb8f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebe8786ccb90a4812e3cda6b4009d5c7') in 0.016547 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.025015 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/AI/BT/BTInterface.cs
+  artifactKey: Guid(5c859dff6f7398f46b1479faaf84cb5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/AI/BT/BTInterface.cs using Guid(5c859dff6f7398f46b1479faaf84cb5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2cf0a09ec5fe96f89dc8fa7489b660b') in 0.001348 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000644 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/Number
+  artifactKey: Guid(030b463e533722248a6e36efb32b3a5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/Number using Guid(030b463e533722248a6e36efb32b3a5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e09b5098f28556208221649bf86cdb31') in 0.000772 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001131 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/EditorTable/TableRead.cs
+  artifactKey: Guid(cfda420256a334f4198418c9bfd992bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/EditorTable/TableRead.cs using Guid(cfda420256a334f4198418c9bfd992bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1bb63bd8c08d6f131003b85d3701f19') in 0.000841 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000918 seconds.
+  path: Assets/BehaviorTree/Scripts/Libary/litJson/JsonMockWrapper.cs
+  artifactKey: Guid(54aa215aec1a02346bbbcf15f4ed4269) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Libary/litJson/JsonMockWrapper.cs using Guid(54aa215aec1a02346bbbcf15f4ed4269) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48839634fb6ddbfd6b85b657a1f4b579') in 0.000795 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000932 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/Graphic/Data/ConditionGroup.cs
+  artifactKey: Guid(3c1e403dec0bf7846893828801e7d7bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/Graphic/Data/ConditionGroup.cs using Guid(3c1e403dec0bf7846893828801e7d7bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3851ec39cde771c5042c751eee0fd30') in 0.000843 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000933 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/SubTree/NodeSubTreeDynamicAB.cs
+  artifactKey: Guid(27facff38a8abca49821cf4368999e33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/SubTree/NodeSubTreeDynamicAB.cs using Guid(27facff38a8abca49821cf4368999e33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d64c621a69f775a786ff330e0416055') in 0.000825 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001006 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/Graphic/Condition/ConditionCheck.cs
+  artifactKey: Guid(9ef767598c58ce5438516ddc3149cf2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/Graphic/Condition/ConditionCheck.cs using Guid(9ef767598c58ce5438516ddc3149cf2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f22c55206747f7ab0e6b59f21bd26cab') in 0.000953 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000609 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/Decorator
+  artifactKey: Guid(f27ac167617fdb247ad0f79f3c8bb86a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/Decorator using Guid(f27ac167617fdb247ad0f79f3c8bb86a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01cea1065416e78483e924428b2a0b2f') in 0.000998 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001224 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/NodeRandomSelect.cs
+  artifactKey: Guid(98ae2a5184103324fa85d552db9d9e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/NodeRandomSelect.cs using Guid(98ae2a5184103324fa85d552db9d9e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec37d04f88925d6d2a518020bb5ad0d9') in 0.000945 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001019 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/NodeInspector/NodeIfInspector.cs
+  artifactKey: Guid(4039aa2bf5e942b4fa5304f9ba998fd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/NodeInspector/NodeIfInspector.cs using Guid(4039aa2bf5e942b4fa5304f9ba998fd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '746685ea0600a80cb8392a8c613345b7') in 0.000871 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000959 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/FileHandle/ConfigFileSelect.cs
+  artifactKey: Guid(29c4a497efd7d724393540e44dea1c11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/FileHandle/ConfigFileSelect.cs using Guid(29c4a497efd7d724393540e44dea1c11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfacebacea8eff757186bc0bad520d49') in 0.000882 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001295 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/Graphic/Condition/ConditionParameter.cs
+  artifactKey: Guid(0148b346375c3e741b2847ceda220c6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/Graphic/Condition/ConditionParameter.cs using Guid(0148b346375c3e741b2847ceda220c6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37ebdd891400e982ef35a23467169d07') in 0.000910 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001041 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorNodeDrawController/Node_Draw_Info.cs
+  artifactKey: Guid(f19df5772f9b5ca43a8e62366a3a19c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorNodeDrawController/Node_Draw_Info.cs using Guid(f19df5772f9b5ca43a8e62366a3a19c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6714ae6cd83073513cf4a87309c0bb35') in 0.000908 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002846 seconds.
+  path: Assets/BehaviorTree/Resources/Player.prefab
+  artifactKey: Guid(65f029c7f3064af4680f206954008008) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Resources/Player.prefab using Guid(65f029c7f3064af4680f206954008008) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ea20544a30aa18d9eae61c97ec27a03') in 0.007981 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001209 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/Graphic/CustomIdentification
+  artifactKey: Guid(a75f862fff95204498180422f62b7b3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/Graphic/CustomIdentification using Guid(a75f862fff95204498180422f62b7b3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ec4d8ea1a8db69fe72b0af87aacd0d3') in 0.000943 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000402 seconds.
+  path: Assets/BehaviorTree/Scripts
+  artifactKey: Guid(5658a1fbe5557a543b390922769383cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts using Guid(5658a1fbe5557a543b390922769383cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21e28e81207dce41ac6e11328ab82646') in 0.000782 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000447 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node
+  artifactKey: Guid(89aee8b9a4fc42247b108f0fa50b8e1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node using Guid(89aee8b9a4fc42247b108f0fa50b8e1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f561bcd24b781a226f5734d41ce6c0de') in 0.000768 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000532 seconds.
+  path: Assets/BehaviorTree/Resources
+  artifactKey: Guid(317dbaf24bed367448d45599038ef6ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Resources using Guid(317dbaf24bed367448d45599038ef6ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b1444ac196b43632e5a5f31347b4b5a') in 0.000917 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000838 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/AbstractNode/NodeBase.cs
+  artifactKey: Guid(14fcc6809d41fe1418efefbea60bca51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/AbstractNode/NodeBase.cs using Guid(14fcc6809d41fe1418efefbea60bca51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e64d305d01d08fcf942b2d81a71615f7') in 0.000779 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000437 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/Graphic/ConfigNode
+  artifactKey: Guid(66ae6ca897d85d3479bd5d09eea40274) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/Graphic/ConfigNode using Guid(66ae6ca897d85d3479bd5d09eea40274) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '192b2302476b278acc00ebcb8193caa6') in 0.000771 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000828 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/NodeSelect.cs
+  artifactKey: Guid(e8a7ec73f5474654cac8af47c0a7e83a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/NodeSelect.cs using Guid(e8a7ec73f5474654cac8af47c0a7e83a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ab1baddba9e3014d68f0f5c3c603423') in 0.000805 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.045404 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/Base/ActionBase.cs
+  artifactKey: Guid(319b0d8f30b14044c8abe52298bb8f5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/Base/ActionBase.cs using Guid(319b0d8f30b14044c8abe52298bb8f5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '594169fbc292fb5ed728cf29efe67a7b') in 0.001120 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000532 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Custom
+  artifactKey: Guid(0566a6748949f7146b00a0b168a34488) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Custom using Guid(0566a6748949f7146b00a0b168a34488) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d36942c7efc3650d541901f3b4426ce') in 0.000945 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000900 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/Sprite/Player/PlayerPatrol.cs
+  artifactKey: Guid(defbc8c9a2968f84ba38b1d962454557) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/Sprite/Player/PlayerPatrol.cs using Guid(defbc8c9a2968f84ba38b1d962454557) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fc4b61dd655476497417f54959762f9') in 0.000913 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000511 seconds.
+  path: Assets/BehaviorTree/Scripts/Libary/litJson
+  artifactKey: Guid(15af843c8d538774499d6bc8b505756a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Libary/litJson using Guid(15af843c8d538774499d6bc8b505756a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2bc9bc943e8832efe7a6602c27330ca') in 0.000872 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000878 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorNodeDrawController/BehaviorDrawModel.cs
+  artifactKey: Guid(5b776eb5db8bb4942866e88d26776694) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorNodeDrawController/BehaviorDrawModel.cs using Guid(5b776eb5db8bb4942866e88d26776694) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fee65808a4ce6b160f84573eb534f37d') in 0.000692 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.046597 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/NodeParallelSelect.cs
+  artifactKey: Guid(ccff3849c3e744542a08dbdfc8ef6719) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/NodeParallelSelect.cs using Guid(ccff3849c3e744542a08dbdfc8ef6719) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '829a3c82b6d48f543090249b2d13bedf') in 0.000854 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000995 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/AI/BT/BTConcrete.cs
+  artifactKey: Guid(a7c45ae114177a848b5806446e1053a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/AI/BT/BTConcrete.cs using Guid(a7c45ae114177a848b5806446e1053a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ec7ba93785e00d1d1b8203815d5ef44') in 0.001122 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000391 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/Graphic/Data
+  artifactKey: Guid(7a4b612b130f8c04a8989584cde007e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/Graphic/Data using Guid(7a4b612b130f8c04a8989584cde007e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3640ff0baaf18df666c98c1744982c6f') in 0.000817 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.007499 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Property/BehaviorParameterController.cs
+  artifactKey: Guid(60d382bf98652764a8fe1a10956ccc69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Property/BehaviorParameterController.cs using Guid(60d382bf98652764a8fe1a10956ccc69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '722279016d168eb9505e8fab473cd35f') in 0.001001 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001039 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Tree/TreeNodeWindow.cs
+  artifactKey: Guid(5b4ee8284f5649c4e873fb86e6de7816) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Tree/TreeNodeWindow.cs using Guid(5b4ee8284f5649c4e873fb86e6de7816) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5234dbddd92f5e6d4c5aea17511599e5') in 0.000892 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001005 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/NodeInspector/BehaviorNodeInspectorModel.cs
+  artifactKey: Guid(69b624beddd33e54785fc66398c382c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/NodeInspector/BehaviorNodeInspectorModel.cs using Guid(69b624beddd33e54785fc66398c382c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e2d500f05cc30338e8d4a830ab1eafe') in 0.000826 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001011 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorNodeDrawController/NodeHandlerState/NodeHandlerStateMakeTransition.cs
+  artifactKey: Guid(56f7ac4d0e76e454593c1ffe9afe52e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorNodeDrawController/NodeHandlerState/NodeHandlerStateMakeTransition.cs using Guid(56f7ac4d0e76e454593c1ffe9afe52e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '279f3d1cb412274eb62d568ebd4027ee') in 0.000841 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000909 seconds.
+  path: Assets/BehaviorTree/GameData/BehaviorTree/EneryEnougthSubTree.bytes
+  artifactKey: Guid(c2d04b742729cec4a9f956fef2502b94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/GameData/BehaviorTree/EneryEnougthSubTree.bytes using Guid(c2d04b742729cec4a9f956fef2502b94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7725f082db8f5fa7c04526c3f4e3574a') in 0.002739 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001259 seconds.
+  path: Assets/BehaviorTree/GameData/CSVAssets/table_text_localization.csv
+  artifactKey: Guid(b1a06e48749836f4c870ceda7bc57f4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/GameData/CSVAssets/table_text_localization.csv using Guid(b1a06e48749836f4c870ceda7bc57f4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4dd85b6879e8492ce842c528686eb96') in 0.025612 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.027736 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Property/BehaviorRuntimeParameterController.cs
+  artifactKey: Guid(f7b3809304e7968449e15e07c57b33f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Property/BehaviorRuntimeParameterController.cs using Guid(f7b3809304e7968449e15e07c57b33f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d843f6f04ea600e61793801fa25da55') in 0.000952 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001114 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/AI/SpriteManager.cs
+  artifactKey: Guid(1b15c447f7dbc0e4b86a1e053ab1cc2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/AI/SpriteManager.cs using Guid(1b15c447f7dbc0e4b86a1e053ab1cc2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fcad7e94083b313c6f501d2f0a16b19') in 0.001130 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000938 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/FileHandle/ConfigFileDelete.cs
+  artifactKey: Guid(48497a8f36f36a546af690cc9342dc48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/FileHandle/ConfigFileDelete.cs using Guid(48497a8f36f36a546af690cc9342dc48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9ec84380f8ac00b7fbe42e583d96a93') in 0.000832 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000978 seconds.
+  path: Assets/BehaviorTree/Scripts/Libary/litJson/JsonReader.cs
+  artifactKey: Guid(a297334d2b730af4cb692c203fb53a5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Libary/litJson/JsonReader.cs using Guid(a297334d2b730af4cb692c203fb53a5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94a30774b1ff8da150cb4e2a6f74642c') in 0.000810 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000945 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/EnumType/NodeType.cs
+  artifactKey: Guid(5237308dba2c52c47a41fc2435327f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/EnumType/NodeType.cs using Guid(5237308dba2c52c47a41fc2435327f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ec36141a9fa98bf0eb0ef4b822f68db') in 0.001208 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001043 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/Table/AnalysisBin.cs
+  artifactKey: Guid(b115bef739e8ab24d8f2f24dd01099be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/Table/AnalysisBin.cs using Guid(b115bef739e8ab24d8f2f24dd01099be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2ae1aafe62d337f41f2770d397d5b5d') in 0.000934 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000986 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/DataController/BehaviorDataController.cs
+  artifactKey: Guid(69a8372299f7b444e80eea24570cd30f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/DataController/BehaviorDataController.cs using Guid(69a8372299f7b444e80eea24570cd30f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d7b88bf236612b19a698eb6ec5bbdb2') in 0.000795 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000880 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/DataController/DataSearchTool.cs
+  artifactKey: Guid(2124e55d699afd948835b1c48f829d99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/DataController/DataSearchTool.cs using Guid(2124e55d699afd948835b1c48f829d99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ab70bb0236d202d416682dccfba3aa4') in 0.000811 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001805 seconds.
+  path: Assets/BehaviorTree/Documentation/documentEN.pdf
+  artifactKey: Guid(4f549cf9b3ce4894884a64779d5b5592) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Documentation/documentEN.pdf using Guid(4f549cf9b3ce4894884a64779d5b5592) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7371e8a3d2d53ffdde4e2b3f32a13e13') in 0.003028 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001537 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorNodeDrawController/NodeHandlerState/NodeHandlerStateBase.cs
+  artifactKey: Guid(7e208701a958a294b93e8b5d5ad3a54e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorNodeDrawController/NodeHandlerState/NodeHandlerStateBase.cs using Guid(7e208701a958a294b93e8b5d5ad3a54e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d9c664bcde09a88a023e5a3c41b0df2') in 0.000942 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000776 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/Base
+  artifactKey: Guid(e777b351af02d314c936f31b2dd7e232) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/Base using Guid(e777b351af02d314c936f31b2dd7e232) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a20c36778da0b100dd49b95de2f3b135') in 0.000841 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000630 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/NodeAsset
+  artifactKey: Guid(8c3a93a0db1521a4ea356e32db03ef19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/NodeAsset using Guid(8c3a93a0db1521a4ea356e32db03ef19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50a5d9f3d57d0b6561d9b9733ba7aeaf') in 0.000825 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001209 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/CommonUtils
+  artifactKey: Guid(be0a88a3edf7964409c069b92a0ccfb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/CommonUtils using Guid(be0a88a3edf7964409c069b92a0ccfb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6eb434d7efe9a6ce6b72bd7c909cd4f7') in 0.000863 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000589 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/AI/BT
+  artifactKey: Guid(689fa294ab3590648ad9e28a705cc2fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/AI/BT using Guid(689fa294ab3590648ad9e28a705cc2fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '245e5f5324c121edce6a0654ea6b07f1') in 0.000757 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001221 seconds.
+  path: Assets/BehaviorTree/Documentation/documentCN.pdf
+  artifactKey: Guid(c56354f9a8d4a93408a7c44b95beef87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Documentation/documentCN.pdf using Guid(c56354f9a8d4a93408a7c44b95beef87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c803d5799fdf5a4a4749dcaf4eb00361') in 0.001077 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000902 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/Graphic/AbstractNode/AbstractNode.cs
+  artifactKey: Guid(5032aff77dcddbe439af166e62fabd24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/Graphic/AbstractNode/AbstractNode.cs using Guid(5032aff77dcddbe439af166e62fabd24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a8562b38a619b423d9dd452b01fa49e') in 0.000770 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000938 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/CommonUtils/FileReadWrite.cs
+  artifactKey: Guid(926b8e7a35437d54b8d68d4fdfb5b1cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/CommonUtils/FileReadWrite.cs using Guid(926b8e7a35437d54b8d68d4fdfb5b1cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d931c008deef6beccbc7ecc2ae08820') in 0.001247 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000962 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Property/PlayController/BehaviorPlayController.cs
+  artifactKey: Guid(95f1639b4a519634cb93f99241c9e723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Property/PlayController/BehaviorPlayController.cs using Guid(95f1639b4a519634cb93f99241c9e723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '666748c195aee93253b20e11ae4f01da') in 0.000844 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000418 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/Graphic/Condition
+  artifactKey: Guid(ebd30f22ade2de9419a458336159446a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/Graphic/Condition using Guid(ebd30f22ade2de9419a458336159446a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38288f111df1758de9f9e60951e48b4c') in 0.000762 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.011733 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/NodeRandomSequence.cs
+  artifactKey: Guid(117012f5028e9b940a5f77d4df04f4a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/NodeRandomSequence.cs using Guid(117012f5028e9b940a5f77d4df04f4a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87cc310594406e8a43f792e4e4c28e0c') in 0.000925 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000528 seconds.
+  path: Assets/BehaviorTree/Scripts/Example
+  artifactKey: Guid(d158c9ade0cb41b42bb3faf4d2c315de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example using Guid(d158c9ade0cb41b42bb3faf4d2c315de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1db0c9f8dfb6b644f118353b8e23232') in 0.000907 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001029 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/Sprite/ISprite/ISprite.cs
+  artifactKey: Guid(88e5393290af08a49910b1d6a35bf0d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/Sprite/ISprite/ISprite.cs using Guid(88e5393290af08a49910b1d6a35bf0d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a8566f7cc60c139e882e33bcf0e0087') in 0.000879 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000782 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/NodeRandomPriority.cs
+  artifactKey: Guid(b66b97fb78d100a4bab05d2c25a2c2c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/NodeRandomPriority.cs using Guid(b66b97fb78d100a4bab05d2c25a2c2c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6979cb988c081880575c99d36f9c7e69') in 0.001209 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001174 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/TreeDescript/BehaviorDescriptController.cs
+  artifactKey: Guid(5c696790f99ac204eb08b27a8d813bea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/TreeDescript/BehaviorDescriptController.cs using Guid(5c696790f99ac204eb08b27a8d813bea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c22b7069e4cfbca91542e546a4b42112') in 0.000925 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001007 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Property/DrawParameter/DrawBehaviorParameter.cs
+  artifactKey: Guid(07b9947fd393cea41ac6d62ca2cdf1eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Property/DrawParameter/DrawBehaviorParameter.cs using Guid(07b9947fd393cea41ac6d62ca2cdf1eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec1e8d078b1deeac3d64b06b8cd393c1') in 0.000885 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000532 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/NodeDraw
+  artifactKey: Guid(f10e1e823df494147827fc6f45d6111a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/NodeDraw using Guid(f10e1e823df494147827fc6f45d6111a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a39128a519bbaed997a3486c699b57b7') in 0.000838 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.027516 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/Decorator/NodeDecoratorUntilSuccess.cs
+  artifactKey: Guid(c281b7c9818845e419c0dcaf099bd942) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/Decorator/NodeDecoratorUntilSuccess.cs using Guid(c281b7c9818845e419c0dcaf099bd942) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97815bbe8c314dca5f79d20ca1dc4a64') in 0.001185 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001588 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/SubTree/NodeSubTree.cs
+  artifactKey: Guid(1f0b44d6b0e8cff4c8e66c4a6b592149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/SubTree/NodeSubTree.cs using Guid(1f0b44d6b0e8cff4c8e66c4a6b592149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca22a8cd4afdb74a034fbee2f5505ecf') in 0.001294 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001240 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/Bullet/BulletManager.cs
+  artifactKey: Guid(f0f5910fd6ee4614daf3c328b030f814) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/Bullet/BulletManager.cs using Guid(f0f5910fd6ee4614daf3c328b030f814) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ed5c17e04e27d157a5198d725fe28b5') in 0.001481 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001523 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/Graphic/Condition/IConditionCheck.cs
+  artifactKey: Guid(4a08b442ba3a2f646b149b33980838d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/Graphic/Condition/IConditionCheck.cs using Guid(4a08b442ba3a2f646b149b33980838d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b85bfe3004201bfcdc40f9966b51249') in 0.001385 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001420 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/Graphic/NodeNotify/NodeNotify.cs
+  artifactKey: Guid(e132c1d2d2cabf6458921f0a69f92a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/Graphic/NodeNotify/NodeNotify.cs using Guid(e132c1d2d2cabf6458921f0a69f92a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '357b508fcfc3558fd5fee7b633fb5bc6') in 0.002639 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001376 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/Decorator/NodeDecoratorReturnSuccess.cs
+  artifactKey: Guid(1d26a7deb0a1961479e7ba8a04e7529d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/Decorator/NodeDecoratorReturnSuccess.cs using Guid(1d26a7deb0a1961479e7ba8a04e7529d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cd9bb143093a24e560fd2cf0224c5e1') in 0.001099 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000539 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/IMove
+  artifactKey: Guid(8cd097bef42aef747ae04d626833b66b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/IMove using Guid(8cd097bef42aef747ae04d626833b66b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01f07cd5a64b4e3d3aeb4ba41bf6235c') in 0.000825 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001941 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorManager/BehaviorManager.cs
+  artifactKey: Guid(869296173cf0ebb47a6e8ad57c0f1559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorManager/BehaviorManager.cs using Guid(869296173cf0ebb47a6e8ad57c0f1559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e9d5ea339e49e76c51a652e41b8f2e7') in 0.001193 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000934 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorNodeDrawController/NodeHandlerState/NodeHandlerStateNormal.cs
+  artifactKey: Guid(43a50318bfc3c2246b1c0d67598024ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorNodeDrawController/NodeHandlerState/NodeHandlerStateNormal.cs using Guid(43a50318bfc3c2246b1c0d67598024ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4d49c7c164d71a9959eca734e4dae4b') in 0.000918 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000588 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/Attribute
+  artifactKey: Guid(aaf4ae4f61032e24287593252ac1915d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/Attribute using Guid(aaf4ae4f61032e24287593252ac1915d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa60c1789a0da94cbeaf0736a2c4bc9e') in 0.000856 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.037421 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorManager/GUIEnableTool.cs
+  artifactKey: Guid(4f7e6f82b6242f941b3877fc9127f791) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorManager/GUIEnableTool.cs using Guid(4f7e6f82b6242f941b3877fc9127f791) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c0658cfce50b7da9d56a0025882cee0') in 0.001202 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/DataHandle
+  artifactKey: Guid(e028520e18dad0a46b3ef4ded24b5f01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/DataHandle using Guid(e028520e18dad0a46b3ef4ded24b5f01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cae27673737bd5968d62e8fc7a1a5792') in 0.001143 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000255 seconds.
+  path: Assets/BehaviorTree/Version
+  artifactKey: Guid(12c52fc9e22fdc7459ba29764fa291fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Version using Guid(12c52fc9e22fdc7459ba29764fa291fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '357451b6ae987f470eb1d4343d68bce4') in 0.003659 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000849 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/PlayerDemo
+  artifactKey: Guid(ac16f780adac30f4ea72e3cb02344578) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/PlayerDemo using Guid(ac16f780adac30f4ea72e3cb02344578) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28cbb056cf9db368c66a99f0fa2f6d3a') in 0.000998 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000983 seconds.
+  path: Assets/BehaviorTree/Resources/Npc.prefab
+  artifactKey: Guid(5190e3e4c35992847a5d33b58a9a20b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Resources/Npc.prefab using Guid(5190e3e4c35992847a5d33b58a9a20b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0ecf473ed696c11422e723ba0be86ec') in 0.009014 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003374 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Analysis
+  artifactKey: Guid(ed428d2964d883e478389ad283df4811) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Analysis using Guid(ed428d2964d883e478389ad283df4811) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7c64eceea0555b9e88a36298876be1c') in 0.000889 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001351 seconds.
+  path: Assets/BehaviorTree/GameData/CSVAssets/table_behaviortree.csv
+  artifactKey: Guid(8061cff8db078d54baf913f4ae15133f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/GameData/CSVAssets/table_behaviortree.csv using Guid(8061cff8db078d54baf913f4ae15133f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b52388a75ff36bc2c78e5089c81cd7c') in 0.001252 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000951 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/Decorator/NodeDecoratorReturnFail.cs
+  artifactKey: Guid(ae5bbb1e95efa264892004c779bfe8b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/Decorator/NodeDecoratorReturnFail.cs using Guid(ae5bbb1e95efa264892004c779bfe8b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2352e1317aeb387f0d55dc9a8afce70') in 0.000898 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001253 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Custom/BehaviorConfigNode.cs
+  artifactKey: Guid(cb9e69f30e8c1d94cb7bb4c7672ee95f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Custom/BehaviorConfigNode.cs using Guid(cb9e69f30e8c1d94cb7bb4c7672ee95f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7eefca936a901aa8447b6b7f79c7bb19') in 0.000822 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000670 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Property/DrawParameter
+  artifactKey: Guid(05b8487a942dcb94babd7c7046cf4994) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Property/DrawParameter using Guid(05b8487a942dcb94babd7c7046cf4994) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c868ffb67595671532b22ee28db56d28') in 0.000824 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000780 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/NodeDraw/NodeDrawEditor.cs
+  artifactKey: Guid(7da3f5d609b80444eabfb37e36b0f0fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/NodeDraw/NodeDrawEditor.cs using Guid(7da3f5d609b80444eabfb37e36b0f0fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a71f48bd96f96daf8d7c93b764b1992') in 0.000816 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.057680 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/AbstractNode/IAction.cs
+  artifactKey: Guid(349070639e698ff40a646b702c2f19d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/AbstractNode/IAction.cs using Guid(349070639e698ff40a646b702c2f19d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32ec37991df563452fcfd4cbeb19c121') in 0.001110 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001028 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite
+  artifactKey: Guid(bd7541bacf8d7714ea38c9b20fe4c5b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite using Guid(bd7541bacf8d7714ea38c9b20fe4c5b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '567697ac8a23e30b1ce390111b6f28ab') in 0.001037 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000540 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree
+  artifactKey: Guid(506589f5553ce3848a7c05a4a084edc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree using Guid(506589f5553ce3848a7c05a4a084edc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8785527f01f4e632ea905c4bae9ddad1') in 0.000988 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001322 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Analysis/BehaviorAnalysis.cs
+  artifactKey: Guid(15e316539dcca7a4ea29494916ddb0ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Analysis/BehaviorAnalysis.cs using Guid(15e316539dcca7a4ea29494916ddb0ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4b2a7e54a3b2975f8ca37a165c58a19') in 0.001108 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001094 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/NodeDecorator.cs
+  artifactKey: Guid(909b4bbc5b4e6544f888a922617e52a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/NodeDecorator.cs using Guid(909b4bbc5b4e6544f888a922617e52a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1947ddbbbfafef407362b395ee98ce37') in 0.001264 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001499 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/TreeDescript/BehaviorDescriptView.cs
+  artifactKey: Guid(9267f52708d1542478d327ad6c1aeaea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/TreeDescript/BehaviorDescriptView.cs using Guid(9267f52708d1542478d327ad6c1aeaea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28bbf4d356a871450ef0a7625e1ca3af') in 0.001220 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000630 seconds.
+  path: Assets/BehaviorTree/Documentation
+  artifactKey: Guid(7cdc567f4e4fd2845a70321765cfd9e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Documentation using Guid(7cdc567f4e4fd2845a70321765cfd9e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a85ed6163d8716db78617adc7a893726') in 0.000950 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000477 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/EditorTable
+  artifactKey: Guid(cd5ab3b541d6c664bb1998c630063aa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/EditorTable using Guid(cd5ab3b541d6c664bb1998c630063aa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f14137e9f5b44364694f10473ea0d4d8') in 0.000898 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000102 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/AbstractNode
+  artifactKey: Guid(ebff0187d4fbdf14396d8ef55c917d85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/AbstractNode using Guid(ebff0187d4fbdf14396d8ef55c917d85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1eadb47978d33aff6b2032e37f6118c') in 0.000907 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.013900 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/FileHandle/ConfigFileMerge.cs
+  artifactKey: Guid(e8a823260f54cf54385fac9bb1b55483) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/FileHandle/ConfigFileMerge.cs using Guid(e8a823260f54cf54385fac9bb1b55483) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cec7218a6dc4095702b7c8b672884057') in 0.000906 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004127 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/NodeInspector/NodeRandomPriorityInspector.cs
+  artifactKey: Guid(6906e6194f6f35a49be0132cc0efac49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/NodeInspector/NodeRandomPriorityInspector.cs using Guid(6906e6194f6f35a49be0132cc0efac49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a367dcdcd3048fe47f567fcc12ce6c3') in 0.000806 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000503 seconds.
+  path: Assets/BehaviorTree/Demo
+  artifactKey: Guid(aa22d616b188e464c969e485e4d87512) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Demo using Guid(aa22d616b188e464c969e485e4d87512) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef821ef706a0add8cf814b07f0e819b9') in 0.000804 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000924 seconds.
+  path: Assets/BehaviorTree/Resources/Black.mat
+  artifactKey: Guid(cd784bbddcbfbd2428c51a413478110a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Resources/Black.mat using Guid(cd784bbddcbfbd2428c51a413478110a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efd192838c275aa58fe50f268d45d204') in 0.022768 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002045 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/EnumType/ResultType.cs
+  artifactKey: Guid(82ad1f86fd01fd9448d0f9ee982c3314) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/EnumType/ResultType.cs using Guid(82ad1f86fd01fd9448d0f9ee982c3314) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '627fb3cb6ea7fd0ea7122db915347dcd') in 0.000951 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000457 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/SubTree
+  artifactKey: Guid(d9134234d5b5d0341a825277ec32ac2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/SubTree using Guid(d9134234d5b5d0341a825277ec32ac2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f94d609196c88c804b9859203f692fa') in 0.000892 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001094 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/NodeIfJudgeSequence.cs
+  artifactKey: Guid(c1e209dc81dee0446b8ce2f1b5c8f1e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/NodeIfJudgeSequence.cs using Guid(c1e209dc81dee0446b8ce2f1b5c8f1e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '769b30f4ec22d2b0167a4e4c152f5550') in 0.001416 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001169 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/FileHandle/BehaviorFileHandleView.cs
+  artifactKey: Guid(7de071738269f2142b6b92fcd0b4a50a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/FileHandle/BehaviorFileHandleView.cs using Guid(7de071738269f2142b6b92fcd0b4a50a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13cca39175790f4c69c77a48e13a9441') in 0.001113 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.014181 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/NodeInspector/BehaviorNodeInspectorController.cs
+  artifactKey: Guid(d517989893e23d6489124b3c8f2b4763) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/NodeInspector/BehaviorNodeInspectorController.cs using Guid(d517989893e23d6489124b3c8f2b4763) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'def0cf11ce27b1a54dd2df2b9e9d8aec') in 0.001103 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000958 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/Graphic/ParameterType.cs
+  artifactKey: Guid(4519e42d1728aab4c850da14960a8bfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/Graphic/ParameterType.cs using Guid(4519e42d1728aab4c850da14960a8bfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b87aaee2b0b7c560f6f7395a64c5fa7') in 0.000836 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000900 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/NodeInspector/NodeBaseInspector.cs
+  artifactKey: Guid(4b2d057c8549eff409a700b2e370cde6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/NodeInspector/NodeBaseInspector.cs using Guid(4b2d057c8549eff409a700b2e370cde6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '908ccf6e9682ccd123521ea889f85193') in 0.000855 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000739 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/Decorator/NodeDecoratorInverter.cs
+  artifactKey: Guid(f883056a04697f640830b3f425004cef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/Decorator/NodeDecoratorInverter.cs using Guid(f883056a04697f640830b3f425004cef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e55ff923f17898da6a679da702a4aa4') in 0.001210 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000989 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/Table/ConfigLoad.cs
+  artifactKey: Guid(4e52040894b8a034eb3d360df6d4c123) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/Table/ConfigLoad.cs using Guid(4e52040894b8a034eb3d360df6d4c123) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8835f130bf4ee87cffdc19fa5bd6a219') in 0.000909 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001049 seconds.
+  path: Assets/BehaviorTree/Resources/Blue.mat
+  artifactKey: Guid(424e100954ead914089095e32a2a9b5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Resources/Blue.mat using Guid(424e100954ead914089095e32a2a9b5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4fd4c3080f92c27b2db0548b55e3dd7') in 0.004903 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000863 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts
+  artifactKey: Guid(88f84134fb869d945984cd4a2f3bf700) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts using Guid(88f84134fb869d945984cd4a2f3bf700) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51d67ae1f1fa67234cc5483652578406') in 0.000804 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.011428 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorNodeDrawController/BehaviorDrawView.cs
+  artifactKey: Guid(e550d79f37f0c3140a3d7ed6db8b21f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorNodeDrawController/BehaviorDrawView.cs using Guid(e550d79f37f0c3140a3d7ed6db8b21f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7dbb54d8ea16d8a0a9fd8f38ef6a1213') in 0.000995 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001090 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorNodeDrawController/NodeHandlerState/NodeHandlerStateMachine.cs
+  artifactKey: Guid(00a54536f6db77b46bd6f829cc7d48c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorNodeDrawController/NodeHandlerState/NodeHandlerStateMachine.cs using Guid(00a54536f6db77b46bd6f829cc7d48c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30aa6509e2ccb8325726a553296b671b') in 0.000827 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000813 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Property/DrawParameter/DrawParameterBase.cs
+  artifactKey: Guid(f9935db1e8966cc40933ba9eb7099c3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Property/DrawParameter/DrawParameterBase.cs using Guid(f9935db1e8966cc40933ba9eb7099c3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '350bb0ec3d81d85b5e9995c7cbba98b6') in 0.001130 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000738 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/TargetTypeEnum.cs
+  artifactKey: Guid(a2571b82da007e747a2cb872cfb89d43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/TargetTypeEnum.cs using Guid(a2571b82da007e747a2cb872cfb89d43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '771d3287b0575fa3e778b809c08e1f65') in 0.000836 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000545 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action
+  artifactKey: Guid(f3a72aa1c68b6874d8012d0e3fc5a531) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action using Guid(f3a72aa1c68b6874d8012d0e3fc5a531) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8c178b654a0b963b13bed235f9bb92d') in 0.000769 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000972 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/FileHandle/ReadWrite/BehaviorReadWrite.cs
+  artifactKey: Guid(3dc46dfc11b857f4aad17a0112521484) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/FileHandle/ReadWrite/BehaviorReadWrite.cs using Guid(3dc46dfc11b857f4aad17a0112521484) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b3326ac82d08d7904334998caa5927a') in 0.000816 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000654 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/Sprite
+  artifactKey: Guid(5e7a181038da27a4dbf0df83baa02b4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/Sprite using Guid(5e7a181038da27a4dbf0df83baa02b4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '759adbf28a49f14812b96c87ff85ffcc') in 0.000821 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000533 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/NodeInspector
+  artifactKey: Guid(809b7662051561e459329340bf54c2c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/NodeInspector using Guid(809b7662051561e459329340bf54c2c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0a08efa246e197b73d25d784a3852a8') in 0.000837 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000936 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/NodeInspector/NodeRepeatInspector.cs
+  artifactKey: Guid(ee2360d5e2198034eb995f26dc5b7e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/NodeInspector/NodeRepeatInspector.cs using Guid(ee2360d5e2198034eb995f26dc5b7e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01a12ed34221a7f57f09c6c9f70fb005') in 0.000886 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001512 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/Graphic/Data/RectT.cs
+  artifactKey: Guid(05a6b3ba76f915a4d837e48a11c7bc8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/Graphic/Data/RectT.cs using Guid(05a6b3ba76f915a4d837e48a11c7bc8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed921ac8c8ec8916d2c0f872f48e9750') in 0.000901 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000965 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/NodeInspector/NodeSubTreeInspector.cs
+  artifactKey: Guid(bb61d1626185f0748b07258963d30f63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/NodeInspector/NodeSubTreeInspector.cs using Guid(bb61d1626185f0748b07258963d30f63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5cc0ac71c69e547bd49e53a301fe20d') in 0.000893 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000506 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/RunTime
+  artifactKey: Guid(8ecb44850915dc94cb80aee17958f256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/RunTime using Guid(8ecb44850915dc94cb80aee17958f256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d238e40a33ec46258e9185296d7e450') in 0.000899 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000952 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Property/DrawParameter/DrawNodeParameter.cs
+  artifactKey: Guid(c25d1279b9ec8454a933280c05ee63c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Property/DrawParameter/DrawNodeParameter.cs using Guid(c25d1279b9ec8454a933280c05ee63c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf85331310d0f26660b36596ac9babe7') in 0.000908 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000563 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/DataController
+  artifactKey: Guid(7fd9f2830e16be74a88879d15b8d7f5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/DataController using Guid(7fd9f2830e16be74a88879d15b8d7f5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d46f9374676b28d1aa32524ac0612a5') in 0.000873 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000969 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Property/PlayController/BehaviorPlayView.cs
+  artifactKey: Guid(d77868b4ea20bf349bfdd023fa0d1e6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Property/PlayController/BehaviorPlayView.cs using Guid(d77868b4ea20bf349bfdd023fa0d1e6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db5a6e91acc1e53a2b1709f3cbfbb901') in 0.000860 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000671 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Property/PlayController
+  artifactKey: Guid(66ceae39866157d4faf8d4b8c719f3c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Property/PlayController using Guid(66ceae39866157d4faf8d4b8c719f3c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc0ee829af2cc525abc4adf6a10b4133') in 0.001144 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001669 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Property/DrawParameter/DrawBehaviorAddParameter.cs
+  artifactKey: Guid(8f4f0c29fa033a6499d021662cdf0fe3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Property/DrawParameter/DrawBehaviorAddParameter.cs using Guid(8f4f0c29fa033a6499d021662cdf0fe3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6ff3babd288c85ff8283894ad171406') in 0.000901 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001109 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/Number/NumberActionDo4.cs
+  artifactKey: Guid(e77f576c9523c9c4e9dae1b0c2d55fa8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/Number/NumberActionDo4.cs using Guid(e77f576c9523c9c4e9dae1b0c2d55fa8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2410d26577650b6a11ad6c1ded9f2104') in 0.000903 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000993 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/NodeSequence.cs
+  artifactKey: Guid(412340c96534db64e9c956ab47ddb0c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/NodeSequence.cs using Guid(412340c96534db64e9c956ab47ddb0c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99118e3723c792984caa8091d759bbd5') in 0.000934 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000956 seconds.
+  path: Assets/BehaviorTree/Scripts/Libary/litJson/Netstandard15Polyfill.cs
+  artifactKey: Guid(e6a2e88694b4c884997ef03b4d44e21b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Libary/litJson/Netstandard15Polyfill.cs using Guid(e6a2e88694b4c884997ef03b4d44e21b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a17d8559b79dcbd98943d743cc3c9ab9') in 0.000899 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.007986 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/FileHandle/ConfigFileSave.cs
+  artifactKey: Guid(a752c7ce2596cc043bb15010fbc0affa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/FileHandle/ConfigFileSave.cs using Guid(a752c7ce2596cc043bb15010fbc0affa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '592e6f8e544d7848720d076de62515e3') in 0.001086 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000880 seconds.
+  path: Assets/StreamingAssets/Bina
+  artifactKey: Guid(d825430942b7e514886b7123e880cdae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/StreamingAssets/Bina using Guid(d825430942b7e514886b7123e880cdae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '885c18baa543d8afeb63ffa7e78847f4') in 0.001011 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001632 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Property/BehaviorConditionGroup.cs
+  artifactKey: Guid(26b174530596f624fbbf8a094733c6f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Property/BehaviorConditionGroup.cs using Guid(26b174530596f624fbbf8a094733c6f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cb5b89c4a2940f75405414d1e377492') in 0.000926 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000531 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Property/LocalizationController
+  artifactKey: Guid(f690a70fd70c49d4bb5c3b6c8f68291b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Property/LocalizationController using Guid(f690a70fd70c49d4bb5c3b6c8f68291b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '341834140d5c1f4eede2aa20661a6f15') in 0.001015 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000669 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/Graphic/NodeNotify
+  artifactKey: Guid(c4cffdf241385f646b79beef727bc920) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/Graphic/NodeNotify using Guid(c4cffdf241385f646b79beef727bc920) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9be08000458bf48949ca0e1ebb98612a') in 0.000818 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001121 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/TreeDescript/BehaviorDescriptModel.cs
+  artifactKey: Guid(18ba4ee8da468154aa58ab6e932ac0fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/TreeDescript/BehaviorDescriptModel.cs using Guid(18ba4ee8da468154aa58ab6e932ac0fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ee395bb505755a1ecea78d7b54aec5b') in 0.000922 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001102 seconds.
+  path: Assets/BehaviorTree/Scripts/Libary/litJson/ParserToken.cs
+  artifactKey: Guid(386bca97fb4d22b4580f54e18ba9e949) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Libary/litJson/ParserToken.cs using Guid(386bca97fb4d22b4580f54e18ba9e949) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbbfe0762b4420c28ddce71c748c41cc') in 0.000943 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001429 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/Graphic/ParameterCompare.cs
+  artifactKey: Guid(4a88568c7e97a924f881bcfc6d4135e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/Graphic/ParameterCompare.cs using Guid(4a88568c7e97a924f881bcfc6d4135e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba39507a7f870d27974abee09ce111ba') in 0.000984 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000912 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/NodeDescript.cs
+  artifactKey: Guid(c639872bd3c2d83409f2c44796d902f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/NodeDescript.cs using Guid(c639872bd3c2d83409f2c44796d902f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'beb85f56fea6e132c051e666e175c578') in 0.001082 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000432 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/AI
+  artifactKey: Guid(a980b6fbe7560ae48a771a41a5ed3899) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/AI using Guid(a980b6fbe7560ae48a771a41a5ed3899) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a93627a6e2bc6e9fbe3445d2a9fdbcea') in 0.000855 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000837 seconds.
+  path: Assets/BehaviorTree/Resources/Red.mat
+  artifactKey: Guid(62195948c5a225e42abdf79237fb96e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Resources/Red.mat using Guid(62195948c5a225e42abdf79237fb96e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c41caf7711b36e1c665195ae6ebb541') in 0.004765 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001402 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/Decorator/NodeDecoratorUntil.cs
+  artifactKey: Guid(5f65aef9ea7aa9b47bcea7c3a87e8718) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/Decorator/NodeDecoratorUntil.cs using Guid(5f65aef9ea7aa9b47bcea7c3a87e8718) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b9c04763d47ad12406f490aea07bbe2') in 0.000927 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001017 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/CommonUtils/FileUtils.cs
+  artifactKey: Guid(7a04af75388b2404bb9f8f35f5b186a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/CommonUtils/FileUtils.cs using Guid(7a04af75388b2404bb9f8f35f5b186a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0b3868c709f2b949a3acb183f411ed4') in 0.000887 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.017833 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/PlayerDemo/PlayerEnougthEnergyCondition.cs
+  artifactKey: Guid(1207b675a0443114cac2082a8fa481c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/PlayerDemo/PlayerEnougthEnergyCondition.cs using Guid(1207b675a0443114cac2082a8fa481c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '757437995a6ab8362e9f50552c1b4721') in 0.000875 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000992 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/Decorator/NodeDecoratorRepeat.cs
+  artifactKey: Guid(82865fa5357c9f741874d4cfb74fc683) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/Decorator/NodeDecoratorRepeat.cs using Guid(82865fa5357c9f741874d4cfb74fc683) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e83f9f8920d15bd66667a3b999278467') in 0.000854 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000893 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/Table/DataCenter.cs
+  artifactKey: Guid(759fb30efbb6b59438d09d2e20cbd7f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/Table/DataCenter.cs using Guid(759fb30efbb6b59438d09d2e20cbd7f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '734c16e6765406f734faea11ccd0c22d') in 0.000793 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000686 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/EnumType
+  artifactKey: Guid(e4cf53fbb863553438abcaa71419c4fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/EnumType using Guid(e4cf53fbb863553438abcaa71419c4fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f19bf259419b5cb540c3618e8e4296e') in 0.000973 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001041 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/Sprite/NumberSprite.cs
+  artifactKey: Guid(33dbda977f8380648b664c783c56b7be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/Sprite/NumberSprite.cs using Guid(33dbda977f8380648b664c783c56b7be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e83fd804d03b8bc0d0cdf64a29f983bf') in 0.001011 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001046 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Leaf/NodeAction.cs
+  artifactKey: Guid(c177a997678fc424ca84615e2ca2afa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Leaf/NodeAction.cs using Guid(c177a997678fc424ca84615e2ca2afa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f2c6aa0bf68a06c1ea978bb4c1201ec') in 0.001058 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.009526 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/Base/ConditionBase.cs
+  artifactKey: Guid(225230a45e1c053449f3ed70660ce824) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/Base/ConditionBase.cs using Guid(225230a45e1c053449f3ed70660ce824) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8af4d8951383558753576612d45813a9') in 0.001094 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000748 seconds.
+  path: Assets/BehaviorTree/Resources/behavior_tree_config.bytes
+  artifactKey: Guid(801d221505b7d28448ef60c4f28a598a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Resources/behavior_tree_config.bytes using Guid(801d221505b7d28448ef60c4f28a598a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2f10527a0474f7e0943f76c635cbb21') in 0.001268 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000827 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/Base/NodeSubTreeDynamicBase.cs
+  artifactKey: Guid(e8e9ef5c919117a45885d887c53a6d3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/Base/NodeSubTreeDynamicBase.cs using Guid(e8e9ef5c919117a45885d887c53a6d3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b1e2e2ade48747e0f6a157c44d78565') in 0.000901 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000446 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script
+  artifactKey: Guid(ed9dbbeb3bad7e94eb4b79147872ad2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script using Guid(ed9dbbeb3bad7e94eb4b79147872ad2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb901eca607a5f1adfae8e7f7308fbc2') in 0.000872 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000889 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/DataController/Handler/DataNodeHandler.cs
+  artifactKey: Guid(a7e563e18f5610d418c77e8f88c7c2ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/DataController/Handler/DataNodeHandler.cs using Guid(a7e563e18f5610d418c77e8f88c7c2ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '508289d57d21521b5b79786f637da91e') in 0.000839 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000849 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorNodeDrawController/DrawNodeCurveTools.cs
+  artifactKey: Guid(ce06730ed5b71d0488422c34157e0fa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorNodeDrawController/DrawNodeCurveTools.cs using Guid(ce06730ed5b71d0488422c34157e0fa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e859ab7982171b3d88d38d552c08e9a') in 0.000922 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000937 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/DataController/DataNodeIdStandardTool.cs
+  artifactKey: Guid(62bc108b567fd9b4886e6db1f3bb3c08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/DataController/DataNodeIdStandardTool.cs using Guid(62bc108b567fd9b4886e6db1f3bb3c08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a290a8315dd415585609a73663630b4') in 0.000860 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000628 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/AbstractNode/ICondition.cs
+  artifactKey: Guid(e9e505967af184c4a92ed2f58492ed0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/AbstractNode/ICondition.cs using Guid(e9e505967af184c4a92ed2f58492ed0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1248d369de04632e50270c79c013a400') in 0.000833 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000865 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Check/CheckSubTreeTool.cs
+  artifactKey: Guid(05556d3aa1c9ba848bb6b1011c0031f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Check/CheckSubTreeTool.cs using Guid(05556d3aa1c9ba848bb6b1011c0031f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0c840532a989d43d5685bc3c4342fac') in 0.000936 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001090 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/FileHandle/ConfigFileUpdate.cs
+  artifactKey: Guid(93b5895b6f4a6e64984555b59f369229) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/FileHandle/ConfigFileUpdate.cs using Guid(93b5895b6f4a6e64984555b59f369229) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0c3ce9f85dd9952121c4e8075b2123f') in 0.000742 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000277 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor
+  artifactKey: Guid(23664ad5ff34cea44be209ef89b35ea2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor using Guid(23664ad5ff34cea44be209ef89b35ea2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a8ce66a367f3e542bf48efcafe67367') in 0.000812 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000969 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/NodeIfJudge.cs
+  artifactKey: Guid(d483b22cf9ccedc4db3a8a4fb3d0c0ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/NodeIfJudge.cs using Guid(d483b22cf9ccedc4db3a8a4fb3d0c0ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c97b06950fd7e7351791efb7db72fb43') in 0.000898 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000594 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Leaf
+  artifactKey: Guid(2856175452b797a42bb626613f1893b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Leaf using Guid(2856175452b797a42bb626613f1893b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d56426145fdfad09063578202790482') in 0.000912 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001015 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/Decorator/NodeDecoratorReturnConst.cs
+  artifactKey: Guid(ded432211a90d9c469fc72de742fee71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/Decorator/NodeDecoratorReturnConst.cs using Guid(ded432211a90d9c469fc72de742fee71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a309bbf5af895a701aaaf3f7f68c6f8c') in 0.000902 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000880 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/IMove/IMove.cs
+  artifactKey: Guid(f3c6fd5dd40a39f43ae68ca84585df1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/IMove/IMove.cs using Guid(f3c6fd5dd40a39f43ae68ca84585df1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5f714a951518d8aaf88192a801fc09f') in 0.000757 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000857 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Localization/Localization.cs
+  artifactKey: Guid(8bd5a464bf72db34dbfcf8b10194b922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Localization/Localization.cs using Guid(8bd5a464bf72db34dbfcf8b10194b922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fae8fd37ba7cbc0692e998ba58ec288') in 0.000850 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000802 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/FileHandle/ConfigFileLoad.cs
+  artifactKey: Guid(94a4a5b53fba9034ab12bd0ca252b65f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/FileHandle/ConfigFileLoad.cs using Guid(94a4a5b53fba9034ab12bd0ca252b65f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03312568b3f33a74db65c32bd93e53d9') in 0.000803 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000682 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor
+  artifactKey: Guid(22e2d1718b610c244bdcc159cba62ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor using Guid(22e2d1718b610c244bdcc159cba62ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4a3a62d779244825201c042e524463f') in 0.000934 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001455 seconds.
+  path: Assets/BehaviorTree/Scripts/Libary/litJson/JsonException.cs
+  artifactKey: Guid(be80416e4538b67478d7157db52bbfc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Libary/litJson/JsonException.cs using Guid(be80416e4538b67478d7157db52bbfc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd68564e713cf39f88ff17c26c9cda2d') in 0.001343 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000967 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/AI/BT/BTConstant.cs
+  artifactKey: Guid(e2adc5c65ad113e47b8a274b7655d8bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/AI/BT/BTConstant.cs using Guid(e2adc5c65ad113e47b8a274b7655d8bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dc58bbafc6fd75843e1b43c3c97abe8') in 0.000899 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001190 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/DataController/Handler/DataHandler.cs
+  artifactKey: Guid(3d085525499129f4bb00cc296455f365) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/DataController/Handler/DataHandler.cs using Guid(3d085525499129f4bb00cc296455f365) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd7ff16b4c47624c8bf6c0c01a6b9a15') in 0.001188 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000544 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/TreeDescript
+  artifactKey: Guid(d31cf11dd81920746978b2cd60deed5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/TreeDescript using Guid(d31cf11dd81920746978b2cd60deed5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92ede1cd30f147af5a947f921291d4bb') in 0.000834 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001901 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/PlayerDemo/PlayerSearchEnemyAction.cs
+  artifactKey: Guid(47fc82c43e2a6af419e68ff847bf9faa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/PlayerDemo/PlayerSearchEnemyAction.cs using Guid(47fc82c43e2a6af419e68ff847bf9faa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6140665f26e1b265fc6ad11f32d6a9a') in 0.000857 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000907 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/AbstractNode/NodeComposite.cs
+  artifactKey: Guid(77b25005f89946d46a6622294a08b50a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/AbstractNode/NodeComposite.cs using Guid(77b25005f89946d46a6622294a08b50a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60420a2d20ab1d893615c7fb62df0ec3') in 0.000852 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000756 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorNodeDrawController/BehaviorNodeDraw.cs
+  artifactKey: Guid(3113a5167e415154abdd454f4f5418b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorNodeDrawController/BehaviorNodeDraw.cs using Guid(3113a5167e415154abdd454f4f5418b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4205d2f7f3493062741679f0f259d1da') in 0.000848 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001089 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Leaf/NodeConditionCustom.cs
+  artifactKey: Guid(4d25d4afec4dedb49a2eba1aaae3ffd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Leaf/NodeConditionCustom.cs using Guid(4d25d4afec4dedb49a2eba1aaae3ffd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69b517c83d4ec35e2069786844b310b0') in 0.000903 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001030 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/NodeParallelAll.cs
+  artifactKey: Guid(689a7b37904948b4dbfaa8e1cbc01dba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/NodeParallelAll.cs using Guid(689a7b37904948b4dbfaa8e1cbc01dba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fc31a305deb164512d29337c5a1ddd8') in 0.000847 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001193 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/AI/AIInterface.cs
+  artifactKey: Guid(ec8b2ddde3b6e094fa95ea5febbf60c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/AI/AIInterface.cs using Guid(ec8b2ddde3b6e094fa95ea5febbf60c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ece73584855e6bc3d07f2be84ddaa38') in 0.000852 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000890 seconds.
+  path: Assets/BehaviorTree/Version/Version_1.0.0.txt
+  artifactKey: Guid(0e7070c3501bb904184392d8004813b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Version/Version_1.0.0.txt using Guid(0e7070c3501bb904184392d8004813b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3535b61ceac01bb8a9a070ada7af1adb') in 0.003870 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001114 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Check/CheckNodeTool.cs
+  artifactKey: Guid(dfc422583fae8244a962786317879eaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Check/CheckNodeTool.cs using Guid(dfc422583fae8244a962786317879eaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c2c5815bc46f60c904a5085de104438') in 0.000866 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000614 seconds.
+  path: Assets/BehaviorTree/GameData/BehaviorTree
+  artifactKey: Guid(9ee243d2c5f7a2e4dbe6b72eb7c6beb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/GameData/BehaviorTree using Guid(9ee243d2c5f7a2e4dbe6b72eb7c6beb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba0e0dfa9771e244ebee1b59daa0e89e') in 0.000795 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.029645 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/PlayerDemo/PlayerReplenishEnergyAction.cs
+  artifactKey: Guid(4dccd717f7e003a4cb08aef9fa30867d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/PlayerDemo/PlayerReplenishEnergyAction.cs using Guid(4dccd717f7e003a4cb08aef9fa30867d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe390c2d4d4dfcb203477cd5e8597b83') in 0.000944 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000817 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/DataController/Handler/DataParameterHandler.cs
+  artifactKey: Guid(d54012ff1d6f5384190d04bbf54e0ad1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/DataController/Handler/DataParameterHandler.cs using Guid(d54012ff1d6f5384190d04bbf54e0ad1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '773d7a5a5bc67d68e3c7d26e3a7ae7a2') in 0.000851 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000296 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/FileHandle
+  artifactKey: Guid(16370abacb69f454994c74568a73f7b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/FileHandle using Guid(16370abacb69f454994c74568a73f7b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c72b22a87212b6e5339af8380b1f6d76') in 0.000867 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000686 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/FileHandle/BehaviorFileHandleController.cs
+  artifactKey: Guid(0c48d58ec8ade5245b54a5a7a99840ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/FileHandle/BehaviorFileHandleController.cs using Guid(0c48d58ec8ade5245b54a5a7a99840ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f3bfc4ed149ca19c3abcb401f55ffa4') in 0.001254 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000762 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/NodeInspector/BehaviorNodeInspectorView.cs
+  artifactKey: Guid(f84dfc74a79edc04cb267cfc8f1be51d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/NodeInspector/BehaviorNodeInspectorView.cs using Guid(f84dfc74a79edc04cb267cfc8f1be51d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d7bbf95abd6c328f441138a435a7164') in 0.000830 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000849 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/PlayerDemo/PlayerMoveAction.cs
+  artifactKey: Guid(2906e809e9607404fa1e4f10c0629d2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/PlayerDemo/PlayerMoveAction.cs using Guid(2906e809e9607404fa1e4f10c0629d2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18b6affe4e75f7b35079c601045ce00a') in 0.000825 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000609 seconds.
+  path: Assets/BehaviorTree/GameData
+  artifactKey: Guid(8cda98bd5f79c5249a2e11359a528001) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/GameData using Guid(8cda98bd5f79c5249a2e11359a528001) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '803aacb81f3239e3a13614cf16190f8e') in 0.000934 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000448 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Check
+  artifactKey: Guid(4b0495760bacfa841a14ad28bca57b83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Check using Guid(4b0495760bacfa841a14ad28bca57b83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24e55e748208db8ecb3bd10ef2282f85') in 0.000846 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001084 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/Graphic/ConfigNode/AbstractConfigNode.cs
+  artifactKey: Guid(7730272ad1a713a4ebb1514bec534843) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/Graphic/ConfigNode/AbstractConfigNode.cs using Guid(7730272ad1a713a4ebb1514bec534843) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2b2a4b153e5a457cbe986b1bfb5dd8e') in 0.000919 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000876 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Property/LocalizationController/LocalizationView.cs
+  artifactKey: Guid(470b5edc83332744a965c6ea1cb520dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Property/LocalizationController/LocalizationView.cs using Guid(470b5edc83332744a965c6ea1cb520dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dd9fbbaa28ba2e329dd005c5420975c') in 0.000842 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000344 seconds.
+  path: Assets/BehaviorTree/Scripts/Libary
+  artifactKey: Guid(7cb0da86e0009f94db707afa02e4d849) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Libary using Guid(7cb0da86e0009f94db707afa02e4d849) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2024ed5b44e5668426a0356ed7127b5') in 0.000776 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000639 seconds.
+  path: Assets/BehaviorTree
+  artifactKey: Guid(ea5358385739e204ab4c3d39d234496e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree using Guid(ea5358385739e204ab4c3d39d234496e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65ac038d3828056d08396376d37322a2') in 0.000795 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001072 seconds.
+  path: Assets/StreamingAssets/Bina/behavior_tree_config.bytes
+  artifactKey: Guid(656f067a85e69d1448f6c91a94a52087) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/StreamingAssets/Bina/behavior_tree_config.bytes using Guid(656f067a85e69d1448f6c91a94a52087) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9947e3a5612761932c986f048b326537') in 0.001016 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000655 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/FileHandle/ReadWrite
+  artifactKey: Guid(0b22c23c5397e534f93b834f3ddd311f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/FileHandle/ReadWrite using Guid(0b22c23c5397e534f93b834f3ddd311f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '504f3b87284bb55ee6d0ac6dc7e2b750') in 0.000817 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000968 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/NodeAsset/NodeAsset.cs
+  artifactKey: Guid(47cc21879285855469b08d3b3d43146d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/NodeAsset/NodeAsset.cs using Guid(47cc21879285855469b08d3b3d43146d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '136dcb6b75aaf6755930ec86ad33da56') in 0.000770 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000977 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/EnergyStation.cs
+  artifactKey: Guid(7247ee60805800541be74665c30d82e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/EnergyStation.cs using Guid(7247ee60805800541be74665c30d82e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5047e2f51a25a1df43e993d7227b5fff') in 0.000987 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001149 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/Attribute/AttributeEditor.cs
+  artifactKey: Guid(59ed030c2c59e18429e39974fbcc408c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/Attribute/AttributeEditor.cs using Guid(59ed030c2c59e18429e39974fbcc408c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66e7edc26d6da7d89029ada0657bbb96') in 0.000903 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000749 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Tree
+  artifactKey: Guid(48336cd31e152a54bae3be1d48683fd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Tree using Guid(48336cd31e152a54bae3be1d48683fd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3ea58e138679bfa35068bb72ec7c8eb') in 0.001296 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000836 seconds.
+  path: Assets/BehaviorTree/Scripts/Libary/litJson/JsonWriter.cs
+  artifactKey: Guid(a6b733efe3e28394b88110349c223827) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Libary/litJson/JsonWriter.cs using Guid(a6b733efe3e28394b88110349c223827) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90540a2bd48ef64d613add82b0d2e6af') in 0.000824 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001028 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/Sprite/BaseSprite.cs
+  artifactKey: Guid(5f88b8ae5290c4b47b84cfdeee7ca280) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/Sprite/BaseSprite.cs using Guid(5f88b8ae5290c4b47b84cfdeee7ca280) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b42cacaa884aa9ffe58440e9377d9273') in 0.000846 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000498 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Property
+  artifactKey: Guid(862a4e4ce30bf2c4cbbfe5929251451e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Property using Guid(862a4e4ce30bf2c4cbbfe5929251451e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0ed6bcf5b0cccda8851619d7c5befe6') in 0.000791 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000561 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/Sprite/ISprite
+  artifactKey: Guid(6063b622eb4363f42862b9aea1e61205) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/Sprite/ISprite using Guid(6063b622eb4363f42862b9aea1e61205) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de80b28e1bc4c249c3939ce528084c87') in 0.000704 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000845 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Leaf/NodeCondition.cs
+  artifactKey: Guid(1e36b6d2c8e296147b5d8d81922dab7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Leaf/NodeCondition.cs using Guid(1e36b6d2c8e296147b5d8d81922dab7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8be49ef59d3baf3d5ab09a7cce089099') in 0.000801 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.032770 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/RunTime/BehaviorRunTime.cs
+  artifactKey: Guid(35bb2609de6436f4d87c76e2e0428419) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/RunTime/BehaviorRunTime.cs using Guid(35bb2609de6436f4d87c76e2e0428419) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c493c7192d493b21f126c52e9735fa7f') in 0.001445 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000985 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/FileHandle/ConfigFileSaveSubTree.cs
+  artifactKey: Guid(176954d3a356c214992281e6c31fe93f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/FileHandle/ConfigFileSaveSubTree.cs using Guid(176954d3a356c214992281e6c31fe93f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00a7656f17b2e9b8887777238dbb28ea') in 0.000985 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.016323 seconds.
+  path: Assets/BehaviorTree/Demo/Human.unity
+  artifactKey: Guid(99c15c0bc56b97049a1911ae73da0d11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Demo/Human.unity using Guid(99c15c0bc56b97049a1911ae73da0d11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cbc2a66eb97f23d5c68114982dfe21d') in 0.000965 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000945 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/NodeInspector/NodeActionInspector.cs
+  artifactKey: Guid(87940a493faa344408896eda03a7c9d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/NodeInspector/NodeActionInspector.cs using Guid(87940a493faa344408896eda03a7c9d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d8235aecad1214480ee8f33e73ac735') in 0.000822 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.014478 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorManager/BehaviorTreeDebugEditor.cs
+  artifactKey: Guid(c7330b7423d0c644391af72cfbd8fd17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorManager/BehaviorTreeDebugEditor.cs using Guid(c7330b7423d0c644391af72cfbd8fd17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f96a0683486ade568099f42e1aedbec') in 0.001053 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000726 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/Table
+  artifactKey: Guid(0f597cf77a4d73c4d88cb494883caf86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/Table using Guid(0f597cf77a4d73c4d88cb494883caf86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40f0b7c110ca853082b2e0613be183f4') in 0.000951 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000858 seconds.
+  path: Assets/BehaviorTree/Scripts/Libary/litJson/Lexer.cs
+  artifactKey: Guid(2c89c42517a6182439a4c38e9db4c302) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Libary/litJson/Lexer.cs using Guid(2c89c42517a6182439a4c38e9db4c302) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3951f121b2b935504b539f397f7a51ee') in 0.000823 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001089 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/BehaviorTreeDebug.cs
+  artifactKey: Guid(ea02d4b6ca5d5a046ac8d583f6455d0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/BehaviorTreeDebug.cs using Guid(ea02d4b6ca5d5a046ac8d583f6455d0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f50cebc9d1035da6065fb9d6af016824') in 0.000817 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000893 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/Number/NumberActionDo1.cs
+  artifactKey: Guid(658a86330902bdc499fdd6be65474a9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/Number/NumberActionDo1.cs using Guid(658a86330902bdc499fdd6be65474a9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a77901c2ede62b0d6d49bec0aaf4895') in 0.000832 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001105 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/Number/NumberActionDo2.cs
+  artifactKey: Guid(d4844065447d81945830e77bec2c0696) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/Number/NumberActionDo2.cs using Guid(d4844065447d81945830e77bec2c0696) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8346d6a88ee7795bcbaf7552b1501404') in 0.000872 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001131 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/DataHandle/BehaviorDataImportParameter.cs
+  artifactKey: Guid(d2021be274e3545419e25eddfb435836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/DataHandle/BehaviorDataImportParameter.cs using Guid(d2021be274e3545419e25eddfb435836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04db83f9e600cc727d7716f4152847f0') in 0.000846 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.007579 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/PlayerDemo/PlayerPatrolAction.cs
+  artifactKey: Guid(4a41d0d4efb36024095f2c7ce935d91c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/PlayerDemo/PlayerPatrolAction.cs using Guid(4a41d0d4efb36024095f2c7ce935d91c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f2c8b0bc93bd25c706074472090f646') in 0.000802 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000992 seconds.
+  path: Assets/BehaviorTree/third-party-notices.txt
+  artifactKey: Guid(fcef85c4993efa84ca507a2f6e0b4aef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/third-party-notices.txt using Guid(fcef85c4993efa84ca507a2f6e0b4aef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33f077f3931a1c861704df56f9d4afe2') in 0.001257 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000846 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/NodeInspector/NodeConditionInspector.cs
+  artifactKey: Guid(9c5292d9a599be343a8af7f4fcc8c296) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/NodeInspector/NodeConditionInspector.cs using Guid(9c5292d9a599be343a8af7f4fcc8c296) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29d9c559e26a892e57101685c0bd4c61') in 0.000811 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000403 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor
+  artifactKey: Guid(0d66c3bddb5af59419339b4caebcaad5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor using Guid(0d66c3bddb5af59419339b4caebcaad5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '532d6aae2a55f5bc91279c64bea87132') in 0.000819 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000437 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Localization
+  artifactKey: Guid(6b5f0b3b4ac53fd44a602a83ae8344ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Localization using Guid(6b5f0b3b4ac53fd44a602a83ae8344ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad9e8a60f6abe574f128582b4760c579') in 0.000745 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000766 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/CommonUtils/ByteBuffer.cs
+  artifactKey: Guid(cbb67c7000ef3a64395781d3d2449701) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/CommonUtils/ByteBuffer.cs using Guid(cbb67c7000ef3a64395781d3d2449701) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea5c77e46f63f1f92d73778393332c2a') in 0.000893 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000396 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/Sprite/Player
+  artifactKey: Guid(a810a59a766ee804697b8c9ffe83a580) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/Sprite/Player using Guid(a810a59a766ee804697b8c9ffe83a580) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c87c7f99069d5a557710fab88cab756') in 0.000726 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.020180 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/NodeInspector/NodeLeafInspector.cs
+  artifactKey: Guid(b2644fde1e9f2004b8530d2464db157d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/NodeInspector/NodeLeafInspector.cs using Guid(b2644fde1e9f2004b8530d2464db157d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66dffa6336fbf7992a4c6e236c0d1499') in 0.000944 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001084 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/Sprite/Player/SpriteFollowEnemy.cs
+  artifactKey: Guid(7f96853bcbf427f429a0e67b6df95de0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/Sprite/Player/SpriteFollowEnemy.cs using Guid(7f96853bcbf427f429a0e67b6df95de0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fe43b3b8dc60cbccacd294617427147') in 0.000918 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000871 seconds.
+  path: Assets/BehaviorTree/GameData/BehaviorTree/Player.bytes
+  artifactKey: Guid(c3a4f9f2a7fdad9408d8d185eb732132) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/GameData/BehaviorTree/Player.bytes using Guid(c3a4f9f2a7fdad9408d8d185eb732132) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8efa45e88c15eb93a27a343a483005dc') in 0.001153 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001451 seconds.
+  path: Assets/BehaviorTree/Scripts/Libary/litJson/JsonMapper.cs
+  artifactKey: Guid(818d768ccf9a85243b1d69efbc780db5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Libary/litJson/JsonMapper.cs using Guid(818d768ccf9a85243b1d69efbc780db5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b75099db0210962f3c3f919625a06b71') in 0.000836 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000839 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/Table/BehaviorData.cs
+  artifactKey: Guid(676bba21e546d2f4992d760dfee7f383) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/Table/BehaviorData.cs using Guid(676bba21e546d2f4992d760dfee7f383) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6354b704ddf07a0ed67180458349bd44') in 0.000793 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000536 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/Graphic
+  artifactKey: Guid(8c4a05b7abd3c7a4ebb230111fef9185) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/Graphic using Guid(8c4a05b7abd3c7a4ebb230111fef9185) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c8205f2ece0034a1bae9ba5272580e5') in 0.000806 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000876 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/AI/SpriteBTUpdateManager.cs
+  artifactKey: Guid(fa4fae7b327bfe7428274addbaba2f9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/AI/SpriteBTUpdateManager.cs using Guid(fa4fae7b327bfe7428274addbaba2f9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7502044e19a67aa0a986e9375a703aeb') in 0.000811 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000610 seconds.
+  path: Assets/BehaviorTree/GameData/CSVAssets
+  artifactKey: Guid(70b1f0e66806bdd488c098ccd5dfd04d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/GameData/CSVAssets using Guid(70b1f0e66806bdd488c098ccd5dfd04d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21ab3ffc8bfbe90b3028119e130e7cda') in 0.000786 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000946 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/Bullet/Bullet.cs
+  artifactKey: Guid(3b2eeb5619212f845b6405ea0dc7ac26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/Bullet/Bullet.cs using Guid(3b2eeb5619212f845b6405ea0dc7ac26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff505298d3c38117533525f3b1158146') in 0.000749 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000937 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorNodeDrawController/BehaviorDrawController.cs
+  artifactKey: Guid(be4b9c2fd24dab24291a020014a1f370) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorNodeDrawController/BehaviorDrawController.cs using Guid(be4b9c2fd24dab24291a020014a1f370) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e42c190127c54086eed282b317d67222') in 0.000855 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.213027 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/PlayerDemo/PlayerAttackAction.cs
+  artifactKey: Guid(7e7a12e7acb2ec341b6daa578255be56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/PlayerDemo/PlayerAttackAction.cs using Guid(7e7a12e7acb2ec341b6daa578255be56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3714deb3c6e10450d5dc4b1eaa7b68f5') in 0.000867 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.039481 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/NodeRandom.cs
+  artifactKey: Guid(5618a6e15f8340b4c862afec35789aea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/NodeRandom.cs using Guid(5618a6e15f8340b4c862afec35789aea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8f4fb762ddb652512ccbfddd4e8c4ba') in 0.000966 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001081 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/Graphic/Data/NodeParameter.cs
+  artifactKey: Guid(18cc24bb6163dc4429040cb4a28f3b28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/Graphic/Data/NodeParameter.cs using Guid(18cc24bb6163dc4429040cb4a28f3b28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7ccd62c1f69ad17104121d69c3908d1') in 0.000918 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001152 seconds.
+  path: Assets/BehaviorTree/Scripts/Libary/litJson/JsonData.cs
+  artifactKey: Guid(4020b26c4d294aa41b3326a70e5fd370) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Libary/litJson/JsonData.cs using Guid(4020b26c4d294aa41b3326a70e5fd370) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d4043bbae8b11f62a336d0c393a7190') in 0.000967 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001033 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/Decorator/NodeDecoratorUntilFail.cs
+  artifactKey: Guid(b934fb8584843c9468fa1fe41d99dcbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/Decorator/NodeDecoratorUntilFail.cs using Guid(b934fb8584843c9468fa1fe41d99dcbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc9e1e6706f59468d13a196b1a6ccf74') in 0.000928 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001166 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/NodeInspector/NodeCompositeInspector.cs
+  artifactKey: Guid(dca071999ac90d146916713b10a472e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/NodeInspector/NodeCompositeInspector.cs using Guid(dca071999ac90d146916713b10a472e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08214d51803f2ee042bfd93cd91a4673') in 0.000910 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001055 seconds.
+  path: Assets/BehaviorTree/Scripts/Libary/litJson/IJsonWrapper.cs
+  artifactKey: Guid(d00a436650353ce4a895d577c4b85166) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Libary/litJson/IJsonWrapper.cs using Guid(d00a436650353ce4a895d577c4b85166) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '328cb9daa33660c9a589432b9f10e9d3') in 0.000869 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001423 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/NodeIfJudgeParallel.cs
+  artifactKey: Guid(d0229b42a011bd84d8c6874ff592a5a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/NodeIfJudgeParallel.cs using Guid(d0229b42a011bd84d8c6874ff592a5a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a771cbc8e76caedcb6d411d522b92fe') in 0.000927 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001460 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Property/LocalizationController/LocalizationController.cs
+  artifactKey: Guid(6ceb51ec9b3b55441b7cd9101550715a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/Property/LocalizationController/LocalizationController.cs using Guid(6ceb51ec9b3b55441b7cd9101550715a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba778bf7d9e33933aff9317f9f259b4c') in 0.000849 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000918 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/Sprite/Npc.cs
+  artifactKey: Guid(15a9d736568b0c24595748af0b71ec6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/Sprite/Npc.cs using Guid(15a9d736568b0c24595748af0b71ec6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31e2588f1fda078c87eee78316597fd8') in 0.000794 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.028451 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorManager/BehaviorDrawProperty.cs
+  artifactKey: Guid(be1a057dfae73e340a7ba6aa5805fba7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorManager/BehaviorDrawProperty.cs using Guid(be1a057dfae73e340a7ba6aa5805fba7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10faf48d531dbd9eafcb8c20a359af3b') in 0.001001 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000700 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorNodeDrawController
+  artifactKey: Guid(350966bd52d76ea4e807f3c63e7055ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorNodeDrawController using Guid(350966bd52d76ea4e807f3c63e7055ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04d4b0eb71070bfc203340401a652bac') in 0.000836 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001082 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/Graphic/AbstractNode
+  artifactKey: Guid(f62a1ab69665c944191168cf88530ebe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/Graphic/AbstractNode using Guid(f62a1ab69665c944191168cf88530ebe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8bc7ef6afa5f5d151d69335d7941de5') in 0.000917 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000849 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/DataController/DebugNodeParentInfoTool.cs
+  artifactKey: Guid(6ce83742b866cc94680c8c64a3bfee3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/DataController/DebugNodeParentInfoTool.cs using Guid(6ce83742b866cc94680c8c64a3bfee3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e7321c0c4a67f1a2af664a82f84a694') in 0.000858 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000950 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/Number/NumberActionDo3.cs
+  artifactKey: Guid(0ecee3bfd7c9c5b4fb94e802fa9f86ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/AI/BT/Action/Number/NumberActionDo3.cs using Guid(0ecee3bfd7c9c5b4fb94e802fa9f86ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0898125c3b0897a2bb1db2c2d8d3a50e') in 0.001414 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000395 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorNodeDrawController/NodeHandlerState
+  artifactKey: Guid(ecb184b0ba456c544a4147e7c68c62f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorNodeDrawController/NodeHandlerState using Guid(ecb184b0ba456c544a4147e7c68c62f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a491810458d35ee0da497ddbdf64d670') in 0.000795 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000529 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/Bullet
+  artifactKey: Guid(20c256fd80bcfb24a901f603c31d3fe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/Bullet using Guid(20c256fd80bcfb24a901f603c31d3fe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '976f2c227d5f6a3163e219813b10c23c') in 0.000686 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000533 seconds.
+  path: Assets/StreamingAssets
+  artifactKey: Guid(774e5000bfc23b045aa3fd65de705853) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/StreamingAssets using Guid(774e5000bfc23b045aa3fd65de705853) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86ba92955d91571ce37d2c8ff68e5d31') in 0.000826 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.020111 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/NodeParallel.cs
+  artifactKey: Guid(7efe29394d929d147877de2c8c3f9176) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/Node/Composite/NodeParallel.cs using Guid(7efe29394d929d147877de2c8c3f9176) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15ca01c6c43ca7ea558a48b7e7957e59') in 0.001120 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000430 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/BehaviorTreeEntity.cs
+  artifactKey: Guid(d16e681aa35e0a74a9a6e817bd9e3dd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/BehaviorTree/BehaviorTreeEntity.cs using Guid(d16e681aa35e0a74a9a6e817bd9e3dd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77e86d7e1eb2943574a1cd0a29e1c3fc') in 0.000866 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001798 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/AI/BT/BTBase.cs
+  artifactKey: Guid(c274003aadf2acd4fb8cde19091bdfc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/AI/BT/BTBase.cs using Guid(c274003aadf2acd4fb8cde19091bdfc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f73d465d20a5475e9448e73c34ff46a7') in 0.000812 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001311 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/Sprite/Player.cs
+  artifactKey: Guid(56f3eb5aa8eb63e42b9d9fc62dcd3d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/Sprite/Player.cs using Guid(56f3eb5aa8eb63e42b9d9fc62dcd3d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bd3259161893f94e617d32ebf701b5e') in 0.000753 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001045 seconds.
+  path: Assets/BehaviorTree/Scripts/CommonScripts/Graphic/CustomIdentification/CustomIdentification.cs
+  artifactKey: Guid(5934617d31673ee4abb56d0c963821aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/CommonScripts/Graphic/CustomIdentification/CustomIdentification.cs using Guid(5934617d31673ee4abb56d0c963821aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e19407b84026e0662136ee5ddbaec833') in 0.000759 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001145 seconds.
+  path: Assets/BehaviorTree/Scripts/Example/Script/AI/GameController.cs
+  artifactKey: Guid(fb27fca71d58de744a83b151d1128046) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/Example/Script/AI/GameController.cs using Guid(fb27fca71d58de744a83b151d1128046) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7958f2a14b6326ede33ca28996b08d9') in 0.000856 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000809 seconds.
+  path: Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorManager
+  artifactKey: Guid(54b091f99baf1584fa83ee6bc0338eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BehaviorTree/Scripts/GameEditor/Editor/BehaviorTreeEditor/BehaviorManager using Guid(54b091f99baf1584fa83ee6bc0338eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29ac56850f24ba04f845c0827e7d4167') in 0.000720 seconds 
