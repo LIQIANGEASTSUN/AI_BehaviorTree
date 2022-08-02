@@ -4,7 +4,7 @@ respective licenses:
 Assets/BehaviorTree/Scripts/Libary
 
     https://litjson.net/
-    Copyright (c) 2014-present, Facebook, Inc. All rights reserved
+    Copyright (c) 2022-present, devlead. All rights reserved
     MIT License
 	
 	
