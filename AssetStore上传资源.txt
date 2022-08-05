@@ -1,13 +1,12 @@
-https://www.bilibili.com/video/av756384364
-
-
-
-https://www.wenjiangs.com/doc/lgytqugc
-
-
-This is the first Assetstore resource I have uploaded. I am looking forward to it and hope it can pass the review smoothly. Thank you very much
-
 
 
 上传规范
 https://blog.csdn.net/Game_jqd/article/details/88533196
+
+
+
+key image 规范
+https://support.unity.com/hc/en-us/articles/210122403-What-makes-a-great-key-image-and-are-there-any-size-restrictions-
+
+
+file:///C:/Program%20Files/Unity/Hub/Editor/2019.4.18f1/Editor/Data/Documentation/en/Manual/AssetStorePkgDetails.html
