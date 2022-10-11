@@ -52,6 +52,13 @@ namespace BehaviorTree
             info.DefaultParameterList.AddRange(parameterList);
         }
 
+        //private void ConfigDefaultParameter<T>(List<string> parameterList) where T : NodeBase, new()
+        //{
+        //    string identificationName = CustomIdentification<T>.GetIdentification();
+        //    ICustomIdentification<AbstractNode> info = GetIdentification(identificationName);
+        //    info.DefaultParameterList.AddRange(parameterList);
+        //}
+
         /// <summary>
         /// The initial composite node
         /// </summary>
