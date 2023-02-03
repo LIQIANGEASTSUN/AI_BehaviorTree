@@ -67,6 +67,12 @@ namespace BehaviorTree
                     BehaviorDataImportParameter behaviorDataImportParameter = new BehaviorDataImportParameter();
                     behaviorDataImportParameter.ImportParameter(BehaviorDataController.Instance.BehaviorTreeData);
                 }
+                string removeUnUseParameter = Localization.GetInstance().Format("RemoveUnUseParameter");
+                if (GUILayout.Button(removeUnUseParameter))
+                {
+                    BehaviorDataRemoveUnUseParameter behaviorDataRemoveUnUseParameter = new BehaviorDataRemoveUnUseParameter();
+                    behaviorDataRemoveUnUseParameter.RemoveParameter(BehaviorDataController.Instance.BehaviorTreeData);
+                }
             }
             EditorGUILayout.EndHorizontal();
 
