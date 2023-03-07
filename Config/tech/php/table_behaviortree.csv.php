@@ -1,0 +1,20 @@
+<?php
+return array(
+1=>["ID"=>1,"EnName"=>"DoFunction","CnName"=>"功能/执行功能","Type"=>2,"FloatValue"=>0,"IntValue"=>0,"BoolValue"=>0,"StringValue"=>""],
+2=>["ID"=>2,"EnName"=>"InHooking","CnName"=>"家园宠物/是否在挂机中","Type"=>5,"FloatValue"=>0,"IntValue"=>0,"BoolValue"=>0,"StringValue"=>""],
+3=>["ID"=>3,"EnName"=>"InHookPlace","CnName"=>"家园宠物/在挂机建筑位置","Type"=>5,"FloatValue"=>0,"IntValue"=>0,"BoolValue"=>0,"StringValue"=>""],
+4=>["ID"=>4,"EnName"=>"DistancePlayer","CnName"=>"岛宠物/与玩家距离","Type"=>0,"FloatValue"=>0,"IntValue"=>0,"BoolValue"=>0,"StringValue"=>""],
+5=>["ID"=>5,"EnName"=>"ArriveFollowPos","CnName"=>"岛宠物/到达跟随点","Type"=>5,"FloatValue"=>0,"IntValue"=>0,"BoolValue"=>0,"StringValue"=>""],
+6=>["ID"=>6,"EnName"=>"ValidPath","CnName"=>"岛宠物/路径有效","Type"=>0,"FloatValue"=>0,"IntValue"=>0,"BoolValue"=>0,"StringValue"=>""],
+7=>["ID"=>7,"EnName"=>"PetHp","CnName"=>"攻击/血量","Type"=>0,"FloatValue"=>0,"IntValue"=>0,"BoolValue"=>0,"StringValue"=>""],
+8=>["ID"=>8,"EnName"=>"HasTarget","CnName"=>"攻击/有攻击目标","Type"=>5,"FloatValue"=>0,"IntValue"=>0,"BoolValue"=>0,"StringValue"=>""],
+9=>["ID"=>9,"EnName"=>"ValidSkill","CnName"=>"攻击/技能有效","Type"=>5,"FloatValue"=>0,"IntValue"=>0,"BoolValue"=>0,"StringValue"=>""],
+10=>["ID"=>10,"EnName"=>"TargetInAttackDistance","CnName"=>"攻击/目标在攻击范围内","Type"=>5,"FloatValue"=>0,"IntValue"=>0,"BoolValue"=>0,"StringValue"=>""],
+11=>["ID"=>11,"EnName"=>"SkillEntry","CnName"=>"技能/入口","Type"=>5,"FloatValue"=>0,"IntValue"=>0,"BoolValue"=>0,"StringValue"=>""],
+12=>["ID"=>12,"EnName"=>"SkillInitFinish","CnName"=>"技能/初始阶段结束","Type"=>5,"FloatValue"=>0,"IntValue"=>0,"BoolValue"=>0,"StringValue"=>""],
+13=>["ID"=>13,"EnName"=>"SkillStandbyFinish","CnName"=>"技能/待机阶段结束","Type"=>5,"FloatValue"=>0,"IntValue"=>0,"BoolValue"=>0,"StringValue"=>""],
+14=>["ID"=>14,"EnName"=>"SkillFireFinish","CnName"=>"技能/释放阶段结束","Type"=>5,"FloatValue"=>0,"IntValue"=>0,"BoolValue"=>0,"StringValue"=>""],
+15=>["ID"=>15,"EnName"=>"SkillEndFinish","CnName"=>"技能/收尾阶段结束","Type"=>5,"FloatValue"=>0,"IntValue"=>0,"BoolValue"=>0,"StringValue"=>""],
+16=>["ID"=>16,"EnName"=>"SkillToState","CnName"=>"技能/转换到状态","Type"=>2,"FloatValue"=>0,"IntValue"=>0,"BoolValue"=>0,"StringValue"=>""],
+);
+?>
