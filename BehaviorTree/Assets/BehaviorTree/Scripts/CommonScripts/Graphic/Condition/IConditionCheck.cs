@@ -15,7 +15,7 @@ namespace GraphicTree
 
         void AddParameter(NodeParameter parameter);
 
-        bool Condition(NodeParameter parameter);
+        bool ConditionNodeParameter(NodeParameter parameter);
 
         bool ConditionAllAnd(List<NodeParameter> parameterList);
 

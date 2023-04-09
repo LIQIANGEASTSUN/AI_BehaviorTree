@@ -221,7 +221,7 @@ namespace GraphicTree
 
         }
 
-        public bool Condition(NodeParameter parameter)
+        public bool ConditionNodeParameter(NodeParameter parameter)
         {
             NodeParameter environmentParameter = null;
             if (!_environmentParameterDic.TryGetValue(parameter.parameterName, out environmentParameter))
@@ -245,7 +245,7 @@ namespace GraphicTree
             for (int i = 0; i < parameterList.Count; ++i)
             {
                 NodeParameter temp = parameterList[i];
-                bool value = Condition(temp);
+                bool value = ConditionNodeParameter(temp);
                 if (!value)
                 {
                     result = false;
@@ -268,7 +268,7 @@ namespace GraphicTree
                 for (int j = 0; j < groupParameter.parameterList.Count; ++j)
                 {
                     NodeParameter parameter = groupParameter.parameterList[j];
-                    bool value = Condition(parameter);
+                    bool value = ConditionNodeParameter(parameter);
                     if (!value)
                     {
                         result = false;
