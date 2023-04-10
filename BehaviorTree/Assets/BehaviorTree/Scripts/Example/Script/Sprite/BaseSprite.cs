@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public abstract class BaseSprite : IBTOwner, IBTNeedUpdate
+public abstract class BaseSprite : IBTOwner
 {
     protected int _spriteId;
     // BehaviorTree entity
@@ -23,7 +23,10 @@ public abstract class BaseSprite : IBTOwner, IBTNeedUpdate
 
     public virtual void Update()
     {
-
+        if (null != BTBase)
+        {
+            BTBase.Update();
+        }
     }
 
     public int SpriteID
@@ -46,7 +49,9 @@ public abstract class BaseSprite : IBTOwner, IBTNeedUpdate
 
     public virtual void Release()
     {
-
+        if (null != BTBase) {
+            BTBase.Exit();
+        }
     }
 
     public GameObject SpriteGameObject

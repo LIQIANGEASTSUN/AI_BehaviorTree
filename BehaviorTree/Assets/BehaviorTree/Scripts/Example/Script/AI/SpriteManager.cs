@@ -9,8 +9,6 @@ public class SpriteManager
 
     // Save all Sprite
     private List<BaseSprite> _spriteList = new List<BaseSprite>();
-    // AI Manager
-    private SpriteBTUpdateManager _spriteBTUpdateManager;
 
     public static SpriteManager GetInstance()
     {
@@ -26,7 +24,6 @@ public class SpriteManager
 
     public SpriteManager()
     {
-        _spriteBTUpdateManager = new SpriteBTUpdateManager();
     }
 
     // add Sprite
@@ -34,8 +31,6 @@ public class SpriteManager
     {
         sprite.SpriteID = SpriteId++;
         _spriteList.Add(sprite);
-        // Add Sprite to the AI manager
-        _spriteBTUpdateManager.AddSprite(sprite.SpriteID, sprite as IBTNeedUpdate);
     }
 
     public void RemoveSprite(int spriteId)
@@ -51,7 +46,6 @@ public class SpriteManager
         _spriteList.RemoveAll((bs)=> {
             return bs.SpriteID == spriteId;
         });
-        _spriteBTUpdateManager.RemoveSprite(sprite.SpriteID);
     }
 
     public void Update()
@@ -60,8 +54,6 @@ public class SpriteManager
         {
             _spriteList[i].Update();
         }
-        // Execute AI manager
-        _spriteBTUpdateManager.Update();
     }
 
     public void Release()
