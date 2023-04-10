@@ -11,12 +11,12 @@ public abstract class BTBase : IAIPerformer
         _btEntity = new BehaviorTreeEntity(aiFunction, data);
     }
 
-    protected virtual void Init(ISprite owner)
+    protected virtual void Init(IBTOwner owner)
     {
         InitNode(owner, _btEntity.RootNode);
     }
 
-    private void InitNode(ISprite owner, NodeBase nodeBase)
+    private void InitNode(IBTOwner owner, NodeBase nodeBase)
     {
         BTActionOwnerTool.NodeSetOwner(owner, nodeBase);
     }

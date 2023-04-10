@@ -64,6 +64,12 @@ namespace BehaviorTree
             _defaultResult = defaultResult;
         }
 
+        public override void SetData(NodeValue nodeValue)
+        {
+            _ifJudgeDataList = nodeValue.ifJudgeDataList;
+            SetDefaultResult((ResultType)nodeValue.defaultResult);
+        }
+
         public void SetData(List<IfJudgeData> ifJudgeDataList)
         {
             _ifJudgeDataList = ifJudgeDataList;

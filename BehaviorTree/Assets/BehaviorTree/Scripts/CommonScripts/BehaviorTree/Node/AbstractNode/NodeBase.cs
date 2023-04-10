@@ -68,5 +68,10 @@ namespace BehaviorTree
         {
             return (int)nodeType;
         }
+
+        public virtual void SetData(NodeValue nodeValue)
+        {
+
+        }
     }
 }

@@ -124,35 +124,14 @@ namespace BehaviorTree
         private AbstractNode AnalysisNode(NodeValue nodeValue, IConditionCheck iConditionCheck)
         {
             AbstractNode nodeBase = BehaviorConfigNode.Instance.GetNode(nodeValue.identificationName);
-            if (nodeValue.NodeType == (int)NODE_TYPE.CONDITION)  // 条件节点
+            if (nodeBase is NodeBase nb)
             {
-                NodeCondition condition = (NodeCondition)nodeBase;
-                condition.SetData(nodeValue.parameterList, nodeValue.conditionGroupList);
-                condition.SetConditionCheck(iConditionCheck);
+                nb.SetData(nodeValue);
             }
-            else if (nodeValue.NodeType == (int)NODE_TYPE.ACTION)
+
+            if (nodeBase is ISetConditionCheck iscc)
             {
-                NodeAction action = (NodeAction)nodeBase;
-                action.SetParameters(nodeValue.parameterList);
-            }
-            else if (nodeValue.NodeType == (int)NODE_TYPE.IF_JUDEG_PARALLEL || nodeValue.NodeType == (int)NODE_TYPE.IF_JUDEG_SEQUENCE)
-            {
-                NodeIfJudge ifJudge = (NodeIfJudge)nodeBase;
-                ifJudge.SetData(nodeValue.ifJudgeDataList);
-                ifJudge.SetDefaultResult((ResultType)nodeValue.defaultResult);
-            }
-            else if (nodeValue.NodeType == (int)NODE_TYPE.DECORATOR_REPEAT)
-            {
-                NodeDecoratorRepeat repeat = (NodeDecoratorRepeat)nodeBase;
-                repeat.SetRepeatCount(nodeValue.repeatTimes);
-            }
-            else if (nodeValue.NodeType == (int)NODE_TYPE.SUB_TREE)
-            {
-                if (typeof(NodeSubTreeDynamicAB).IsAssignableFrom(nodeBase.GetType()))
-                {
-                    NodeSubTreeDynamicAB nodeSubTreeDynamic = nodeBase as NodeSubTreeDynamicAB;
-                    nodeSubTreeDynamic.SetConditionCheck(iConditionCheck);
-                }
+                iscc.SetConditionCheck(iConditionCheck);
             }
 
             return nodeBase;
@@ -171,8 +150,5 @@ namespace BehaviorTree
         {
             get { return ++_entityId; }
         }
-
     }
-
 }
-

@@ -8,7 +8,7 @@ namespace BehaviorTree
     /// <summary>
     /// dynamic subtree
     /// </summary>
-    public abstract class NodeSubTreeDynamicAB : NodeSubTree
+    public abstract class NodeSubTreeDynamicAB : NodeSubTree, ISetConditionCheck
     {
         protected IConditionCheck _iconditionCheck = null;
 

@@ -1,16 +1,11 @@
 ﻿using UnityEngine;
 
-public interface ISprite
+public interface IBTOwner
 {
     int SpriteID
     {
         get;
     }
-
-    //long SpriteType
-    //{
-    //    get;
-    //}
 
     GameObject SpriteGameObject
     {
@@ -18,8 +13,4 @@ public interface ISprite
     }
 
     void Update();
-
-    //void Destroy(bool isExitLevel);
-
-    //void OnPause(bool isPause);
 }

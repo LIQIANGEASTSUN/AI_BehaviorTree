@@ -3,14 +3,14 @@ using BehaviorTree;
 
 public interface IBTActionOwner
 {
-    void SetOwner(ISprite owner);
+    void SetOwner(IBTOwner owner);
 
-    ISprite GetOwner();
+    IBTOwner GetOwner();
 }
 
 public class BTActionOwnerTool
 {
-    public static void NodeSetOwner(ISprite owner, NodeBase nodeBase)
+    public static void NodeSetOwner(IBTOwner owner, NodeBase nodeBase)
     {
         Queue<NodeBase> queue = new Queue<NodeBase>();
         queue.Enqueue(nodeBase);

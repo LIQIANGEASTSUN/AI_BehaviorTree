@@ -5,14 +5,14 @@
 /// </summary>
 public abstract class ConditionBase : NodeCondition, IBTActionOwner
 {
-    protected ISprite _owner = null;
+    protected IBTOwner _owner = null;
 
-    public ISprite GetOwner()
+    public IBTOwner GetOwner()
     {
         return _owner;
     }
 
-    public void SetOwner(ISprite owner)
+    public void SetOwner(IBTOwner owner)
     {
         _owner = owner;
     }

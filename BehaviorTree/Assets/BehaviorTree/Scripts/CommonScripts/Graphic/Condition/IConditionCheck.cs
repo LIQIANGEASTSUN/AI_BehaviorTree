@@ -24,5 +24,9 @@ namespace GraphicTree
         List<NodeParameter> GetAllParameter();
     }
 
+    public interface ISetConditionCheck
+    {
+        void SetConditionCheck(IConditionCheck conditionCheck);
+    }
 }
 

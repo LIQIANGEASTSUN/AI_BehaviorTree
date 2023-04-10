@@ -25,16 +25,15 @@ namespace BehaviorTree
             return resultType;
         }
 
-        public void SetParameters(List<NodeParameter> parameterList)
-        {
-            _parameterList.AddRange(parameterList);
-        }
-
         /// <summary>
         /// action node need to implement this method
         /// </summary>
         /// <returns></returns>
         public abstract ResultType DoAction();
 
+        public override void SetData(NodeValue nodeValue)
+        {
+            _parameterList.AddRange(nodeValue.parameterList);
+        }
     }
 }

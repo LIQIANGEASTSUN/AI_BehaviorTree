@@ -78,9 +78,9 @@ namespace BehaviorTree
             _executeCount = 0;
         }
 
-        public void SetRepeatCount(int value)
+        public override void SetData(NodeValue nodeValue)
         {
-            _repeatCount = value;
+            _repeatCount = nodeValue.repeatTimes;
         }
 
     }

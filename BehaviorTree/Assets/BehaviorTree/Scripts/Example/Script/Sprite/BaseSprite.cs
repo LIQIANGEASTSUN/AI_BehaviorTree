@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public abstract class BaseSprite : ISprite, IBTNeedUpdate
+public abstract class BaseSprite : IBTOwner, IBTNeedUpdate
 {
     protected int _spriteId;
     // BehaviorTree entity

@@ -7,7 +7,7 @@ namespace BehaviorTree
     /// <summary>
     /// 条件节点(叶节点)
     /// </summary>
-    public abstract class NodeCondition : NodeLeaf, ICondition
+    public abstract class NodeCondition : NodeLeaf, ICondition, ISetConditionCheck
     {
         protected List<NodeParameter> _parameterList;
         private List<ConditionGroup> _conditionGroupList;
@@ -38,10 +38,10 @@ namespace BehaviorTree
             _iconditionCheck = iConditionCheck;
         }
 
-        public void SetData(List<NodeParameter> parameterList, List<ConditionGroup> conditionGroupList)
+        public override void SetData(NodeValue nodeValue)
         {
-            _parameterList = parameterList;
-            _conditionGroupList = conditionGroupList;
+            _parameterList = nodeValue.parameterList;
+            _conditionGroupList = nodeValue.conditionGroupList;
         }
 
         /// <summary>

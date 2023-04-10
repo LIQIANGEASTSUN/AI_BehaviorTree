@@ -2,11 +2,11 @@
 
 public class BTConcrete : BTBase
 {
-    private ISprite _owner;
+    private IBTOwner _owner;
     private BehaviorTreeData _data;
     private BehaviorTreeDebug _behaviorTreeDebug;
 
-    public BTConcrete(ISprite owner, long aiFunction, string aiConfig)
+    public BTConcrete(IBTOwner owner, long aiFunction, string aiConfig)
     {
         _owner = owner;
         _data = DataCenter.behaviorData.GetBehaviorInfo(aiConfig);
@@ -14,7 +14,7 @@ public class BTConcrete : BTBase
         Init(_owner);
     }
 
-    protected override void Init(ISprite owner)
+    protected override void Init(IBTOwner owner)
     {
         base.Init(owner);
         if (null == _behaviorTreeDebug && _owner.SpriteGameObject)
