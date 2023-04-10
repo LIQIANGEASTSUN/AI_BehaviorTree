@@ -25,13 +25,6 @@ namespace BehaviorTree
             return _instance;
         }
 
-        private LoadConfigInfoEvent _loadConfigInfoEvent;
-
-        public void SetLoadConfigEvent(LoadConfigInfoEvent loadEvent)
-        {
-            _loadConfigInfoEvent = loadEvent;
-        }
-
         public NodeBase Analysis(long aiFunction, BehaviorTreeData data, IConditionCheck iConditionCheck, Action<int> InvalidSubTreeCallBack)
         {
             int entityId = NewEntityId;
@@ -88,7 +81,8 @@ namespace BehaviorTree
 
             if (nodeValue.NodeType == (int)NODE_TYPE.SUB_TREE && nodeValue.subTreeType == (int)SUB_TREE_TYPE.CONFIG)
             {
-                BehaviorTreeData subTreeData = _loadConfigInfoEvent(nodeValue.subTreeConfig);
+                //BehaviorTreeData subTreeData = _loadConfigInfoEvent(nodeValue.subTreeConfig);
+                BehaviorTreeData subTreeData = DataCenter.behaviorData.GetBehaviorInfo(nodeValue.subTreeConfig);
                 if (null != subTreeData)
                 {
                     NodeBase subTreeNode = AnalysisTree(entityId, aiFunction, subTreeData, iConditionCheck, InvalidSubTreeCallBack);
@@ -139,7 +133,7 @@ namespace BehaviorTree
 
         private void SetParameter(IConditionCheck iConditionCheck, BehaviorTreeData data)
         {
-            foreach(var parameter in data.parameterList)
+            foreach (var parameter in data.parameterList)
             {
                 iConditionCheck.AddParameter(parameter.Clone());
             }

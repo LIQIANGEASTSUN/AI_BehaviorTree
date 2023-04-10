@@ -39,6 +39,5 @@ public class BehaviorData
         return behaviorTreeData;
     }
     #endregion
-
 }
 

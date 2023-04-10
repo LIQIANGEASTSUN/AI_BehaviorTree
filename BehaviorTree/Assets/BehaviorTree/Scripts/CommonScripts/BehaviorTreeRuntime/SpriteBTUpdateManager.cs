@@ -15,7 +15,6 @@ public class SpriteBTUpdateManager
 
     public SpriteBTUpdateManager()
     {
-        BehaviorAnalysis.GetInstance().SetLoadConfigEvent(DataCenter.behaviorData.GetBehaviorInfo);
     }
 
     public void Release()
