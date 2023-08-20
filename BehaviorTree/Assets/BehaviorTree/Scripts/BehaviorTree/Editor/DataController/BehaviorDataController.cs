@@ -36,7 +36,7 @@ namespace BehaviorTree
 
         public string GetCsvPath()
         {
-            string csvPath = CommonUtils.FileUtils.CombinePath(new string[] { Application.dataPath, "BehaviorTree", "GameData", "CSVAssets" });
+            string csvPath = CommonUtils.FileUtils.CombinePath(new string[] { Application.streamingAssetsPath, "CSVAssets" });
             return csvPath;
         }
 
