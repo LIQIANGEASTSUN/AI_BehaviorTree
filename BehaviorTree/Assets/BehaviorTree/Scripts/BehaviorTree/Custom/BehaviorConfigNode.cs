@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System;
 using GraphicTree;
 
 namespace BehaviorTree
@@ -8,36 +9,56 @@ namespace BehaviorTree
     /// </summary>
     public class BehaviorConfigNode : AbstractConfigNode
     {
-        public readonly static BehaviorConfigNode Instance = new BehaviorConfigNode();
+        private static BehaviorConfigNode _instance;
+        private static object _lock = new object();
+        public static BehaviorConfigNode Instance
+        {
+            get
+            {
+                if (null == _instance)
+                {
+                    lock (_lock)
+                    {
+                        if (null == _instance)
+                        {
+                            _instance = new BehaviorConfigNode();
+                            _instance.Init();
+                        }
+                    }
+                }
+                return _instance;
+            }
+        }
 
         public BehaviorConfigNode() : base()
         {
-            Init();
         }
 
-        public override void Init()
+        protected override void Init()
         {
             base.Init();
 
-            // Add the custom node
-            Config<PlayerAttackAction>("Player/Attack");
-            Config<PlayerMoveAction>("Player/Move");
-            Config<PlayerPatrolAction>("Player/Patrol");
-            Config<PlayerReplenishEnergyAction>("Player/Replenish Energy");
-            Config<PlayerSearchEnemyAction>("Player/Search Enemy");
-            Config<PlayerEnougthEnergyCondition>("Player/Enougth Energy Condition");
+            BehaviorRegisterNode.RegisterNode();
 
-            Config<NumberActionDo1>("Number/Do1");
-            Config<NumberActionDo2>("Number/Do2");
-            Config<NumberActionDo3>("Number/Do3");
-            Config<NumberActionDo4>("Number/Do4");
+            //// Add the custom node
+            //Config<PlayerAttackAction>("Player/Attack");
+            //Config<PlayerMoveAction>("Player/Move");
+            //Config<PlayerPatrolAction>("Player/Patrol");
+            //Config<PlayerReplenishEnergyAction>("Player/Replenish Energy");
+            //Config<PlayerSearchEnemyAction>("Player/Search Enemy");
+            //Config<PlayerEnougthEnergyCondition>("Player/Enougth Energy Condition");
 
-            Config<NodeConditionCustom>("Custom Condition");
+            //Config<NumberActionDo1>("Number/Do1");
+            //Config<NumberActionDo2>("Number/Do2");
+            //Config<NumberActionDo3>("Number/Do3");
+            //Config<NumberActionDo4>("Number/Do4");
 
-            #region DefaultParameter
-            ConfigDefaultParameter<PlayerEnougthEnergyCondition>(new List<string>() { BTConstant.Energy });
-            ConfigDefaultParameter<PlayerSearchEnemyAction>(new List<string>() { BTConstant.EnergyMin, BTConstant.IsSurvial });
-            #endregion
+            //Config<NodeConditionCustom>("Custom Condition");
+
+            //#region DefaultParameter
+            //ConfigDefaultParameter<PlayerEnougthEnergyCondition>(new List<string>() { BTConstant.Energy });
+            //ConfigDefaultParameter<PlayerSearchEnemyAction>(new List<string>() { BTConstant.EnergyMin, BTConstant.IsSurvial });
+            //#endregion
         }
 
         /// <summary>
@@ -45,7 +66,7 @@ namespace BehaviorTree
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="parameterList">The parameters are in the behavior tree parameter list</param>
-        private void ConfigDefaultParameter<T>(List<string> parameterList) where T : NodeBase, new()
+        public void ConfigDefaultParameter<T>(List<string> parameterList) where T : NodeBase, new()
         {
             string identificationName = CustomIdentification.GetIdentification<T>();
             CustomIdentification info = GetIdentification(identificationName);

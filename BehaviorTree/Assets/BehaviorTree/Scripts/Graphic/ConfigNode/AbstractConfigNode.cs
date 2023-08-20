@@ -11,21 +11,20 @@ namespace GraphicTree
 
         public AbstractConfigNode()
         {
-            Init();
         }
 
-        public virtual void Init()
+        protected virtual void Init()
         {
             PrimaryNode();
         }
 
-        protected void Config<T>(string name) where T : AbstractNode, new()
+        public void Config<T>(string name) where T : AbstractNode, new()
         {
             CustomIdentification customIdentification = new CustomIdentification(name, typeof(T));
             nodeDic[customIdentification.IdentificationName] = customIdentification;
         }
 
-        protected void Config<T>(string name, int nodeType) where T : AbstractNode, new()
+        public void Config<T>(string name, int nodeType) where T : AbstractNode, new()
         {
             CustomIdentification customIdentification = new CustomIdentification(name, typeof(T), nodeType);
             nodeDic[customIdentification.IdentificationName] = customIdentification;

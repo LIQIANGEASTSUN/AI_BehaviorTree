@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using BehaviorTree;
+﻿using BehaviorTree;
 
 public abstract class BTBase : IAIPerformer
 {
