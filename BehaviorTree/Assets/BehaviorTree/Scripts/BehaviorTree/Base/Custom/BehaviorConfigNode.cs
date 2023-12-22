@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System;
-using GraphicTree;
+﻿using GraphicTree;
 
 namespace BehaviorTree
 {
@@ -37,48 +35,8 @@ namespace BehaviorTree
         protected override void Init()
         {
             base.Init();
-
             BehaviorRegisterNode.RegisterNode();
-
-            //// Add the custom node
-            //Config<PlayerAttackAction>("Player/Attack");
-            //Config<PlayerMoveAction>("Player/Move");
-            //Config<PlayerPatrolAction>("Player/Patrol");
-            //Config<PlayerReplenishEnergyAction>("Player/Replenish Energy");
-            //Config<PlayerSearchEnemyAction>("Player/Search Enemy");
-            //Config<PlayerEnougthEnergyCondition>("Player/Enougth Energy Condition");
-
-            //Config<NumberActionDo1>("Number/Do1");
-            //Config<NumberActionDo2>("Number/Do2");
-            //Config<NumberActionDo3>("Number/Do3");
-            //Config<NumberActionDo4>("Number/Do4");
-
-            //Config<NodeConditionCustom>("Custom Condition");
-
-            //#region DefaultParameter
-            //ConfigDefaultParameter<PlayerEnougthEnergyCondition>(new List<string>() { BTConstant.Energy });
-            //ConfigDefaultParameter<PlayerSearchEnemyAction>(new List<string>() { BTConstant.EnergyMin, BTConstant.IsSurvial });
-            //#endregion
         }
-
-        /// <summary>
-        /// Add default parameters for the node
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="parameterList">The parameters are in the behavior tree parameter list</param>
-        public void ConfigDefaultParameter<T>(List<string> parameterList) where T : NodeBase, new()
-        {
-            string identificationName = CustomIdentification.GetIdentification<T>();
-            CustomIdentification info = GetIdentification(identificationName);
-            info.DefaultParameterList.AddRange(parameterList);
-        }
-
-        //private void ConfigDefaultParameter<T>(List<string> parameterList) where T : NodeBase, new()
-        //{
-        //    string identificationName = CustomIdentification<T>.GetIdentification();
-        //    ICustomIdentification<AbstractNode> info = GetIdentification(identificationName);
-        //    info.DefaultParameterList.AddRange(parameterList);
-        //}
 
         /// <summary>
         /// The initial composite node

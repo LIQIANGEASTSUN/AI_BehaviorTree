@@ -1,13 +1,6 @@
 ﻿using System.Collections.Generic;
 using BehaviorTree;
 
-public interface IBTActionOwner
-{
-    void SetOwner(IBTOwner owner);
-
-    IBTOwner GetOwner();
-}
-
 public class BTActionOwnerTool
 {
     public static void NodeSetOwner(IBTOwner owner, NodeBase nodeBase)

@@ -1,4 +1,6 @@
-﻿public class BTConstant
+﻿
+
+public class BTConstant
 {
 
     public const string IsSurvial = "IsSurvial";
