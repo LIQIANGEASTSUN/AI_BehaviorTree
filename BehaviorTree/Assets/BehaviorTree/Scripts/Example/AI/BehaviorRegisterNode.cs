@@ -18,11 +18,6 @@ public class BehaviorRegisterNode
         config.Config<PlayerSearchEnemyAction>("Player/Search Enemy");
         config.Config<PlayerEnougthEnergyCondition>("Player/Enougth Energy Condition");
 
-        config.Config<NumberActionDo1>("Number/Do1");
-        config.Config<NumberActionDo2>("Number/Do2");
-        config.Config<NumberActionDo3>("Number/Do3");
-        config.Config<NumberActionDo4>("Number/Do4");
-
         config.Config<NodeConditionCustom>("Custom Condition");
     }
 }
