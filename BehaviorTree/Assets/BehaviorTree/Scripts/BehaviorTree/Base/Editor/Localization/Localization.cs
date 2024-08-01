@@ -35,7 +35,7 @@ namespace BehaviorTree
 
         private Localization()
         {
-            
+            LoadLocalization();
         }
 
         public string Format(string key)
@@ -57,10 +57,6 @@ namespace BehaviorTree
         {
             get
             {
-                if (_dataDic.Count <= 0)
-                {
-                    LoadLocalization();
-                }
                 return _dataDic;
             }
         }
@@ -72,8 +68,6 @@ namespace BehaviorTree
             //    return;
             //}
             _dataDic.Clear();
-            string csvPath = BehaviorDataController.Instance.GetCsvPath();
-            TableRead.Instance.ReadCustomPath(csvPath);
             List<int> idList = TableRead.Instance.GetKeyList(tableName);
             foreach (var id in idList)
             {

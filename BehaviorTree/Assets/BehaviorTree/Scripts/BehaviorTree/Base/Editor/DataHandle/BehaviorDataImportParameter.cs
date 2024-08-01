@@ -9,10 +9,6 @@ namespace BehaviorTree
         public void ImportParameter(BehaviorTreeData behaviorData)
         {
             string fileName = "table_behaviortree";
-            TableRead.Instance.Init();
-
-            string csvPath = BehaviorDataController.Instance.GetCsvPath();
-            TableRead.Instance.ReadCustomPath(csvPath);
 
             // Debug.LogError(filePath + "   " + fileName);
             List<int> keyList = TableRead.Instance.GetKeyList(fileName);

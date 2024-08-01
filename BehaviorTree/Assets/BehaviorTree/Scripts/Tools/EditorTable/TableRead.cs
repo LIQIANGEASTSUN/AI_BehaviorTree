@@ -46,6 +46,7 @@ public class TableRead
         TableData tableData = null;
         if (!_tableDic.TryGetValue(tableName, out tableData))
         {
+            Debug.LogError("TableRead is null:" + tableName);
             return string.Empty;
         }
 

@@ -26,6 +26,9 @@ namespace BehaviorTree
             _behaviorDrawController = new BehaviorDrawController();
             _behaviorDrawController.Init();
 
+            string csvPath = BehaviorDataController.Instance.GetCsvPath();
+            TableRead.Instance.ReadCustomPath(csvPath);
+
             BehaviorRunTime.Instance.Init();
             BehaviorNodeDrawInfoController.GetInstance();
         }
