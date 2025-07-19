@@ -93,9 +93,9 @@ namespace BehaviorTree
 
         private DynamicData AddDynamicTree(string aiConfig)
         {
-            BehaviorTreeData data = DataCenter.behaviorData.GetBehaviorInfo(aiConfig);
+            BehaviorTreeData data = BehaviorData.GetBehaviorInfo(aiConfig);
             long aiFunction = AIFunction();
-            NodeBase subTreeNode = BehaviorAnalysis.GetInstance().Analysis(EntityId, aiFunction, data, _iconditionCheck, null);
+            NodeBase subTreeNode = BehaviorAnalysis.Instance.Analysis(EntityId, aiFunction, data, _iconditionCheck, null);
             TreeSetOwner(subTreeNode);
 
             DynamicData dynamicData = new DynamicData(Time.realtimeSinceStartup, subTreeNode);

@@ -1,73 +1,74 @@
 ﻿using GraphicTree;
+using System.Collections.Generic;
 
 namespace BehaviorTree
 {
     /// <summary>
     /// Custom node configuration
     /// </summary>
-    public class BehaviorConfigNode : AbstractConfigNode
+    public class BehaviorConfigNode : SingletonObject<BehaviorConfigNode>
     {
-        private static BehaviorConfigNode _instance;
-        private static object _lock = new object();
-        public static BehaviorConfigNode Instance
+        private GraphicConfigNode GraphicConfigNode { get; set; }
+        private BehaviorConfigNode()
         {
-            get
-            {
-                if (null == _instance)
-                {
-                    lock (_lock)
-                    {
-                        if (null == _instance)
-                        {
-                            _instance = new BehaviorConfigNode();
-                            _instance.Init();
-                        }
-                    }
-                }
-                return _instance;
-            }
+            GraphicConfigNode = new GraphicConfigNode();
         }
 
-        public BehaviorConfigNode() : base()
+        public void Init()
         {
-        }
+            GraphicConfigNode.Config<NodeConditionCustom>("Custom Condition");
 
-        protected override void Init()
-        {
-            base.Init();
-            BehaviorRegisterNode.RegisterNode();
-        }
-
-        /// <summary>
-        /// The initial composite node
-        /// </summary>
-        protected override void PrimaryNode()
-        {
             #region Composite Node
-            Config<NodeSelect>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.SELECT), (int)NODE_TYPE.SELECT);
-            Config<NodeSequence>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.SEQUENCE), (int)NODE_TYPE.SEQUENCE);
-            Config<NodeRandomSelect>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.RANDOM), (int)NODE_TYPE.RANDOM);
-            Config<NodeRandomSequence>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.RANDOM_SEQUEUECE), (int)NODE_TYPE.RANDOM_SEQUEUECE);
-            Config<NodeRandomPriority>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.RANDOM_PRIORITY), (int)NODE_TYPE.RANDOM_PRIORITY);
-            Config<NodeParallel>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.PARALLEL), (int)NODE_TYPE.PARALLEL);
-            Config<NodeParallelSelect>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.PARALLEL_SELECT), (int)NODE_TYPE.PARALLEL_SELECT);
-            Config<NodeParallelAll>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.PARALLEL_ALL), (int)NODE_TYPE.PARALLEL_ALL);
-            Config<NodeIfJudgeParallel>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.IF_JUDEG_PARALLEL), (int)NODE_TYPE.IF_JUDEG_PARALLEL);
-            Config<NodeIfJudgeSequence>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.IF_JUDEG_SEQUENCE), (int)NODE_TYPE.IF_JUDEG_SEQUENCE);
+            Config<NodeSelect>(NODE_TYPE.SELECT);
+            Config<NodeSequence>(NODE_TYPE.SEQUENCE);
+            Config<NodeRandomSelect>(NODE_TYPE.RANDOM);
+            Config<NodeRandomSequence>(NODE_TYPE.RANDOM_SEQUEUECE);
+            Config<NodeRandomPriority>(NODE_TYPE.RANDOM_PRIORITY);
+            Config<NodeParallel>(NODE_TYPE.PARALLEL);
+            Config<NodeParallelSelect>(NODE_TYPE.PARALLEL_SELECT);
+            Config<NodeParallelAll>(NODE_TYPE.PARALLEL_ALL);
+            Config<NodeIfJudgeParallel>(NODE_TYPE.IF_JUDEG_PARALLEL);
+            Config<NodeIfJudgeSequence>(NODE_TYPE.IF_JUDEG_SEQUENCE);
             #endregion
 
             #region Decorator Node
-            Config<NodeDecoratorInverter>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.DECORATOR_INVERTER), (int)NODE_TYPE.DECORATOR_INVERTER);
-            Config<NodeDecoratorRepeat>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.DECORATOR_REPEAT), (int)NODE_TYPE.DECORATOR_REPEAT);
-            Config<NodeDecoratorReturnFail>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.DECORATOR_RETURN_FAIL), (int)NODE_TYPE.DECORATOR_RETURN_FAIL);
-            Config<NodeDecoratorReturnSuccess>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.DECORATOR_RETURN_SUCCESS), (int)NODE_TYPE.DECORATOR_RETURN_SUCCESS);
-            Config<NodeDecoratorUntilFail>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.DECORATOR_UNTIL_FAIL), (int)NODE_TYPE.DECORATOR_UNTIL_FAIL);
-            Config<NodeDecoratorUntilSuccess>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.DECORATOR_UNTIL_SUCCESS), (int)NODE_TYPE.DECORATOR_UNTIL_SUCCESS);
+            Config<NodeDecoratorInverter>(NODE_TYPE.DECORATOR_INVERTER);
+            Config<NodeDecoratorRepeat>(NODE_TYPE.DECORATOR_REPEAT);
+            Config<NodeDecoratorReturnFail>(NODE_TYPE.DECORATOR_RETURN_FAIL);
+            Config<NodeDecoratorReturnSuccess>(NODE_TYPE.DECORATOR_RETURN_SUCCESS);
+            Config<NodeDecoratorUntilFail>(NODE_TYPE.DECORATOR_UNTIL_FAIL);
+            Config<NodeDecoratorUntilSuccess>(NODE_TYPE.DECORATOR_UNTIL_SUCCESS);
             #endregion
 
             #region SubTree
-            Config<NodeSubTree>(EnumNames.GetEnumName<NODE_TYPE>(NODE_TYPE.SUB_TREE), (int)NODE_TYPE.SUB_TREE);
+            Config<NodeSubTree>(NODE_TYPE.SUB_TREE);
             #endregion
+        }
+
+        public void Config<T>(NODE_TYPE nodeType) where T : AbstractNode, new()
+        {
+            string name = EnumNames.GetEnumName<NODE_TYPE>(nodeType);
+            GraphicConfigNode.Config<T>(name, (int)nodeType);
+        }
+
+        public void Config<T>(string name) where T : AbstractNode, new()
+        {
+            GraphicConfigNode.Config<T>(name);
+        }
+
+        public AbstractNode GetNode(string identificationName)
+        {
+            return GraphicConfigNode.GetNode(identificationName);
+        }
+
+        public Dictionary<string, CustomIdentification> GetNodeDic()
+        {
+            return GraphicConfigNode.GetNodeDic();
+        }
+
+        public CustomIdentification GetIdentification(string identificationName)
+        {
+            return GraphicConfigNode.GetIdentification(identificationName);
         }
     }
 }

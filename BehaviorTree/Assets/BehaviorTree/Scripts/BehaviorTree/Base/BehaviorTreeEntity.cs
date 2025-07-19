@@ -23,7 +23,7 @@ namespace BehaviorTree
         public BehaviorTreeEntity(long aiFunction, BehaviorTreeData data)
         {
             _iconditionCheck = new ConditionCheck();
-            _rootNode = BehaviorAnalysis.GetInstance().Analysis(aiFunction, data, _iconditionCheck, AddInvalidSubTree);
+            _rootNode = BehaviorAnalysis.Instance.Analysis(aiFunction, data, _iconditionCheck, AddInvalidSubTree);
             if (null != _rootNode)
             {
                 _entityId = _rootNode.EntityId;

@@ -3,17 +3,6 @@ using GraphicTree;
 
 namespace BehaviorTree
 {
-    public class BehaviorTreeData
-    {
-        public string fileName = string.Empty;
-        public int rootNodeId = -1;
-        public List<NodeValue> nodeList = new List<NodeValue>();
-        public List<NodeParameter> parameterList = new List<NodeParameter>();
-        public string descript = string.Empty;
-        // nodeDic is cleared for storage and used at RunTime
-        public Dictionary<int, NodeValue> nodeDic = new Dictionary<int, NodeValue>();
-    }
-
     public class NodeValue
     {
         public string identificationName = string.Empty;
@@ -97,21 +86,7 @@ namespace BehaviorTree
         }
     }
 
-    public class IfJudgeData
-    {
-        public int nodeId;
-        public int ifJudegType = (int)NodeIfJudgeEnum.IF;
-        public int ifResult = (int)ResultType.Fail;
 
-        public IfJudgeData Clone()
-        {
-            IfJudgeData ifJudgeData = new IfJudgeData();
-            ifJudgeData.nodeId = nodeId;
-            ifJudgeData.ifJudegType = ifJudegType;
-            ifJudgeData.ifResult = ifResult;
-            return ifJudgeData;
-        }
-    }
    
 
 }

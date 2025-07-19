@@ -2,7 +2,7 @@
 
 public interface IBTOwner
 {
-    int SpriteID
+    int SpriteId
     {
         get;
     }

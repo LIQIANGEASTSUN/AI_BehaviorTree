@@ -5,24 +5,11 @@ namespace BehaviorTree
 {
     public delegate BehaviorTreeData LoadConfigInfoEvent(string fileName);
 
-    public class BehaviorAnalysis
+    public class BehaviorAnalysis : SingletonObject<BehaviorAnalysis>
     {
-        private static BehaviorAnalysis _instance;
-        private static object lockObj = new object();
-        public static BehaviorAnalysis GetInstance()
+        private BehaviorAnalysis()
         {
-            if (null == _instance)
-            {
-                lock (lockObj)
-                {
-                    if (null == _instance)
-                    {
-                        _instance = new BehaviorAnalysis();
-                    }
-                }
-            }
-
-            return _instance;
+            BehaviorConfigNode.Instance.Init();
         }
 
         public NodeBase Analysis(long aiFunction, BehaviorTreeData data, IConditionCheck iConditionCheck, Action<int> InvalidSubTreeCallBack)
@@ -54,8 +41,7 @@ namespace BehaviorTree
 
         private NodeBase AnalysisNode(int entityId, long aiFunction, BehaviorTreeData data, int nodeId, IConditionCheck iConditionCheck, Action<int> InvalidSubTreeCallBack)
         {
-            NodeValue nodeValue = null;
-            if (!data.nodeDic.TryGetValue(nodeId, out nodeValue))
+            if (!data.nodeDic.TryGetValue(nodeId, out NodeValue nodeValue))
             {
                 return null;
             }
@@ -82,7 +68,7 @@ namespace BehaviorTree
             if (nodeValue.NodeType == (int)NODE_TYPE.SUB_TREE && nodeValue.subTreeType == (int)SUB_TREE_TYPE.CONFIG)
             {
                 //BehaviorTreeData subTreeData = _loadConfigInfoEvent(nodeValue.subTreeConfig);
-                BehaviorTreeData subTreeData = DataCenter.behaviorData.GetBehaviorInfo(nodeValue.subTreeConfig);
+                BehaviorTreeData subTreeData = BehaviorData.GetBehaviorInfo(nodeValue.subTreeConfig);
                 if (null != subTreeData)
                 {
                     NodeBase subTreeNode = AnalysisTree(entityId, aiFunction, subTreeData, iConditionCheck, InvalidSubTreeCallBack);
