@@ -46,7 +46,7 @@ namespace BehaviorTree
                 nodeValue.parameterList[i].index = i;
             }
 
-            GUIEnableTool.Enable = !BehaviorDataController.Instance.CurrentOpenConfigSubTree();
+            GUIEnableTool.Enable = !DataController.Instance.CurrentOpenConfigSubTree();
             EditorGUILayout.BeginVertical("box", GUILayout.ExpandWidth(true));
             {
                 string parameter = Localization.GetInstance().Format("Parameter");
@@ -115,7 +115,7 @@ namespace BehaviorTree
         {
             EditorGUILayout.BeginVertical("box");
             {
-                GUIEnableTool.Enable = !BehaviorDataController.Instance.CurrentOpenConfigSubTree();
+                GUIEnableTool.Enable = !DataController.Instance.CurrentOpenConfigSubTree();
                 string addCondition = Localization.GetInstance().Format("AddCondition");
                 if (GUILayout.Button(addCondition))
                 {
@@ -128,7 +128,7 @@ namespace BehaviorTree
 
         private void AddParameter(NodeValue nodeValue)
         {
-            if (BehaviorDataController.Instance.BehaviorTreeData.parameterList.Count <= 0)
+            if (DataController.Instance.BehaviorTreeData.parameterList.Count <= 0)
             {
                 if (TreeNodeWindow.window != null)
                 {
@@ -153,7 +153,7 @@ namespace BehaviorTree
 
         private NodeParameter GetEnableAddParameter(NodeValue nodeValue)
         {
-            List<NodeParameter> parameterList = BehaviorDataController.Instance.BehaviorTreeData.parameterList;
+            List<NodeParameter> parameterList = DataController.Instance.BehaviorTreeData.parameterList;
             for (int i = 0; i < parameterList.Count; ++i)
             {
                 NodeParameter nodeParameter = parameterList[i];

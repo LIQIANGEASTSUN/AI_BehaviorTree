@@ -46,11 +46,11 @@ namespace BehaviorTree
 
         public void Reset(BehaviorTreeData behaviorTreeData, BehaviorTreeEntity behaviorTreeEntity)
         {
-            BehaviorDataController.Instance.BehaviorTreeData = behaviorTreeData;
+            DataController.Instance.BehaviorTreeData = behaviorTreeData;
             _behaviorTreeEntity = behaviorTreeEntity;
             BehaviorTreeEntity.CurrentDebugEntityId = _behaviorTreeEntity.EntityId;
             SetRunTimeDrawNode( behaviorTreeEntity);
-            BehaviorDataController.Instance.PlayState = BehaviorPlayType.PLAY;
+            DataController.Instance.PlayState = BehaviorPlayType.PLAY;
             NodeNotify.Clear();
         }
 
@@ -60,25 +60,11 @@ namespace BehaviorTree
             {
                 return;
             }
-            BehaviorDataController.Instance.RunTimeInvalidSubTreeHash.Clear();
+            DataController.Instance.RunTimeInvalidSubTreeHash.Clear();
             foreach (var nodeId in behaviorTreeEntity.InvalidSubTreeList)
             {
-                BehaviorDataController.Instance.RunTimeInvalidSubTreeHash.Add(nodeId);
+                DataController.Instance.RunTimeInvalidSubTreeHash.Add(nodeId);
             }
-        }
-
-        private BehaviorTreeData LoadConfig(string fileName)
-        {
-            ConfigFileLoad configFileLoad = new ConfigFileLoad();
-            BehaviorTreeData behaviorTreeData = configFileLoad.ReadFile(fileName, false);
-            behaviorTreeData.nodeDic.Clear();
-            for (int i = 0; i < behaviorTreeData.nodeList.Count; ++i)
-            {
-                NodeValue nodeValue = behaviorTreeData.nodeList[i];
-                behaviorTreeData.nodeDic.Add(nodeValue.id, nodeValue);
-            }
-
-            return behaviorTreeData;
         }
 
         public void Update()
@@ -98,8 +84,8 @@ namespace BehaviorTree
 
         public void Execute()
         {
-            if (BehaviorDataController.Instance.PlayState == BehaviorPlayType.STOP
-                || (BehaviorDataController.Instance.PlayState == BehaviorPlayType.PAUSE))
+            if (DataController.Instance.PlayState == BehaviorPlayType.STOP
+                || (DataController.Instance.PlayState == BehaviorPlayType.PAUSE))
             {
                 return;
             }

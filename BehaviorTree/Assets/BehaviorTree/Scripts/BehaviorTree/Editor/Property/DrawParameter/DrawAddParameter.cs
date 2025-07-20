@@ -1,15 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using GraphicTree;
+﻿using GraphicTree;
 using UnityEditor;
 using System.Text.RegularExpressions;
 
 namespace BehaviorTree
 {
-    public class DrawBehaviorAddParameter : DrawParameterBase
+    public class DrawAddParameter : DrawParameterBase
     {
-
         public override void Draw(NodeParameter behaviorParameter)
         {
             EditorGUILayout.BeginVertical();
@@ -55,7 +51,5 @@ namespace BehaviorTree
             Match match = Regex.Match(str, pattern);
             return match.Success;
         }
-
     }
 }
-

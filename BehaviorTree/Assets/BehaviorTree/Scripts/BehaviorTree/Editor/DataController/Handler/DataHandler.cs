@@ -13,9 +13,9 @@ namespace BehaviorTree
             NodeValue newNodeValue = new NodeValue();
             newNodeValue.id = GetNewNodeId();
 
-            if (BehaviorDataController.Instance.BehaviorTreeData.rootNodeId < 0)
+            if (DataController.Instance.BehaviorTreeData.rootNodeId < 0)
             {
-                BehaviorDataController.Instance.BehaviorTreeData.rootNodeId = newNodeValue.id;
+                DataController.Instance.BehaviorTreeData.rootNodeId = newNodeValue.id;
                 newNodeValue.isRootNode = true;
             }
 
@@ -30,7 +30,7 @@ namespace BehaviorTree
 
             newNodeValue.parentSubTreeNodeId = openSubTreeId;
 
-            List<NodeValue> NodeList = BehaviorDataController.Instance.NodeList;
+            List<NodeValue> NodeList = DataController.Instance.NodeList;
             NodeList.Add(newNodeValue);
 
             if (openSubTreeId >= 0)
@@ -62,14 +62,14 @@ namespace BehaviorTree
                 return;
             }
 
-            if (null == BehaviorDataController.Instance.BehaviorTreeData.parameterList)
+            if (null == DataController.Instance.BehaviorTreeData.parameterList)
             {
                 Debug.LogError("No configuration parameters");
                 return;
             }
             foreach (var parameterName in customIdentification.DefaultParameterList)
             {
-                NodeParameter behaviorParameter = BehaviorDataController.Instance.BehaviorTreeData.parameterList.Find((a) => { return a.parameterName == parameterName; });
+                NodeParameter behaviorParameter = DataController.Instance.BehaviorTreeData.parameterList.Find((a) => { return a.parameterName == parameterName; });
                 if (null != behaviorParameter)
                 {
                     DataNodeHandler dataNodeHandler = new DataNodeHandler();
@@ -95,7 +95,7 @@ namespace BehaviorTree
             {
                 ++index;
                 id = index;
-                List<NodeValue> NodeList = BehaviorDataController.Instance.NodeList;
+                List<NodeValue> NodeList = DataController.Instance.NodeList;
                 for (int i = 0; i < NodeList.Count; ++i)
                 {
                     int value = NodeList[i].id % 10000;
@@ -106,13 +106,13 @@ namespace BehaviorTree
                 }
             }
 
-            id = DataNodeIdStandardTool.IdTransition(BehaviorDataController.Instance.FileName, id);
+            id = DataNodeIdStandardTool.IdTransition(DataController.Instance.FileName, id);
             return id;
         }
 
         public void DeleteNode(int nodeId)
         {
-            List<NodeValue> NodeList = BehaviorDataController.Instance.NodeList;
+            List<NodeValue> NodeList = DataController.Instance.NodeList;
             for (int i = 0; i < NodeList.Count; ++i)
             {
                 NodeValue nodeValue = NodeList[i];
@@ -125,7 +125,7 @@ namespace BehaviorTree
                 for (int j = 0; j < nodeValue.childNodeList.Count; ++j)
                 {
                     int childId = nodeValue.childNodeList[j];
-                    NodeValue childNode = BehaviorDataController.Instance.GetNode(childId);
+                    NodeValue childNode = DataController.Instance.GetNode(childId);
                     childNode.parentNodeID = -1;
                 }
 
@@ -141,14 +141,14 @@ namespace BehaviorTree
 
         public void DeleteSubTreeChild(int subTreeNodeId)
         {
-            NodeValue nodeValue = BehaviorDataController.Instance.GetNode(subTreeNodeId);
+            NodeValue nodeValue = DataController.Instance.GetNode(subTreeNodeId);
             if (nodeValue.childNodeList.Count <= 0)
             {
                 return;
             }
             nodeValue.childNodeList.Clear();
 
-            List<NodeValue> NodeList = BehaviorDataController.Instance.NodeList;
+            List<NodeValue> NodeList = DataController.Instance.NodeList;
             for (int j = NodeList.Count - 1; j >= 0; --j)
             {
                 NodeValue node = NodeList[j];
@@ -161,19 +161,19 @@ namespace BehaviorTree
 
         public void RemoveParentNode(int nodeId)
         {
-            NodeValue nodeValue = BehaviorDataController.Instance.GetNode(nodeId);
+            NodeValue nodeValue = DataController.Instance.GetNode(nodeId);
             if (nodeValue.parentNodeID < 0)
             {
                 return;
             }
 
-            NodeValue parentNode = BehaviorDataController.Instance.GetNode(nodeValue.parentNodeID);
+            NodeValue parentNode = DataController.Instance.GetNode(nodeValue.parentNodeID);
             if (null != parentNode)
             {
                 for (int i = 0; i < parentNode.childNodeList.Count; ++i)
                 {
                     int childId = parentNode.childNodeList[i];
-                    NodeValue childNode = BehaviorDataController.Instance.GetNode(childId);
+                    NodeValue childNode = DataController.Instance.GetNode(childId);
                     if (childNode.id == nodeValue.id)
                     {
                         parentNode.childNodeList.RemoveAt(i);
@@ -187,19 +187,19 @@ namespace BehaviorTree
 
         public void ChangeSubTreeEntryNode(int subTreeNodeId, int nodeId)
         {
-            NodeValue nodeValue = BehaviorDataController.Instance.GetNode(nodeId);
+            NodeValue nodeValue = DataController.Instance.GetNode(nodeId);
             if (null == nodeValue)
             {
                 return;
             }
 
-            NodeValue subTreeNode = BehaviorDataController.Instance.GetNode(subTreeNodeId);
+            NodeValue subTreeNode = DataController.Instance.GetNode(subTreeNodeId);
             if (null == subTreeNode)
             {
                 return;
             }
 
-            List<NodeValue> nodeList = BehaviorDataController.Instance.NodeList;
+            List<NodeValue> nodeList = DataController.Instance.NodeList;
             for (int i = 0; i < nodeList.Count; ++i)
             {
                 if (nodeList[i].parentSubTreeNodeId == nodeValue.parentSubTreeNodeId)
@@ -224,8 +224,8 @@ namespace BehaviorTree
 
         public void ChangeRootNode(int rootNodeId)
         {
-            BehaviorDataController.Instance.BehaviorTreeData.rootNodeId = rootNodeId;
-            List<NodeValue> NodeList = BehaviorDataController.Instance.NodeList;
+            DataController.Instance.BehaviorTreeData.rootNodeId = rootNodeId;
+            List<NodeValue> NodeList = DataController.Instance.NodeList;
             for (int i = 0; i < NodeList.Count; ++i)
             {
                 NodeList[i].isRootNode = (NodeList[i].id == rootNodeId);
@@ -234,14 +234,14 @@ namespace BehaviorTree
 
         public void DataAddGlobalParameter(NodeParameter parameter)
         {
-            BehaviorTreeData behaviorTreeData = BehaviorDataController.Instance.BehaviorTreeData;
+            BehaviorTreeData behaviorTreeData = DataController.Instance.BehaviorTreeData;
             DataParameterHandler dataParameterHandler = new DataParameterHandler();
             dataParameterHandler.AddParameter(behaviorTreeData.parameterList, parameter);
         }
 
         public void DataDelGlobalParameter(NodeParameter parameter)
         {
-            BehaviorTreeData behaviorTreeData = BehaviorDataController.Instance.BehaviorTreeData;
+            BehaviorTreeData behaviorTreeData = DataController.Instance.BehaviorTreeData;
             DataParameterHandler dataParameterHandler = new DataParameterHandler();
             dataParameterHandler.DelParameter(behaviorTreeData.parameterList, parameter);
         }

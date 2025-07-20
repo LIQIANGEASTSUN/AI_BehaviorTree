@@ -1,27 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEditor;
 
 namespace BehaviorTree
 {
     public class ConfigFileSelect
     {
-
         public string Select()
         {
-            string path = BehaviorDataController.Instance.FilePath;
-            if (!System.IO.Directory.Exists(path))
-            {
-                System.IO.Directory.CreateDirectory(path);
-            }
-            GUILayout.Space(8);
-
-            string selectConfigFile = Localization.GetInstance().Format("SelectConfigFile");
-            string filePath = EditorUtility.OpenFilePanel(selectConfigFile, path, "bytes");
+            string filePath = FileHandleController.GetFileFolder();
+            filePath = EditorUtility.OpenFilePanel("Select", filePath, "bytes");
+            FileHandleController.SaveFilePath(filePath);
             return filePath;
         }
-
     }
-
 }

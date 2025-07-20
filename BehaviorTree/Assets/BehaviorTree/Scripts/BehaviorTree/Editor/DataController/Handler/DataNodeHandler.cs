@@ -14,8 +14,8 @@ namespace BehaviorTree
 
         public void NodeAddChild(int parentId, int childId)
         {
-            NodeValue parentNode = BehaviorDataController.Instance.GetNode(parentId);
-            NodeValue childNode = BehaviorDataController.Instance.GetNode(childId);
+            NodeValue parentNode = DataController.Instance.GetNode(parentId);
+            NodeValue childNode = DataController.Instance.GetNode(childId);
 
             if (null == parentNode || null == childNode)
             {
@@ -74,7 +74,7 @@ namespace BehaviorTree
             {
                 for (int i = 0; i < parentNode.childNodeList.Count; ++i)
                 {
-                    NodeValue node = BehaviorDataController.Instance.GetNode(parentNode.childNodeList[i]);
+                    NodeValue node = DataController.Instance.GetNode(parentNode.childNodeList[i]);
                     if (null != node)
                     {
                         node.parentNodeID = -1;
@@ -95,7 +95,7 @@ namespace BehaviorTree
 
         public void NodeDelParameter(int nodeId, NodeParameter parameter)
         {
-            NodeValue nodeValue = BehaviorDataController.Instance.GetNode(nodeId);
+            NodeValue nodeValue = DataController.Instance.GetNode(nodeId);
             if (null != nodeValue)
             {
                 DataParameterHandler dataParameterHandler = new DataParameterHandler();
@@ -109,16 +109,16 @@ namespace BehaviorTree
 
         public void NodeParameterChange(int nodeId, string oldParameter, string newParameter)
         {
-            NodeValue nodeValue = BehaviorDataController.Instance.GetNode(nodeId);
+            NodeValue nodeValue = DataController.Instance.GetNode(nodeId);
             if (null == nodeValue)
             {
                 return;
             }
 
             NodeParameter parameter = null;
-            for (int i = 0; i < BehaviorDataController.Instance.BehaviorTreeData.parameterList.Count; ++i)
+            for (int i = 0; i < DataController.Instance.BehaviorTreeData.parameterList.Count; ++i)
             {
-                NodeParameter temp = BehaviorDataController.Instance.BehaviorTreeData.parameterList[i];
+                NodeParameter temp = DataController.Instance.BehaviorTreeData.parameterList[i];
                 if (temp.parameterName.CompareTo(newParameter) == 0)
                 {
                     parameter = temp;
@@ -148,7 +148,7 @@ namespace BehaviorTree
 
         public void NodeAddConditionGroup(int nodeId)
         {
-            NodeValue nodeValue = BehaviorDataController.Instance.GetNode(nodeId);
+            NodeValue nodeValue = DataController.Instance.GetNode(nodeId);
             if (null == nodeValue)
             {
                 return;
@@ -176,7 +176,7 @@ namespace BehaviorTree
 
         public void NodeDelConditionGroup(int nodeId, int groupId)
         {
-            NodeValue nodeValue = BehaviorDataController.Instance.GetNode(nodeId);
+            NodeValue nodeValue = DataController.Instance.GetNode(nodeId);
             if (null == nodeValue)
             {
                 return;

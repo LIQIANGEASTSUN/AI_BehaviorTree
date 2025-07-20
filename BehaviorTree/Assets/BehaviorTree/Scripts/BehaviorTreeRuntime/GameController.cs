@@ -3,19 +3,13 @@
 public class GameController : MonoBehaviour
 {
     public static GameController Instance;
-    // Start is called before the first frame update
     void Start()
     {
         Instance = this;
         BehaviorRegisterNode.Instance.RegisterNode();
-        ConfigLoad configLoad = new ConfigLoad();
-        // Load the behavior tree configuration file callback
-        ConfigLoad.loadEndCallBack = ConfigLoadEnd;
-        // Loading a Configuration File
-        configLoad.Init();
+        Init();
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -24,8 +18,7 @@ public class GameController : MonoBehaviour
         BulletManager.GetInstance().Update();
     }
 
-    // Callback at the end of configuration file loading
-    private void ConfigLoadEnd()
+    private void Init()
     {
         // create Sprite
         Player sprite = new Player();

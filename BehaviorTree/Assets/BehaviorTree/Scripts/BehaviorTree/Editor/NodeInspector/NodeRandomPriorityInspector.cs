@@ -22,7 +22,7 @@ namespace BehaviorTree
             {
                 for (int i = 0; i < nodeValue.childNodeList.Count; ++i)
                 {
-                    NodeValue childNode = BehaviorDataController.Instance.GetNode(nodeValue.childNodeList[i]);
+                    NodeValue childNode = DataController.Instance.GetNode(nodeValue.childNodeList[i]);
                     string childNodePriority = Localization.GetInstance().Format("ChildNodePriority");
                     string nodeMsg = string.Format(childNodePriority, childNode.id);
                     childNode.priority = EditorGUILayout.IntField(nodeMsg, childNode.priority);

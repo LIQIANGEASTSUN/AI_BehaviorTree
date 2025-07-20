@@ -6,7 +6,7 @@ namespace BehaviorTree
     {
         public BehaviorTreeData GetData()
         {
-            return BehaviorDataController.Instance.BehaviorTreeData;
+            return DataController.Instance.BehaviorTreeData;
         }
     }
 

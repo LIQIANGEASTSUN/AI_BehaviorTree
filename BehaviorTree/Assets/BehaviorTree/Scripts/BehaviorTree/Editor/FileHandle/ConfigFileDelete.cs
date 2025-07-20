@@ -7,7 +7,8 @@ namespace BehaviorTree
     {
         public void Delete(string fileName)
         {
-            string filePath = BehaviorDataController.Instance.GetFilePath(fileName);
+            string filePath = FileHandleController.GetFileFolder();
+            filePath = EditorUtility.OpenFilePanel("Select", filePath, "bytes");
             if (!File.Exists(filePath))
             {
                 string tips = Localization.GetInstance().Format("Tips");

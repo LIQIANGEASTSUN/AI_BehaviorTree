@@ -1,18 +1,14 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
-using GraphicTree;
-using System;
 
 namespace BehaviorTree
 {
-
-    public class BehaviorNodeInspectorView
+    public class NodeInspectorView
     {
-
         private NodeCompositeInspector nodeCompositeInspector = new NodeCompositeInspector();
         private Dictionary<NODE_TYPE, NodeBaseInspector> _inspectorDic = new Dictionary<NODE_TYPE, NodeBaseInspector>();
-        public BehaviorNodeInspectorView()
+        public NodeInspectorView()
         {
             _inspectorDic[NODE_TYPE.CONDITION] = new NodeConditionInspector();
             _inspectorDic[NODE_TYPE.ACTION] = new NodeActionInspector();
@@ -48,7 +44,7 @@ namespace BehaviorTree
 
             NodeBaseInspector nodeBaseInspector = GetBaseInspector(nodeValue);
 
-            GUIEnableTool.Enable = !BehaviorDataController.Instance.CurrentOpenConfigSubTree();
+            GUIEnableTool.Enable = !DataController.Instance.CurrentOpenConfigSubTree();
             EditorGUILayout.BeginVertical("box");
             {
                 nodeBaseInspector.Draw();
@@ -72,7 +68,5 @@ namespace BehaviorTree
                 debugNodeParentInfoTool.DebugNodeParentInfo(_nodeID);
             }
         }
-
     }
-
 }

@@ -8,24 +8,24 @@ namespace BehaviorTree
     public class BehaviorDrawPropertyController
     {
         private LocalizationController _localizationController;
-        private BehaviorFileHandleController _fileHandleController;
+        private FileHandleController _fileHandleController;
         //private BehaviorPlayController _playController;
         private BehaviorPropertyOption _propertyOption;
         private BehaviorDescriptController _descriptController;
-        private BehaviorNodeInspectorController _nodeInspectorController;
-        private BehaviorParameterController _parameterController;
-        private BehaviorRuntimeParameterController _runtimeParameter;
+        private NodeInspectorController _nodeInspectorController;
+        private ParameterController _parameterController;
+        private RuntimeParameterController _runtimeParameter;
 
         public void Init()
         {
             _localizationController = new LocalizationController();
-            _fileHandleController = new BehaviorFileHandleController();
+            _fileHandleController = new FileHandleController();
             //_playController = new BehaviorPlayController();
             _propertyOption = new BehaviorPropertyOption();
             _descriptController = new BehaviorDescriptController();
-            _nodeInspectorController = new BehaviorNodeInspectorController();
-            _parameterController = new BehaviorParameterController();
-            _runtimeParameter = new BehaviorRuntimeParameterController();
+            _nodeInspectorController = new NodeInspectorController();
+            _parameterController = new ParameterController();
+            _runtimeParameter = new RuntimeParameterController();
         }
 
         public void OnDestroy()
@@ -59,8 +59,8 @@ namespace BehaviorTree
             }
             else if (option == 2)
             {
-                if (BehaviorDataController.Instance.PlayState == BehaviorPlayType.PLAY
-                    || BehaviorDataController.Instance.PlayState == BehaviorPlayType.PAUSE)
+                if (DataController.Instance.PlayState == BehaviorPlayType.PLAY
+                    || DataController.Instance.PlayState == BehaviorPlayType.PAUSE)
                 {
                     _runtimeParameter.OnGUI();
                 }

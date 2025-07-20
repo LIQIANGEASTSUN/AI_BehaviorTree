@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace BehaviorTree
 {
-    public class BehaviorDataImportParameter
+    public class DataImportParameter
     {
         public void ImportParameter(BehaviorTreeData behaviorData)
         {

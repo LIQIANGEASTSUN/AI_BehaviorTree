@@ -9,20 +9,20 @@ namespace BehaviorTree
 
         public NodeValue GetCurrentSelectNode()
         {
-            return BehaviorDataController.Instance.CurrentNode;
+            return DataController.Instance.CurrentNode;
         }
 
         private List<NodeValue> GetNodeList()
         {
-            return BehaviorDataController.Instance.NodeList;
+            return DataController.Instance.NodeList;
         }
 
         public List<NodeValue> GetDrawNode()
         {
             List<NodeValue> nodeList = new List<NodeValue>();
-            if (BehaviorDataController.Instance.CurrentOpenSubTree >= 0)
+            if (DataController.Instance.CurrentOpenSubTree >= 0)
             {
-                nodeList = GetSubTreeNode(BehaviorDataController.Instance.CurrentOpenSubTree);
+                nodeList = GetSubTreeNode(DataController.Instance.CurrentOpenSubTree);
             }
             else
             {
@@ -53,7 +53,7 @@ namespace BehaviorTree
         {
             List<NodeValue> nodeList = new List<NodeValue>();
 
-            NodeValue subTreeNode = BehaviorDataController.Instance.GetNode(currentOpenSubTreeId);
+            NodeValue subTreeNode = DataController.Instance.GetNode(currentOpenSubTreeId);
             if (null == subTreeNode)
             {
                 return nodeList;
@@ -73,8 +73,7 @@ namespace BehaviorTree
             }
             else if (subTreeNode.subTreeType == (int)SUB_TREE_TYPE.CONFIG)
             {
-                ConfigFileLoad configFileLoad = new ConfigFileLoad();
-                BehaviorTreeData data = configFileLoad.ReadFile(subTreeNode.subTreeConfig, false);
+                BehaviorTreeData data = DataController.Instance.ConfigDataDic[subTreeNode.subTreeConfig];
                 if (null != data)
                 {
                     nodeList.AddRange(data.nodeList);
@@ -86,7 +85,7 @@ namespace BehaviorTree
 
         private void CheckDrawNode(List<NodeValue> nodeList)
         {
-            if (BehaviorDataController.Instance.RunTimeInvalidSubTreeHash.Count <= 0)
+            if (DataController.Instance.RunTimeInvalidSubTreeHash.Count <= 0)
             {
                 return;
             }
@@ -96,7 +95,7 @@ namespace BehaviorTree
                 NodeValue nodeValue = nodeList[i];
                 if (nodeValue.NodeType == (int)NODE_TYPE.SUB_TREE)
                 {
-                    if (BehaviorDataController.Instance.RunTimeInvalidSubTreeHash.Contains(nodeValue.id))
+                    if (DataController.Instance.RunTimeInvalidSubTreeHash.Contains(nodeValue.id))
                     {
                         nodeList.RemoveAt(i);
                     }
@@ -110,10 +109,10 @@ namespace BehaviorTree
             optionList.Add("Base");
             dic["Base"] = -1;
 
-            if (BehaviorDataController.Instance.CurrentOpenSubTree >= 0)
+            if (DataController.Instance.CurrentOpenSubTree >= 0)
             {
-                int nodeId = BehaviorDataController.Instance.CurrentOpenSubTree;
-                NodeValue nodeValue = BehaviorDataController.Instance.GetNode(nodeId);
+                int nodeId = DataController.Instance.CurrentOpenSubTree;
+                NodeValue nodeValue = DataController.Instance.GetNode(nodeId);
                 while (null != nodeValue && nodeValue.NodeType == (int)NODE_TYPE.SUB_TREE)
                 {
                     string name = GetNodeName(nodeValue);
@@ -124,7 +123,7 @@ namespace BehaviorTree
                     {
                         break;
                     }
-                    nodeValue = BehaviorDataController.Instance.GetNode(nodeValue.parentSubTreeNodeId);
+                    nodeValue = DataController.Instance.GetNode(nodeValue.parentSubTreeNodeId);
                 }
             }
             return optionList.ToArray();

@@ -55,7 +55,7 @@ namespace BehaviorTree
             if (option != (optionArr.Length - 1))
             {
                 int nodeId = dic[optionArr[option]];
-                BehaviorDataController.Instance.CurrentOpenSubTree = nodeId;
+                DataController.Instance.CurrentOpenSubTree = nodeId;
             }
         }
 

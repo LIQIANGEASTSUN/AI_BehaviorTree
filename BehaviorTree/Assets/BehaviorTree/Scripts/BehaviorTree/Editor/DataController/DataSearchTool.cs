@@ -9,13 +9,13 @@ namespace BehaviorTree
 
         public static NodeValue GetNode(int nodeId)
         {
-            NodeValue nodeValue = GetNode(BehaviorDataController.Instance.BehaviorTreeData, nodeId);
+            NodeValue nodeValue = GetNode(DataController.Instance.BehaviorTreeData, nodeId);
             if (null != nodeValue)
             {
                 return nodeValue;
             }
 
-            foreach (var kv in BehaviorDataController.Instance.ConfigDataDic)
+            foreach (var kv in DataController.Instance.ConfigDataDic)
             {
                 BehaviorTreeData treeData = kv.Value;
                 nodeValue = GetNode(treeData, nodeId);

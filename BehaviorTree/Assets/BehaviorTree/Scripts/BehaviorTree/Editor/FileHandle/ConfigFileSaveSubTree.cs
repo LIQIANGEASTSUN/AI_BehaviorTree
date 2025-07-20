@@ -1,18 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Collections.Generic;
 using GraphicTree;
 
 namespace BehaviorTree
 {
     public class ConfigFileSaveSubTree
     {
-
         public void SaveSubTree(string subTreeConfigName, int subTreeNodeId)
         {
             UnityEngine.Debug.LogError("SaveSubTree:" + subTreeConfigName + "     " + subTreeNodeId);
 
-            NodeValue subTreeNode = BehaviorDataController.Instance.GetNode(subTreeNodeId);
+            NodeValue subTreeNode = DataController.Instance.GetNode(subTreeNodeId);
             if (null == subTreeNode || subTreeNode.NodeType != (int)NODE_TYPE.SUB_TREE)
             {
                 return;
@@ -25,7 +22,7 @@ namespace BehaviorTree
             BehaviorTreeData subTreeData = new BehaviorTreeData();
             subTreeData.fileName = subTreeConfigName;
 
-            List<NodeValue> nodeList = BehaviorDataController.Instance.FindChild(BehaviorDataController.Instance.BehaviorTreeData, subTreeNodeId);
+            List<NodeValue> nodeList = DataController.Instance.FindChild(DataController.Instance.BehaviorTreeData, subTreeNodeId);
 
             List<NodeValue> newNodeList = new List<NodeValue>();
             for (int i = 0; i < nodeList.Count; ++i)
@@ -44,9 +41,9 @@ namespace BehaviorTree
                 subTreeData.nodeList.Add(newNodeValue);
             }
 
-            for (int i = 0; i < BehaviorDataController.Instance.BehaviorTreeData.parameterList.Count; ++i)
+            for (int i = 0; i < DataController.Instance.BehaviorTreeData.parameterList.Count; ++i)
             {
-                NodeParameter parameter = BehaviorDataController.Instance.BehaviorTreeData.parameterList[i];
+                NodeParameter parameter = DataController.Instance.BehaviorTreeData.parameterList[i];
                 subTreeData.parameterList.Add(parameter.Clone());
             }
 
@@ -55,6 +52,5 @@ namespace BehaviorTree
             ConfigFileSave configFileSave = new ConfigFileSave();
             configFileSave.SaveFile(subTreeConfigName, subTreeData);
         }
-
     }
 }

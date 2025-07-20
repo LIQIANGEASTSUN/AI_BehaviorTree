@@ -20,11 +20,11 @@ namespace BehaviorTree
             for (int i = 0; i < _nodeList.Count; i++)
             {
                 NodeValue nodeValue = _nodeList[i];
-                GUIEnableTool.Enable = !BehaviorDataController.Instance.CurrentOpenConfigSubTree();
+                GUIEnableTool.Enable = !DataController.Instance.CurrentOpenConfigSubTree();
                 string name = string.Format("{0}", nodeValue.nodeName);
                 name = Localization.GetInstance().Format(name);
                 Rect rect = GUI.Window(i, RectTool.RectTToRect(nodeValue.position), DrawNodeWindow, new GUIContent(name, name));
-                if (!BehaviorDataController.Instance.CurrentOpenConfigSubTree())
+                if (!DataController.Instance.CurrentOpenConfigSubTree())
                 {
                     SyncChildNodePosition(nodeValue, rect);
                 }
@@ -46,7 +46,7 @@ namespace BehaviorTree
                 return;
             }
             NodeValue nodeValue = _nodeList[id];
-            NodeDrawEditor.Draw(nodeValue, BehaviorDataController.Instance.CurrentSelectId);
+            NodeDrawEditor.Draw(nodeValue, DataController.Instance.CurrentSelectId);
             GUI.DragWindow();
         }
 
@@ -74,7 +74,7 @@ namespace BehaviorTree
                 for (int i = 0; i < node.childNodeList.Count; ++i)
                 {
                     int childId = node.childNodeList[i];
-                    NodeValue childNode = BehaviorDataController.Instance.GetNode(childId);
+                    NodeValue childNode = DataController.Instance.GetNode(childId);
                     childNode.position.x += offset.x;
                     childNode.position.y += offset.y;
 
@@ -95,12 +95,12 @@ namespace BehaviorTree
             for (int i = nodeValue.childNodeList.Count - 1; i >= 0; --i)
             {
                 int childId = nodeValue.childNodeList[i];
-                NodeValue childNode = BehaviorDataController.Instance.GetNode(childId);
+                NodeValue childNode = DataController.Instance.GetNode(childId);
                 if (null == nodeValue || null == childNode)
                 {
                     continue;
                 }
-                if (BehaviorDataController.Instance.RunTimeInvalidSubTreeHash.Count > 0 && BehaviorDataController.Instance.RunTimeInvalidSubTreeHash.Contains(childNode.id))
+                if (DataController.Instance.RunTimeInvalidSubTreeHash.Count > 0 && DataController.Instance.RunTimeInvalidSubTreeHash.Contains(childNode.id))
                 {
                     continue;
                 }
@@ -146,8 +146,8 @@ namespace BehaviorTree
 
                 nodeValue.childNodeList.Sort((a, b) =>
                 {
-                    NodeValue nodeA = BehaviorDataController.Instance.GetNode(a);
-                    NodeValue nodeB = BehaviorDataController.Instance.GetNode(b);
+                    NodeValue nodeA = DataController.Instance.GetNode(a);
+                    NodeValue nodeB = DataController.Instance.GetNode(b);
                     return (int)(nodeA.position.x - nodeB.position.x);
                 });
             }

@@ -13,7 +13,7 @@ namespace BehaviorTree
             }
 
             StringBuilder sb = new StringBuilder();
-            NodeValue nodeValue = BehaviorDataController.Instance.GetNode(nodeId);
+            NodeValue nodeValue = DataController.Instance.GetNode(nodeId);
             while (null != nodeValue)
             {
                 sb.AppendFormat("{0}->", nodeValue.id);
@@ -21,11 +21,11 @@ namespace BehaviorTree
                 NodeValue parentNode = null;
                 if (nodeValue.parentNodeID < 0 && nodeValue.parentSubTreeNodeId > 0)
                 {
-                    parentNode = BehaviorDataController.Instance.GetNode(nodeValue.parentSubTreeNodeId);
+                    parentNode = DataController.Instance.GetNode(nodeValue.parentSubTreeNodeId);
                 }
                 else
                 {
-                    parentNode = BehaviorDataController.Instance.GetNode(nodeValue.parentNodeID);
+                    parentNode = DataController.Instance.GetNode(nodeValue.parentNodeID);
                 }
                 nodeValue = parentNode;
             }

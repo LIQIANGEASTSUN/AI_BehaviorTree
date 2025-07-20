@@ -47,7 +47,7 @@ namespace BehaviorTree
 
         protected void DrawParameterSelect(NodeParameter behaviorParameter)
         {
-            List<NodeParameter> parameterList = BehaviorDataController.Instance.BehaviorTreeData.parameterList;
+            List<NodeParameter> parameterList = DataController.Instance.BehaviorTreeData.parameterList;
             string[] parameterArr = new string[parameterList.Count];
             int index = -1;
             for (int i = 0; i < parameterList.Count; ++i)
@@ -78,11 +78,11 @@ namespace BehaviorTree
 
         private bool DelEnableHandle()
         {
-            if (BehaviorDataController.Instance.CurrentOpenConfigSubTree())
+            if (DataController.Instance.CurrentOpenConfigSubTree())
             {
                 return false;
             }
-            BehaviorPlayType type = BehaviorDataController.Instance.PlayState;
+            BehaviorPlayType type = DataController.Instance.PlayState;
             if (type == BehaviorPlayType.PLAY || type == BehaviorPlayType.PAUSE)
             {
                 return false;
@@ -92,11 +92,11 @@ namespace BehaviorTree
 
         private bool ParameterNameSelectEnableHandle()
         {
-            if (BehaviorDataController.Instance.CurrentOpenConfigSubTree())
+            if (DataController.Instance.CurrentOpenConfigSubTree())
             {
                 return false;
             }
-            BehaviorPlayType type = BehaviorDataController.Instance.PlayState;
+            BehaviorPlayType type = DataController.Instance.PlayState;
             if (type == BehaviorPlayType.PLAY || type == BehaviorPlayType.PAUSE)
             {
                 return false;

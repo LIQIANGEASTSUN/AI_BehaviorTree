@@ -46,7 +46,7 @@ namespace BehaviorTree
                 return key;
             }
 
-            if (BehaviorDataController.Instance.LanguageType == LanguageType.CN)
+            if (DataController.Instance.LanguageType == LanguageType.CN)
             {
                 return data.cn;
             }

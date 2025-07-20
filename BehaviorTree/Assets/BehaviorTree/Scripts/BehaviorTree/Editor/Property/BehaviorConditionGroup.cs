@@ -64,7 +64,7 @@ namespace BehaviorTree
                     }
                 }
 
-                GUIEnableTool.Enable = select && !BehaviorDataController.Instance.CurrentOpenConfigSubTree();
+                GUIEnableTool.Enable = select && !DataController.Instance.CurrentOpenConfigSubTree();
           
                 for (int i = 0; i < nodeValue.parameterList.Count; ++i)
                 {
@@ -98,7 +98,7 @@ namespace BehaviorTree
                 }
                 GUIEnableTool.Enable = true;
 
-                GUIEnableTool.Enable = !BehaviorDataController.Instance.CurrentOpenConfigSubTree();
+                GUIEnableTool.Enable = !DataController.Instance.CurrentOpenConfigSubTree();
                 string deleteFile = Localization.GetInstance().Format("DeleteFile");
                 if (GUILayout.Button(deleteFile))
                 {

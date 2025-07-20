@@ -18,7 +18,7 @@ namespace BehaviorTree
 
         private void Init()
         {
-            BehaviorDataController.Instance = new BehaviorDataController();
+            DataController.Instance = new DataController();
             BehaviorConfigNode.Instance.Init();
 
             _behaviorDrawPropertyController = new BehaviorDrawPropertyController();
@@ -35,7 +35,7 @@ namespace BehaviorTree
 
         public void OnDestroy()
         {
-            BehaviorDataController.Instance.OnDestroy();
+            DataController.Instance.OnDestroy();
             _behaviorDrawPropertyController.OnDestroy();
             _behaviorDrawController.OnDestroy();
             BehaviorRunTime.Instance.OnDestroy();
@@ -46,8 +46,8 @@ namespace BehaviorTree
 
         public void Update()
         {
-            CheckNodeTool.CheckNode(BehaviorDataController.Instance.BehaviorTreeData.nodeList);
-            CheckSubTreeTool.CheckSubTreeEditor(BehaviorDataController.Instance.BehaviorTreeData.nodeList);
+            CheckNodeTool.CheckNode(DataController.Instance.BehaviorTreeData.nodeList);
+            CheckSubTreeTool.CheckSubTreeEditor(DataController.Instance.BehaviorTreeData.nodeList);
             BehaviorRunTime.Instance.Update();
         }
 

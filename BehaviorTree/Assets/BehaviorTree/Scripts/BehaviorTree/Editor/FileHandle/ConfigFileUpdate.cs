@@ -1,14 +1,19 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using UnityEditor;
 using UnityEngine;
 
 namespace BehaviorTree
 {
     public class ConfigFileUpdate
     {
-        public void Update(string filePath)
+        public void Update()
         {
-            DirectoryInfo dInfo = new DirectoryInfo(filePath);
+            string directory = FileHandleController.GetFileFolder();
+            directory = EditorUtility.OpenFolderPanel("Select", directory, "bytes");
+            FileHandleController.SaveFilePath(directory);
+
+            DirectoryInfo dInfo = new DirectoryInfo(directory);
             FileInfo[] fileInfoArr = dInfo.GetFiles("*.bytes", SearchOption.TopDirectoryOnly);
             for (int i = 0; i < fileInfoArr.Length; ++i)
             {
@@ -22,10 +27,10 @@ namespace BehaviorTree
                 CheckSubTreeTool.CheckSubTreeUpdate(treeData.nodeList);
 
                 treeData = UpdateData(treeData);
-                string fileName = System.IO.Path.GetFileNameWithoutExtension(fullName);
+                string fileName = Path.GetFileNameWithoutExtension(fullName);
 
                 fileName = string.Format("{0}.bytes", fileName);
-                string jsonFilePath = FileUtils.CombinePath(filePath, "Json", fileName);
+                string jsonFilePath = FileUtils.CombinePath(directory, "Json", fileName);
                 bool value = readWrite.WriteJson(treeData, jsonFilePath);
                 if (!value)
                 {

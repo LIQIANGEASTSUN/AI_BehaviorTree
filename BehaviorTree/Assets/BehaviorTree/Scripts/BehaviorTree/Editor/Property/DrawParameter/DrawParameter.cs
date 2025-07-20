@@ -1,14 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using GraphicTree;
+﻿using GraphicTree;
 using UnityEditor;
 
 namespace BehaviorTree
 {
-    public class DrawBehaviorParameter : DrawParameterBase
+    public class DrawParameter : DrawParameterBase
     {
-
         public override void Draw(NodeParameter behaviorParameter)
         {
             EditorGUILayout.BeginVertical();
@@ -39,7 +35,6 @@ namespace BehaviorTree
                 EditorGUILayout.EndHorizontal();
             }
             EditorGUILayout.EndHorizontal();
-
         }
 
         protected override void DrawParameterCnName(NodeParameter behaviorParameter)
@@ -54,11 +49,11 @@ namespace BehaviorTree
 
         private bool DelEnableHandle()
         {
-            if (BehaviorDataController.Instance.CurrentOpenConfigSubTree())
+            if (DataController.Instance.CurrentOpenConfigSubTree())
             {
                 return false;
             }
-            BehaviorPlayType type = BehaviorDataController.Instance.PlayState;
+            BehaviorPlayType type = DataController.Instance.PlayState;
             if (type == BehaviorPlayType.PLAY || type == BehaviorPlayType.PAUSE)
             {
                 return false;
@@ -68,11 +63,11 @@ namespace BehaviorTree
 
         private bool ParameterValueEnableHandle()
         {
-            if (BehaviorDataController.Instance.CurrentOpenConfigSubTree())
+            if (DataController.Instance.CurrentOpenConfigSubTree())
             {
                 return false;
             }
-            BehaviorPlayType type = BehaviorDataController.Instance.PlayState;
+            BehaviorPlayType type = DataController.Instance.PlayState;
             if (type == BehaviorPlayType.PLAY || type == BehaviorPlayType.PAUSE)
             {
                 return false;
@@ -80,5 +75,4 @@ namespace BehaviorTree
             return true;
         }
     }
-
 }

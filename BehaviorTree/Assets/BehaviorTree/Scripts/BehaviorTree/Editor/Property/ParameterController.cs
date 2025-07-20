@@ -6,13 +6,12 @@ using GraphicTree;
 
 namespace BehaviorTree
 {
-
-    public class BehaviorParameterController
+    public class ParameterController
     {
         private BehaviorParameterModel _parameterModel;
         private BehaviorParameterView _parameterView;
 
-        public BehaviorParameterController()
+        public ParameterController()
         {
             Init();
         }
@@ -33,7 +32,6 @@ namespace BehaviorTree
             List<NodeParameter> parameterList = _parameterModel.ParameterList;
             _parameterView.Draw(parameterList);
         }
-
     }
 
     public class BehaviorParameterModel
@@ -46,7 +44,7 @@ namespace BehaviorTree
         {
             get
             {
-                return BehaviorDataController.Instance.BehaviorTreeData.parameterList;
+                return DataController.Instance.BehaviorTreeData.parameterList;
             }
         }
     }
@@ -54,7 +52,7 @@ namespace BehaviorTree
     public class BehaviorParameterView
     {
         private Vector2 scrollPos = Vector2.zero;
-        private DrawBehaviorParameter drawBehaviorParameter = new DrawBehaviorParameter();
+        private DrawParameter drawBehaviorParameter = new DrawParameter();
         public void Draw(List<NodeParameter> parameterList)
         {
             EditorGUILayout.BeginHorizontal();
@@ -64,14 +62,14 @@ namespace BehaviorTree
                 string importParameter = Localization.GetInstance().Format("ImportParameter");
                 if (GUILayout.Button(importParameter))
                 {
-                    BehaviorDataImportParameter behaviorDataImportParameter = new BehaviorDataImportParameter();
-                    behaviorDataImportParameter.ImportParameter(BehaviorDataController.Instance.BehaviorTreeData);
+                    DataImportParameter behaviorDataImportParameter = new DataImportParameter();
+                    behaviorDataImportParameter.ImportParameter(DataController.Instance.BehaviorTreeData);
                 }
                 string removeUnUseParameter = Localization.GetInstance().Format("RemoveUnUseParameter");
                 if (GUILayout.Button(removeUnUseParameter))
                 {
-                    BehaviorDataRemoveUnUseParameter behaviorDataRemoveUnUseParameter = new BehaviorDataRemoveUnUseParameter();
-                    behaviorDataRemoveUnUseParameter.RemoveParameter(BehaviorDataController.Instance.BehaviorTreeData);
+                    DataRemoveUnUseParameter behaviorDataRemoveUnUseParameter = new DataRemoveUnUseParameter();
+                    behaviorDataRemoveUnUseParameter.RemoveParameter(DataController.Instance.BehaviorTreeData);
                 }
             }
             EditorGUILayout.EndHorizontal();
@@ -117,7 +115,7 @@ namespace BehaviorTree
         }
 
         private NodeParameter newAddParameter = new NodeParameter();
-        private DrawBehaviorAddParameter _drawBehaviorAddParameter = new DrawBehaviorAddParameter();
+        private DrawAddParameter _drawBehaviorAddParameter = new DrawAddParameter();
         private void DrawAddParameter()
         {
             if (null == newAddParameter)
@@ -140,8 +138,5 @@ namespace BehaviorTree
                 dataHandler.DataAddGlobalParameter(newAddParameter);
             }
         }
-
     }
-
 }
-

@@ -37,8 +37,9 @@ namespace BehaviorTree
                 }
             }
 
-            string path = BehaviorDataController.Instance.GetFilePath(fileName);
-            if (File.Exists(path))
+            string filePath = FileHandleController.GetFileFolder();
+            filePath = EditorUtility.SaveFilePanel("Save", filePath, fileName, "bytes");
+            if (File.Exists(filePath))
             {
                 string replace = Localization.GetInstance().Format("Replace");
                 string yes = Localization.GetInstance().Format("Yes");
@@ -48,9 +49,10 @@ namespace BehaviorTree
                     return;
                 }
             }
+            FileHandleController.SaveFilePath(filePath);
 
             // 如果项目总不包含该路径，创建一个
-            string directory = Path.GetDirectoryName(path);
+            string directory = Path.GetDirectoryName(filePath);
             if (!Directory.Exists(directory))
             {
                 Directory.CreateDirectory(directory);
@@ -62,9 +64,7 @@ namespace BehaviorTree
             data.fileName = fileName;
 
             BehaviorReadWrite readWrite = new BehaviorReadWrite();
-            readWrite.WriteJson(data, path);
+            readWrite.WriteJson(data, filePath);
         }
-
     }
-
 }

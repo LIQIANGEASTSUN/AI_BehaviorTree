@@ -5,13 +5,12 @@ using GraphicTree;
 
 namespace BehaviorTree
 {
-
-    public class BehaviorRuntimeParameterController
+    public class RuntimeParameterController
     {
         private BehaviorRuntimeParameterModel _runtimeParameterModel;
         private BehaviorRuntimeParameterView _runtimeParameterView;
 
-        public BehaviorRuntimeParameterController()
+        public RuntimeParameterController()
         {
             Init();
         }
@@ -60,13 +59,12 @@ namespace BehaviorTree
                 return _parameterList;
             }
         }
-
     }
 
     public class BehaviorRuntimeParameterView
     {
         private Vector2 scrollPos = Vector2.zero;
-        private DrawBehaviorParameter drawBehaviorParameter = new DrawBehaviorParameter();
+        private DrawParameter drawBehaviorParameter = new DrawParameter();
 
         public void Draw(List<NodeParameter> parameterList)
         {
@@ -95,12 +93,5 @@ namespace BehaviorTree
             }
             EditorGUILayout.EndVertical();
         }
-
     }
-
 }
-
-
-
-
-

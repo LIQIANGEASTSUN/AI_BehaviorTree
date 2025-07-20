@@ -3,12 +3,9 @@ using UnityEditor;
 
 namespace BehaviorTree
 {
-    public class BehaviorFileHandleView
+    public class FileHandleView
     {
-        public BehaviorFileHandleView()
-        {
-
-        }
+        public FileHandleView() {   }
 
         public void Draw()
         {
@@ -25,28 +22,22 @@ namespace BehaviorTree
                     string save = Localization.GetInstance().Format("SaveFile");
                     if (GUILayout.Button(save))
                     {
-                        CreateSaveFile(BehaviorDataController.Instance.FileName);
+                        CreateSaveFile(DataController.Instance.FileName);
                         AssetDatabase.Refresh();
                     }
 
                     string delete = Localization.GetInstance().Format("DeleteFile");
                     if (GUILayout.Button(delete))
                     {
-                        DeleteFile(BehaviorDataController.Instance.FileName);
+                        DeleteFile(DataController.Instance.FileName);
                         AssetDatabase.Refresh();
                     }
 
                     string update = Localization.GetInstance().Format("UpdateFile");
                     if (GUILayout.Button(update))
                     {
-                        UpdateAllFile(BehaviorDataController.Instance.FilePath);
+                        UpdateAllFile();
                         AssetDatabase.Refresh();
-                    }
-
-                    string merge = Localization.GetInstance().Format("MergeFile");
-                    if (GUILayout.Button(merge))
-                    {
-                        MergeFile(BehaviorDataController.Instance.FilePath);
                     }
                 }
                 EditorGUILayout.EndHorizontal();
@@ -56,7 +47,7 @@ namespace BehaviorTree
                 {
                     string fileName = Localization.GetInstance().Format("FileName");
                     EditorGUILayout.LabelField(fileName, GUILayout.Width(80));
-                    BehaviorDataController.Instance.FileName = EditorGUILayout.TextField(BehaviorDataController.Instance.FileName);
+                    DataController.Instance.FileName = EditorGUILayout.TextField(DataController.Instance.FileName);
                 }
                 EditorGUILayout.EndHorizontal();
             }
@@ -67,19 +58,14 @@ namespace BehaviorTree
         {
             ConfigFileSelect configFileSelect = new ConfigFileSelect();
             string filePath = configFileSelect.Select();
-            if (string.IsNullOrEmpty(filePath))
-            {
-                return;
-            }
-            string fileName = System.IO.Path.GetFileNameWithoutExtension(filePath);
             ConfigFileLoad configFileLoad = new ConfigFileLoad();
-            configFileLoad.LoadFile(fileName);
+            configFileLoad.LoadFile(filePath);
         }
 
         private static void CreateSaveFile(string fileName)
         {
             ConfigFileSave configFileSave = new ConfigFileSave();
-            configFileSave.SaveFile(fileName, BehaviorDataController.Instance.BehaviorTreeData);
+            configFileSave.SaveFile(fileName, DataController.Instance.BehaviorTreeData);
         }
 
         private static void DeleteFile(string fileName)
@@ -88,16 +74,10 @@ namespace BehaviorTree
             configFileDelete.Delete(fileName);
         }
 
-        private static void UpdateAllFile(string filePath)
+        private static void UpdateAllFile()
         {
             ConfigFileUpdate configFileUpdate = new ConfigFileUpdate();
-            configFileUpdate.Update(filePath);
-        }
-
-        private static void MergeFile(string filePath)
-        {
-            ConfigFileMerge configFileMerge = new ConfigFileMerge();
-            configFileMerge.MergeFile(filePath);
+            configFileUpdate.Update();
         }
     }
 }

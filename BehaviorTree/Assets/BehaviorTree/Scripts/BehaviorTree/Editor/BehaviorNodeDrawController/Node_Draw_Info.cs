@@ -63,7 +63,7 @@ namespace BehaviorTree
 
         public BehaviorNodeDrawInfoController()
         {
-            BehaviorDataController.languageChange += InitInfoList;
+            DataController.languageChange += InitInfoList;
         }
 
         public void InitInfoList()

@@ -42,14 +42,14 @@ namespace BehaviorTree
                 return;
             }
 
-            BehaviorDataController.behaviorChangeSelectId(nodeValue.id);
+            DataController.behaviorChangeSelectId(nodeValue.id);
 
             if (nodeValue.NodeType == (int)NODE_TYPE.SUB_TREE)
             {
                 int currentTime = (int)(Time.realtimeSinceStartup * 1000);
                 if (currentTime - _lastClickNodeTime <= 200)
                 {
-                    BehaviorDataController.Instance.CurrentOpenSubTree = nodeValue.id;
+                    DataController.Instance.CurrentOpenSubTree = nodeValue.id;
                 }
                 _lastClickNodeTime = currentTime;
             }
@@ -89,7 +89,7 @@ namespace BehaviorTree
         private void AddNodeCallBack(object userData)
         {
             DataHandler dataHandler = new DataHandler();
-            dataHandler.AddNode((Node_Draw_Info_Item)userData, mousePosition, BehaviorDataController.Instance.CurrentOpenSubTree);
+            dataHandler.AddNode((Node_Draw_Info_Item)userData, mousePosition, DataController.Instance.CurrentOpenSubTree);
         }
 
         private void MouseRightDownOnNode(NodeValue currentNode, NodeValue nodeValue)
@@ -121,7 +121,7 @@ namespace BehaviorTree
 
         private void GenericMenuAddItem(GenericMenu menu, GUIContent content, GenericMenu.MenuFunction2 func, object userData)
         {
-            if (!BehaviorDataController.Instance.CurrentOpenConfigSubTree())
+            if (!DataController.Instance.CurrentOpenConfigSubTree())
             {
                 menu.AddItem(content, false, func, userData);
             }

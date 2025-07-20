@@ -17,13 +17,13 @@ namespace BehaviorTree
                 optionArr[i] = msg;
             }
 
-            int index = GUILayout.Toolbar((int)BehaviorDataController.Instance.LanguageType, optionArr, EditorStyles.toolbarButton);
-            if (index != (int)BehaviorDataController.Instance.LanguageType)
+            int index = GUILayout.Toolbar((int)DataController.Instance.LanguageType, optionArr, EditorStyles.toolbarButton);
+            if (index != (int)DataController.Instance.LanguageType)
             {
-                BehaviorDataController.Instance.LanguageType = (LanguageType)index;
-                if (null != BehaviorDataController.languageChange)
+                DataController.Instance.LanguageType = (LanguageType)index;
+                if (null != DataController.languageChange)
                 {
-                    BehaviorDataController.languageChange();
+                    DataController.languageChange();
                 }
             }
         }

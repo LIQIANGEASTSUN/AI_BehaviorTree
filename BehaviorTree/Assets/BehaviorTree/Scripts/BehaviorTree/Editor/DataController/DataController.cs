@@ -6,12 +6,9 @@ using System;
 
 namespace BehaviorTree
 {
-
-    public class BehaviorDataController
+    public class DataController
     {
-
-        public static BehaviorDataController Instance;
-
+        public static DataController Instance;
         public static BehaviorChangeSelectId behaviorChangeSelectId;
         public static Action languageChange;
 
@@ -19,25 +16,6 @@ namespace BehaviorTree
         {
             get { return BehaviorTreeData.fileName; }
             set { BehaviorTreeData.fileName = value; }
-        }
-
-        private string _filePath = string.Empty;
-        public string FilePath
-        {
-            get { return _filePath; }
-        }
-
-        public string GetFilePath(string fileName)
-        {
-            fileName = string.Format("{0}.bytes", fileName);
-            string path = FileUtils.CombinePath(FilePath, fileName);
-            return path;
-        }
-
-        public string GetCsvPath()
-        {
-            string csvPath = FileUtils.CombinePath(new string[] { Application.dataPath, "SubAssets", "CSVAssets" });
-            return csvPath;
         }
 
         private BehaviorTreeData _behaviorTreeData;
@@ -103,7 +81,7 @@ namespace BehaviorTree
             }
         }
 
-        public BehaviorDataController()
+        public DataController()
         {
             Init();
         }
@@ -119,9 +97,6 @@ namespace BehaviorTree
             {
                 LanguageType = (LanguageType)EditorPrefs.GetInt(languageTypeKey);
             }
-
-            _filePath = FileUtils.CombinePath(new string[] { "Assets", "SubAssets", "GameData", "BehaviorTree" });
-
             behaviorChangeSelectId += ChangeSelectId;
         }
 
@@ -165,12 +140,12 @@ namespace BehaviorTree
 
         public bool CurrentOpenConfigSubTree()
         {
-            if (BehaviorDataController.Instance.CurrentOpenSubTree <= 0)
+            if (DataController.Instance.CurrentOpenSubTree <= 0)
             {
                 return false;
             }
 
-            NodeValue subTreeNode = BehaviorDataController.Instance.GetNode(BehaviorDataController.Instance.CurrentOpenSubTree);
+            NodeValue subTreeNode = DataController.Instance.GetNode(DataController.Instance.CurrentOpenSubTree);
             if (null == subTreeNode)
             {
                 return false;

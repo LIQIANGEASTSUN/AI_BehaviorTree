@@ -1,11 +1,9 @@
 ﻿using GraphicTree;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 namespace BehaviorTree
 {
-    public class BehaviorDataRemoveUnUseParameter
+    public class DataRemoveUnUseParameter
     {
         private HashSet<string> useHash = new HashSet<string>();
         public void RemoveParameter(BehaviorTreeData behaviorData)
@@ -56,6 +54,5 @@ namespace BehaviorTree
                 useHash.Add(parameterName);
             }
         }
-
     }
 }

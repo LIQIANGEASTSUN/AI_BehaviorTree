@@ -2,20 +2,20 @@
 namespace BehaviorTree
 {
 
-    public class BehaviorNodeInspectorController
+    public class NodeInspectorController
     {
-        private BehaviorNodeInspectorModel _nodeInspectorModel;
-        private BehaviorNodeInspectorView _nodeInspectorView;
+        private NodeInspectorModel _nodeInspectorModel;
+        private NodeInspectorView _nodeInspectorView;
 
-        public BehaviorNodeInspectorController()
+        public NodeInspectorController()
         {
             Init();
         }
 
         public void Init()
         {
-            _nodeInspectorModel = new BehaviorNodeInspectorModel();
-            _nodeInspectorView = new BehaviorNodeInspectorView();
+            _nodeInspectorModel = new NodeInspectorModel();
+            _nodeInspectorView = new NodeInspectorView();
         }
 
         public void OnDestroy()

@@ -15,12 +15,12 @@ namespace BehaviorTree
         {
             EditorGUILayout.BeginHorizontal("box");
             {
-                int index = (int)BehaviorDataController.Instance.PlayState;
+                int index = (int)DataController.Instance.PlayState;
                 int option = GUILayout.Toolbar(index, optionArr, EditorStyles.toolbarButton);
                 if (index != option)
                 {
                     BehaviorPlayType state = (BehaviorPlayType)option;
-                    BehaviorDataController.Instance.PlayState = state;
+                    DataController.Instance.PlayState = state;
                 }
             }
             EditorGUILayout.EndHorizontal();
