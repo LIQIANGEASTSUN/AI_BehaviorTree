@@ -97,19 +97,15 @@ namespace BehaviorTree
             GenericMenu menu = new GenericMenu();
             if (null != currentNode && nodeValue.id == currentNode.id && (NODE_TYPE)nodeValue.NodeType < NODE_TYPE.CONDITION)
             {
-                string makeTransition = Localization.GetInstance().Format("Make Transition");
-                GenericMenuAddItem(menu, new GUIContent(makeTransition), MakeTransition, nodeValue.id);
+                GenericMenuAddItem(menu, new GUIContent("连线"), MakeTransition, nodeValue.id);
                 menu.AddSeparator("");
             }
 
             // Delete nodes
-            string deleteNode = Localization.GetInstance().Format("Delete Node");
-            GenericMenuAddItem(menu, new GUIContent(deleteNode), DeleteNode, nodeValue.id);
-
+            GenericMenuAddItem(menu, new GUIContent("删除节点"), DeleteNode, nodeValue.id);
             if (nodeValue.parentNodeID >= 0 && !nodeValue.subTreeEntry)
             {
-                string removeParent = Localization.GetInstance().Format("Remove Parent");
-                GenericMenuAddItem(menu, new GUIContent(removeParent), RemoveParentNode, nodeValue.id);
+                GenericMenuAddItem(menu, new GUIContent("移除父节点"), RemoveParentNode, nodeValue.id);
             }
             menu.ShowAsContext();
         }
@@ -133,11 +129,7 @@ namespace BehaviorTree
 
         private void DeleteNode(object userData)
         {
-            string tips = Localization.GetInstance().Format("Tips");
-            string deleteConfirm = Localization.GetInstance().Format("DeleteNodeConfirm");
-            string yes = Localization.GetInstance().Format("Yes");
-            string no = Localization.GetInstance().Format("No");
-            if (EditorUtility.DisplayDialog(tips, deleteConfirm, yes, no))
+            if (EditorUtility.DisplayDialog("提示", "确定要删除节点吗？", "Yes", "No"))
             {
                 int nodeId = (int)userData;
                 DataHandler dataHandler = new DataHandler();
@@ -147,11 +139,7 @@ namespace BehaviorTree
 
         private void RemoveParentNode(object userData)
         {
-            string tips = Localization.GetInstance().Format("Tips");
-            string deleteConfirm = Localization.GetInstance().Format("DeleteParentConfirm");
-            string yes = Localization.GetInstance().Format("Yes");
-            string no = Localization.GetInstance().Format("No");
-            if (EditorUtility.DisplayDialog(tips, deleteConfirm, yes, no))
+            if (EditorUtility.DisplayDialog("提示", "确定要删除父节点吗？", "Yes", "No"))
             {
                 int nodeId = (int)userData;
                 DataHandler dataHandler = new DataHandler();
@@ -159,5 +147,4 @@ namespace BehaviorTree
             }
         }
     }
-
 }

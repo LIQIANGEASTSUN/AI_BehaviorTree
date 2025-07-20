@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using BehaviorTree;
-using UnityEngine;
 
 public class BehaviorData
 {

@@ -68,13 +68,10 @@ namespace BehaviorTree
 
         public void Draw(List<NodeParameter> parameterList)
         {
-            string runtimeParameter = Localization.GetInstance().Format("RuntimeParameter");
-            EditorGUILayout.LabelField(runtimeParameter);
-
+            EditorGUILayout.LabelField("运行时变量");
             EditorGUILayout.BeginVertical("box", GUILayout.ExpandWidth(true));
             {
-                string conditionParameters = Localization.GetInstance().Format("ConditionParameters");
-                EditorGUILayout.LabelField(conditionParameters);
+                EditorGUILayout.LabelField("条件参数");
                 scrollPos = EditorGUILayout.BeginScrollView(scrollPos, GUILayout.ExpandHeight(true));
                 {
                     GUI.backgroundColor = new Color(0.85f, 0.85f, 0.85f, 1f);

@@ -23,24 +23,21 @@ namespace BehaviorTree
                 string idMsg = string.Empty;
                 if (nodeValue.NodeType == (int)NODE_TYPE.SUB_TREE)
                 {
-                    string subTreeId = Localization.GetInstance().Format("ID");
-                    idMsg = string.Format(subTreeId, nodeValue.id);
+                    idMsg = $"ID:{nodeValue.id}";
                 }
                 else
                 {
                     if (nodeValue.NodeType == (int)NODE_TYPE.CONDITION)
                     {
-                        string conditionId = Localization.GetInstance().Format("ID");
-                        idMsg = string.Format(conditionId, nodeValue.id);
+                        idMsg = $"ID:{nodeValue.id}";
                     }
                     else if (nodeValue.NodeType == (int)NODE_TYPE.ACTION)
                     {
-                        string actionId = Localization.GetInstance().Format("ID");
-                        idMsg = string.Format(actionId, nodeValue.id);
+                        idMsg = $"ID:{nodeValue.id}";
                     }
                     else
                     {
-                        idMsg = string.Format("ID:{0}", nodeValue.id);
+                        idMsg = $"ID:{nodeValue.id}";
                     }
                 }
                 EditorGUILayout.LabelField(idMsg);

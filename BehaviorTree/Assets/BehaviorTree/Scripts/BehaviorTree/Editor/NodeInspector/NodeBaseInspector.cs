@@ -35,8 +35,7 @@ namespace BehaviorTree
         {
             if (!string.IsNullOrEmpty(nodeValue.identificationName))
             {
-                string classIdentification = Localization.GetInstance().Format("ClassIdentification");
-                string identificationName = string.Format(classIdentification, nodeValue.identificationName);
+                string identificationName = $"类标识_{nodeValue.identificationName}";
                 EditorGUILayout.LabelField(identificationName);
             }
         }
@@ -50,11 +49,9 @@ namespace BehaviorTree
         {
             if (nodeValue.parentNodeID >= 0)
             {
-                string parentNode = Localization.GetInstance().Format("ParentNode");
-                string parentName = string.Format(parentNode, nodeValue.parentNodeID);
+                string parentName = $"父节点_{nodeValue.parentNodeID}";
                 EditorGUILayout.LabelField(parentName);
-                string belongSubTree = Localization.GetInstance().Format("BelongSubTree");
-                string parentSubTreeNodeId = string.Format(belongSubTree, nodeValue.parentSubTreeNodeId);
+                string parentSubTreeNodeId = $"所属子树ID:{nodeValue.parentSubTreeNodeId}";
                 EditorGUILayout.LabelField(parentSubTreeNodeId);
             }
         }
@@ -63,8 +60,7 @@ namespace BehaviorTree
         {
             EditorGUILayout.BeginHorizontal();
             {
-                string remark = Localization.GetInstance().Format("Remark");
-                EditorGUILayout.LabelField(remark, GUILayout.Width(60));
+                EditorGUILayout.LabelField("备注", GUILayout.Width(60));
                 nodeValue.descript = EditorGUILayout.TextArea(nodeValue.descript, GUILayout.ExpandWidth(true));
             }
             EditorGUILayout.EndHorizontal();

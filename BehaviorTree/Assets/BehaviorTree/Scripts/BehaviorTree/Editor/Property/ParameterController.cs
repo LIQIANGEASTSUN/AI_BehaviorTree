@@ -57,16 +57,13 @@ namespace BehaviorTree
         {
             EditorGUILayout.BeginHorizontal();
             {
-                string globalParameter = Localization.GetInstance().Format("GlobalParameter");
-                EditorGUILayout.LabelField(globalParameter, GUILayout.Width(100));
-                string importParameter = Localization.GetInstance().Format("ImportParameter");
-                if (GUILayout.Button(importParameter))
+                EditorGUILayout.LabelField("全局变量", GUILayout.Width(100));
+                if (GUILayout.Button("导入变量"))
                 {
                     DataImportParameter behaviorDataImportParameter = new DataImportParameter();
                     behaviorDataImportParameter.ImportParameter(DataController.Instance.BehaviorTreeData);
                 }
-                string removeUnUseParameter = Localization.GetInstance().Format("RemoveUnUseParameter");
-                if (GUILayout.Button(removeUnUseParameter))
+                if (GUILayout.Button("删除未使用变量"))
                 {
                     DataRemoveUnUseParameter behaviorDataRemoveUnUseParameter = new DataRemoveUnUseParameter();
                     behaviorDataRemoveUnUseParameter.RemoveParameter(DataController.Instance.BehaviorTreeData);
@@ -76,8 +73,7 @@ namespace BehaviorTree
 
             EditorGUILayout.BeginVertical("box", GUILayout.ExpandWidth(true));
             {
-                string conditionParameters = Localization.GetInstance().Format("ConditionParameters");
-                EditorGUILayout.LabelField(conditionParameters);
+                EditorGUILayout.LabelField("条件参数");
                 scrollPos = EditorGUILayout.BeginScrollView(scrollPos, GUILayout.ExpandHeight(true));
                 {
                     GUI.backgroundColor = new Color(0.85f, 0.85f, 0.85f, 1f);
@@ -131,8 +127,7 @@ namespace BehaviorTree
             EditorGUILayout.EndVertical();
             GUILayout.Space(5);
 
-            string addCondition = Localization.GetInstance().Format("AddCondition");
-            if (GUILayout.Button(addCondition))
+            if (GUILayout.Button("添加条件"))
             {
                 DataHandler dataHandler = new DataHandler();
                 dataHandler.DataAddGlobalParameter(newAddParameter);

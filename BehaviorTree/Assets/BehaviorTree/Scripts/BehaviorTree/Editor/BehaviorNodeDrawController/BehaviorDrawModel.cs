@@ -133,7 +133,6 @@ namespace BehaviorTree
         {
             int nodeIndex = EnumNames.GetEnumIndex<NODE_TYPE>((NODE_TYPE)nodeValue.NodeType);
             string name = EnumNames.GetEnumName<NODE_TYPE>(nodeIndex);
-            name = Localization.GetInstance().Format(name);
             return string.Format("{0}_{1}", name, nodeValue.id);
         }
     }

@@ -25,15 +25,13 @@ namespace BehaviorTree
         protected override void DrawParameterName(NodeParameter behaviorParameter)
         {
             string oldName = behaviorParameter.parameterName;
-            string english = Localization.GetInstance().Format("English");
-            behaviorParameter.parameterName = EditorGUILayout.TextField(english, behaviorParameter.parameterName);
+            behaviorParameter.parameterName = EditorGUILayout.TextField("English", behaviorParameter.parameterName);
             if (oldName.CompareTo(behaviorParameter.parameterName) != 0)
             {
                 bool isNumOrAlp = IsNumOrAlp(behaviorParameter.parameterName);
                 if (!isNumOrAlp)
                 {
-                    string parameterNameRules = Localization.GetInstance().Format("ParameterNameRules");
-                    TreeNodeWindow.window.ShowNotification(parameterNameRules);
+                    TreeNodeWindow.window.ShowNotification("参数名只能包含:数字、字母、下划线，且数字不能放在第一个字符位置");
                     behaviorParameter.parameterName = oldName;
                 }
             }
@@ -41,8 +39,7 @@ namespace BehaviorTree
 
         protected override void DrawParameterCnName(NodeParameter behaviorParameter)
         {
-            string chinese = Localization.GetInstance().Format("Chinese");
-            behaviorParameter.CNName = EditorGUILayout.TextField(chinese, behaviorParameter.CNName);
+            behaviorParameter.CNName = EditorGUILayout.TextField("中文", behaviorParameter.CNName);
         }
 
         private static bool IsNumOrAlp(string str)

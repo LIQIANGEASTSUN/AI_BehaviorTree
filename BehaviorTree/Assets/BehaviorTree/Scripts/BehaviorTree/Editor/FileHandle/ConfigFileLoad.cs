@@ -46,11 +46,8 @@ namespace BehaviorTree
                 filePath = Path.Combine(directoryPath, name + ".bytes");
                 if (warningWhenExist && !File.Exists(filePath))
                 {
-                    string tips = Localization.GetInstance().Format("Tips");
-                    string content = Localization.GetInstance().Format("FileDoesNotExist");
-                    string fileDoesNotExist = string.Format(content, filePath);
-                    string yes = Localization.GetInstance().Format("Yes");
-                    if (!EditorUtility.DisplayDialog(tips, fileDoesNotExist, yes))
+                    string fileDoesNotExist = $"文件不存在:{filePath}";
+                    if (!EditorUtility.DisplayDialog("提示", fileDoesNotExist, "Yes"))
                     {
                         continue;
                     }

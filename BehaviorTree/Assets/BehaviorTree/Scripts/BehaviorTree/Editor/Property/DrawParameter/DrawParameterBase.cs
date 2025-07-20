@@ -49,8 +49,7 @@ namespace BehaviorTree
 
         protected void DrawDelBtn(Action DelCallBack)
         {
-            string deleteFile = Localization.GetInstance().Format("DeleteFile");
-            if (GUILayout.Button(deleteFile))
+            if (GUILayout.Button("删除"))
             {
                 if (null != DelCallBack)
                 {
@@ -117,10 +116,7 @@ namespace BehaviorTree
             for (int i = 0; i < compareEnumArr.Length; ++i)
             {
                 int index = EnumNames.GetEnumIndex<ParameterCompare>(compareEnumArr[i]);
-                string name = EnumNames.GetEnumName<ParameterCompare>(index);
-                compareArr[i] = Localization.GetInstance().Format(name);
-
-                //compareArr[i] = System.Enum.GetName(typeof(ParameterCompare), compareEnumArr[i]);
+                compareArr[i] = EnumNames.GetEnumName<ParameterCompare>(index);
                 if ((ParameterCompare)behaviorParameter.compare == compareEnumArr[i])
                 {
                     compareIndex = i;

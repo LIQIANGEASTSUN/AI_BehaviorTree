@@ -20,7 +20,6 @@ namespace BehaviorTree
         {
             int index = EnumNames.GetEnumIndex<NODE_TYPE>((NODE_TYPE)nodeValue.NodeType);
             string name = EnumNames.GetEnumName<NODE_TYPE>(index);
-            name = Localization.GetInstance().Format(name);
             name = string.Format("{0}_{1}", name, nodeValue.id);
             EditorGUILayout.LabelField(name);
             base.NodeName();
@@ -49,8 +48,7 @@ namespace BehaviorTree
             GUIEnableTool.Enable = !DataController.Instance.CurrentOpenConfigSubTree();
             EditorGUILayout.BeginVertical("box", GUILayout.ExpandWidth(true));
             {
-                string parameter = Localization.GetInstance().Format("Parameter");
-                EditorGUILayout.LabelField(parameter);
+                EditorGUILayout.LabelField("参数");
 
                 int height = (nodeValue.parameterList.Count * 58);
                 height = height <= 400 ? height : 400;
@@ -116,8 +114,7 @@ namespace BehaviorTree
             EditorGUILayout.BeginVertical("box");
             {
                 GUIEnableTool.Enable = !DataController.Instance.CurrentOpenConfigSubTree();
-                string addCondition = Localization.GetInstance().Format("AddCondition");
-                if (GUILayout.Button(addCondition))
+                if (GUILayout.Button("添加条件"))
                 {
                     AddParameter(nodeValue);
                 }
@@ -132,8 +129,7 @@ namespace BehaviorTree
             {
                 if (TreeNodeWindow.window != null)
                 {
-                    string noParameterCanBeAdd = Localization.GetInstance().Format("NoParameterCanBeAdd");
-                    TreeNodeWindow.window.ShowNotification(noParameterCanBeAdd);
+                    TreeNodeWindow.window.ShowNotification("没有参数可添加，请先添加参数");
                 }
                 return;
             }
@@ -146,8 +142,7 @@ namespace BehaviorTree
             }
             else
             {
-                string noParameter = Localization.GetInstance().Format("NoParameter");
-                TreeNodeWindow.window.ShowNotification(noParameter);
+                TreeNodeWindow.window.ShowNotification("没有参数可添加，请先添加参数");
             }
         }
 

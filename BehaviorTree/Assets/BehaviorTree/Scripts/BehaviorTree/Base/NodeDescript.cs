@@ -1,178 +1,91 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿
 namespace BehaviorTree
 {
-
     public class NodeDescript
     {
-
         public static string GetFunction(NODE_TYPE nodeType)
         {
             if (nodeType == NODE_TYPE.SELECT)
             {
-                return GetSelect();
+                return NodeSelect.descript;
             }
 
             if (nodeType == NODE_TYPE.SEQUENCE)
             {
-                return GetSequence();
+                return NodeSequence.descript;
             }
 
             if (nodeType == NODE_TYPE.RANDOM)
             {
-                return GetRandom();
+                return NodeRandomSelect.descript;
             }
             
             if (nodeType == NODE_TYPE.IF_JUDEG_PARALLEL)
             {
-                return GetIfJudgeParallel();
+                return NodeIfJudgeParallel.descript;
             }
 
             if (nodeType == NODE_TYPE.IF_JUDEG_SEQUENCE)
             {
-                return GetIfJudgeSequence();
+                return NodeIfJudgeSequence.descript;
             }
 
             if (nodeType == NODE_TYPE.RANDOM_SEQUEUECE)
             {
-                return GetRandomSequeuece();
+                return NodeRandomSequence.descript;
             }
 
             if (nodeType == NODE_TYPE.RANDOM_PRIORITY)
             {
-                return GetRandomPriority();
+                return NodeRandomPriority.descript;
             }
 
             if (nodeType == NODE_TYPE.PARALLEL)
             {
-                return GetParallel();
+                return NodeParallel.descript;
             }
 
             if (nodeType == NODE_TYPE.PARALLEL_SELECT)
             {
-                return GetParallelSelect();
+                return NodeParallelSelect.descript;
             }
 
             if (nodeType == NODE_TYPE.PARALLEL_ALL)
             {
-                return GetParallelAll();
+                return NodeParallelAll.descript;
             }
 
             if (nodeType == NODE_TYPE.DECORATOR_INVERTER)
             {
-                return GetDecoratorInverter();
+                return NodeDecoratorInverter.descript;
             }
 
             if (nodeType == NODE_TYPE.DECORATOR_REPEAT)
             {
-                return GetDecoratorRepeat();
+                return NodeDecoratorRepeat.descript;
             }
 
             if (nodeType == NODE_TYPE.DECORATOR_RETURN_FAIL)
             {
-                return GetDecoratorReturnFail();
+                return NodeDecoratorReturnFail.descript;
             }
 
             if (nodeType == NODE_TYPE.DECORATOR_RETURN_SUCCESS)
             {
-                return GetDecoratorReturnSuccess();
+                return NodeDecoratorReturnSuccess.descript;
             }
 
             if (nodeType == NODE_TYPE.DECORATOR_UNTIL_FAIL)
             {
-                return GetDecoratorUntilFail();
+                return NodeDecoratorUntilFail.descript;
             }
 
             if (nodeType == NODE_TYPE.DECORATOR_UNTIL_SUCCESS)
             {
-                return GetDecoratorUntilSuccess();
+                return NodeDecoratorUntilSuccess.descript;
             }
 
             return string.Empty;
         }
-
-        private static string GetSelect()
-        {
-            return NodeSelect.descript;
-        }
-
-        private static string GetSequence()
-        {
-            return NodeSequence.descript;
-        }
-
-        private static string GetRandom()
-        {
-            return NodeRandomSelect.descript;
-        }
-
-        private static string GetIfJudgeParallel()
-        {
-            return NodeIfJudgeParallel.descript;
-        }
-
-        private static string GetIfJudgeSequence()
-        {
-            return NodeIfJudgeSequence.descript;
-        }
-
-        private static string GetRandomSequeuece()
-        {
-            return NodeRandomSequence.descript;
-        }
-
-        private static string GetRandomPriority()
-        {
-            return NodeRandomPriority.descript;
-        }
-
-        private static string GetParallel()
-        {
-            return NodeParallel.descript;
-        }
-
-        private static string GetParallelSelect()
-        {
-            return NodeParallelSelect.descript;
-        }
-
-        private static string GetParallelAll()
-        {
-            return NodeParallelAll.descript;
-        }
-
-        private static string GetDecoratorInverter()
-        {
-            return NodeDecoratorInverter.descript;
-        }
-
-        private static string GetDecoratorRepeat()
-        {
-            return NodeDecoratorRepeat.descript;
-        }
-
-        private static string GetDecoratorReturnFail()
-        {
-            return NodeDecoratorReturnFail.descript;
-        }
-
-        private static string GetDecoratorReturnSuccess()
-        {
-            return NodeDecoratorReturnSuccess.descript;
-        }
-
-        private static string GetDecoratorUntilFail()
-        {
-            return NodeDecoratorUntilFail.descript;
-        }
-
-        private static string GetDecoratorUntilSuccess()
-        {
-            return NodeDecoratorUntilSuccess.descript;
-        }
-
     }
 }
-

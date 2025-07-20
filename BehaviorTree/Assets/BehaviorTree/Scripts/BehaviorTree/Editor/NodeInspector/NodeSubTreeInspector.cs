@@ -16,28 +16,19 @@ namespace BehaviorTree
 
         private void SubTree()
         {
-            string subTreeValue = Localization.GetInstance().Format("SubTreeValue");
-            nodeValue.subTreeValue = EditorGUILayout.LongField(subTreeValue, nodeValue.subTreeValue);
+            nodeValue.subTreeValue = EditorGUILayout.LongField("子树值", nodeValue.subTreeValue);
             string[] nameArr = EnumNames.GetEnumNames<SUB_TREE_TYPE>();
-            for (int i = 0; i < nameArr.Length; ++i)
-            {
-                nameArr[i] = Localization.GetInstance().Format(nameArr[i]);
-            }
             int index = EnumNames.GetEnumIndex<SUB_TREE_TYPE>((SUB_TREE_TYPE)nodeValue.subTreeType);
-            string subTreeType = Localization.GetInstance().Format("SubTreeType");
-            int result = EditorGUILayout.Popup(subTreeType, index, nameArr);
+            int result = EditorGUILayout.Popup("子树类型", index, nameArr);
             nodeValue.subTreeType = (int)(EnumNames.GetEnum<SUB_TREE_TYPE>(result));
-            string configFile = Localization.GetInstance().Format("ConfigFile");
-            nodeValue.subTreeConfig = EditorGUILayout.TextField(new GUIContent(configFile), nodeValue.subTreeConfig);
+            nodeValue.subTreeConfig = EditorGUILayout.TextField(new GUIContent("配置文件"), nodeValue.subTreeConfig);
             GUILayout.Space(5);
 
             if (nodeValue.subTreeType == (int)SUB_TREE_TYPE.CONFIG)
             {
                 DataHandler dataHandler = new DataHandler();
                 dataHandler.DeleteSubTreeChild(nodeValue.id);
-
-                string selectSubTreeConfig = Localization.GetInstance().Format("SelectSubTreeConfig");
-                if (GUILayout.Button(selectSubTreeConfig))
+                if (GUILayout.Button("选择子树配置文件"))
                 {
                     ConfigFileSelect configFileSelect = new ConfigFileSelect();
                     string filePath = configFileSelect.Select();
@@ -46,8 +37,7 @@ namespace BehaviorTree
             }
             else
             {
-                string changeSubtreeToConfig = Localization.GetInstance().Format("ChangeSubtreeToConfig");
-                if (GUILayout.Button(changeSubtreeToConfig))
+                if (GUILayout.Button("将子树存储为配置文件"))
                 {
                     ConfigFileSaveSubTree configFileSaveSubTree = new ConfigFileSaveSubTree();
                     configFileSaveSubTree.SaveSubTree(nodeValue.subTreeConfig, nodeValue.id);

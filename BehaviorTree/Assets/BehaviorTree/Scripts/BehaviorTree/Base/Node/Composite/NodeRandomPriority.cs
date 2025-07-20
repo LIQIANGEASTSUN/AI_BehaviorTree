@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using System;
 using GraphicTree;
 
 namespace BehaviorTree
@@ -13,7 +11,18 @@ namespace BehaviorTree
     {
         private NodeBase lastRunningNode;
         private int _totalPriotity = 0;
-        public static string descript = "RandomPriorityNodeFunctionDescript";
+        public static string descript = "随机权重节点：(参考随机选择节点) \n" +
+            "每次根据节点权重随机一个未执行的节点 \n" +
+            "总随机次数为子节点个数 \n\n" +
+            "当前执行节点返回 Success，退出停止 \n" +
+            "向父节点返回 Success \n\n" +
+            "当前执行节点返回 Fail，退出当前节点 \n" +
+            "继续随机一个未执行的节点开始执行 \n\n" +
+            "当前执行节点返回 Running, 记录当前节点 \n" +
+            "向父节点返回 Running \n" +
+            "下次执行直接从该节点开始 \n\n" +
+            "如果所有节点都返回Fail，执行完所有节点后 \n" +
+            "向父节点返回 Fail; \n";
 
         private System.Random _random;
         public NodeRandomPriority() : base(NODE_TYPE.RANDOM_PRIORITY)

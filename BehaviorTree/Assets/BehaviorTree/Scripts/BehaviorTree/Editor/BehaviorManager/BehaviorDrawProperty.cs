@@ -1,13 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEditor;
 
 namespace BehaviorTree
 {
     public class BehaviorDrawPropertyController
     {
-        private LocalizationController _localizationController;
         private FileHandleController _fileHandleController;
         //private BehaviorPlayController _playController;
         private BehaviorPropertyOption _propertyOption;
@@ -18,7 +15,6 @@ namespace BehaviorTree
 
         public void Init()
         {
-            _localizationController = new LocalizationController();
             _fileHandleController = new FileHandleController();
             //_playController = new BehaviorPlayController();
             _propertyOption = new BehaviorPropertyOption();
@@ -30,7 +26,6 @@ namespace BehaviorTree
 
         public void OnDestroy()
         {
-            _localizationController.OnDestroy();
             _fileHandleController.OnDestroy();
             //_playController.OnDestroy();
             _propertyOption.OnDestroy();
@@ -42,7 +37,6 @@ namespace BehaviorTree
 
         public void OnGUI()
         {
-            _localizationController.OnGUI();
             _fileHandleController.OnGUI();
 
             //_playController.OnGUI();
@@ -77,16 +71,9 @@ namespace BehaviorTree
         private int option = 1;
         private readonly string[] optionArrKey = new string[] { "Descript", "Inspect", "Parameter" };
 
-        private string[] optionArr = new string[3] { "", "", ""};
+        private string[] optionArr = new string[3] { "Descript", "Inspect", "Parameter"};
         public int OnGUI()
         {
-            for (int i = 0; i < optionArr.Length; ++i)
-            {
-                string msg = Localization.GetInstance().Format(optionArrKey[i]);
-                optionArr[i] = msg;
-            }
-
-            int index = option;
             option = GUILayout.Toolbar(option, optionArr, EditorStyles.toolbarButton);
             return option;
         }
@@ -95,7 +82,6 @@ namespace BehaviorTree
         {
 
         }
-
     }
 }
 

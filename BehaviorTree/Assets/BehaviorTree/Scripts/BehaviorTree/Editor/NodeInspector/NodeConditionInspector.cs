@@ -29,8 +29,7 @@ namespace BehaviorTree
                 SetGroupHash(conditionGroup);
 
                 GUIEnableTool.Enable = !DataController.Instance.CurrentOpenConfigSubTree();
-                string addGroup = Localization.GetInstance().Format("AddGroup");
-                if (GUILayout.Button(addGroup))
+                if (GUILayout.Button("添加组"))
                 {
                     DataNodeHandler dataNodeHandler = new DataNodeHandler();
                     dataNodeHandler.NodeAddConditionGroup(nodeValue.id);

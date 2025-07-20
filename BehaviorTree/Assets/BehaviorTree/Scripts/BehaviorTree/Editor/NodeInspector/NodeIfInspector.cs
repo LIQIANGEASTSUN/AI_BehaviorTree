@@ -20,8 +20,7 @@ namespace BehaviorTree
             {
                 if (null != TreeNodeWindow.window)
                 {
-                    string ifNodeMaxChild = Localization.GetInstance().Format("IfNodeMaxChild");
-                    string msg = string.Format(ifNodeMaxChild, nodeValue.id);
+                    string msg = $"判断节点 {nodeValue.id} 最多只能有三个子节点";
                     TreeNodeWindow.window.ShowNotification(msg);
                 }
 
@@ -54,13 +53,11 @@ namespace BehaviorTree
                     EditorGUILayout.BeginVertical("box");
                     {
                         GUIEnableTool.Enable = false;
-                        string nodeId = Localization.GetInstance().Format("NodeId");
-                        EditorGUILayout.IntField(nodeId, judgeData.nodeId);
+                        EditorGUILayout.IntField("节点ID", judgeData.nodeId);
                         {
                             string[] nameArr = GetNames();
                             int index = EnumNames.GetEnumIndex<NodeIfJudgeEnum>((NodeIfJudgeEnum)judgeData.ifJudegType);
-                            string nodeType = Localization.GetInstance().Format("NodeType");
-                            int result = EditorGUILayout.Popup(nodeType, index, nameArr);
+                            int result = EditorGUILayout.Popup("节点类型", index, nameArr);
                             judgeData.ifJudegType = (int)(EnumNames.GetEnum<NodeIfJudgeEnum>(result));
                         }
                         GUIEnableTool.Enable = true;
@@ -69,8 +66,7 @@ namespace BehaviorTree
                         {
                             string[] nameArr = new string[] { "Fail", "Success" };
                             int oldValue = judgeData.ifResult;
-                            string executeConditional = Localization.GetInstance().Format("ExecuteConditional");
-                            int result = EditorGUILayout.Popup(executeConditional, judgeData.ifResult, nameArr);
+                            int result = EditorGUILayout.Popup("执行条件", judgeData.ifResult, nameArr);
                             if (oldValue != result)
                             {
                                 JudgeNodeChangeChildCondition(nodeValue, judgeData.nodeId, (ResultType)result);
@@ -82,10 +78,9 @@ namespace BehaviorTree
 
                 EditorGUILayout.BeginVertical("box");
                 {
-                    string defaultResult = Localization.GetInstance().Format("DefaultResult");
-                    EditorGUILayout.LabelField(defaultResult);
+                    EditorGUILayout.LabelField("默认返回结果");
                     string[] nameArr = new string[] { "Fail", "Success", "Running" };
-                    nodeValue.defaultResult = EditorGUILayout.Popup(defaultResult, nodeValue.defaultResult, nameArr);
+                    nodeValue.defaultResult = EditorGUILayout.Popup("默认返回结果", nodeValue.defaultResult, nameArr);
                 }
                 EditorGUILayout.EndVertical();
             }
@@ -131,16 +126,7 @@ namespace BehaviorTree
         private string[] GetNames()
         {
             string[] nameArr = EnumNames.GetEnumNames<NodeIfJudgeEnum>();
-            for (int j = 0; j < nameArr.Length; ++j)
-            {
-                nameArr[j] = Localization.GetInstance().Format(nameArr[j]);
-            }
             return nameArr;
         }
-
     }
-
-    
-
 }
-

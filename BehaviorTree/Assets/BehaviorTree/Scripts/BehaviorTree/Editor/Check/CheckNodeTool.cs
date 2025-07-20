@@ -35,30 +35,26 @@ namespace BehaviorTree
             string meg = string.Empty;
             if (rootNodeCount > 1)
             {
-                meg = Localization.GetInstance().Format("MultipleRootNode");
+                meg = "有多个根节点";
                 for (int i = 0; i < rootNodeCount; ++i)
                 {
-                    meg += string.Format("_{0} ", rootNodeArr[i]);
+                    meg = $"{meg}_{rootNodeArr[i]}";
                 }
             }
             else if (rootNodeCount == 0)
             {
-                meg = Localization.GetInstance().Format("MustBeARootNode");
+                meg = "必须有一个根节点";
             }
             else if (rootNodeHasParent)
             {
-
-                string content = Localization.GetInstance().Format("RootCannotHaveParent");
-                meg = string.Format(content, rootNodeArr[0]);
+                meg = $"跟节点:{rootNodeArr[0]}  不能有父节点";
             }
 
             if (null != invalidNodeValue)
             {
                 int index = EnumNames.GetEnumIndex<NODE_TYPE>((NODE_TYPE)invalidNodeValue.NodeType);
                 string name = EnumNames.GetEnumName<NODE_TYPE>(index);
-                name = Localization.GetInstance().Format(name);
-                string content = Localization.GetInstance().Format("NodeCannotHaveChilds");
-                meg = string.Format(content, invalidNodeValue.id, name);
+                meg = $"节点:{invalidNodeValue.id} {name} 不能有子节点";
             }
 
             if (TreeNodeWindow.window != null && !string.IsNullOrEmpty(meg))

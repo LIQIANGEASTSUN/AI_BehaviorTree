@@ -13,28 +13,24 @@ namespace BehaviorTree
             {
                 EditorGUILayout.BeginHorizontal();
                 {
-                    string selectFile = Localization.GetInstance().Format("SelectFile");
-                    if (GUILayout.Button(selectFile))
+                    if (GUILayout.Button("选择文件"))
                     {
                         SelectFile();
                     }
 
-                    string save = Localization.GetInstance().Format("SaveFile");
-                    if (GUILayout.Button(save))
+                    if (GUILayout.Button("保存"))
                     {
                         CreateSaveFile(DataController.Instance.FileName);
                         AssetDatabase.Refresh();
                     }
 
-                    string delete = Localization.GetInstance().Format("DeleteFile");
-                    if (GUILayout.Button(delete))
+                    if (GUILayout.Button("删除"))
                     {
                         DeleteFile(DataController.Instance.FileName);
                         AssetDatabase.Refresh();
                     }
 
-                    string update = Localization.GetInstance().Format("UpdateFile");
-                    if (GUILayout.Button(update))
+                    if (GUILayout.Button("更新"))
                     {
                         UpdateAllFile();
                         AssetDatabase.Refresh();
@@ -45,8 +41,7 @@ namespace BehaviorTree
 
                 EditorGUILayout.BeginHorizontal();
                 {
-                    string fileName = Localization.GetInstance().Format("FileName");
-                    EditorGUILayout.LabelField(fileName, GUILayout.Width(80));
+                    EditorGUILayout.LabelField("文件名", GUILayout.Width(80));
                     DataController.Instance.FileName = EditorGUILayout.TextField(DataController.Instance.FileName);
                 }
                 EditorGUILayout.EndHorizontal();

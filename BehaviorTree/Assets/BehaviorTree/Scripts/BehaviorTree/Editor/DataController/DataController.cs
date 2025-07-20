@@ -71,16 +71,6 @@ namespace BehaviorTree
             get { return _runTimeInvalidSubTreeHash; }
         }
 
-        private string languageTypeKey = "LanguageTypeKey";
-        private LanguageType _languageType = LanguageType.EN;
-        public LanguageType LanguageType
-        {
-            get {  return _languageType; }
-            set {  _languageType = value;
-                EditorPrefs.SetInt(languageTypeKey, (int)value);
-            }
-        }
-
         public DataController()
         {
             Init();
@@ -93,10 +83,6 @@ namespace BehaviorTree
             ConfigDataDic.Clear();
             _playState = BehaviorPlayType.STOP;
 
-            if(EditorPrefs.HasKey(languageTypeKey))
-            {
-                LanguageType = (LanguageType)EditorPrefs.GetInt(languageTypeKey);
-            }
             behaviorChangeSelectId += ChangeSelectId;
         }
 

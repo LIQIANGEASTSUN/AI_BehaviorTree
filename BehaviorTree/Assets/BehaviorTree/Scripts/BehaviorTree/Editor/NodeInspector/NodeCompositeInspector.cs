@@ -23,8 +23,7 @@ namespace BehaviorTree
 
         private void ConfigNode()
         {
-            string rootNode = Localization.GetInstance().Format("RootNode");
-            bool value = EditorGUILayout.Toggle(new GUIContent(rootNode), nodeValue.isRootNode/*, GUILayout.Width(50)*/);
+            bool value = EditorGUILayout.Toggle(new GUIContent("有多个根节点"), nodeValue.isRootNode/*, GUILayout.Width(50)*/);
             if (value && !nodeValue.isRootNode)
             {
                 nodeValue.isRootNode = true;
@@ -36,11 +35,9 @@ namespace BehaviorTree
 
         private void SubTreeChildNode()
         {
-            string subTreeEntryNode = Localization.GetInstance().Format("SubTreeEntryNode");
-            bool value = EditorGUILayout.Toggle(new GUIContent(subTreeEntryNode), nodeValue.subTreeEntry/*, GUILayout.Width(50)*/);
+            bool value = EditorGUILayout.Toggle(new GUIContent("子树入口节点"), nodeValue.subTreeEntry/*, GUILayout.Width(50)*/);
             if (value && !nodeValue.subTreeEntry)
             {
-                Debug.LogError(subTreeEntryNode);
                 nodeValue.subTreeEntry = value;
                 DataHandler dataHandler = new DataHandler();
                 dataHandler.ChangeSubTreeEntryNode(nodeValue.parentSubTreeNodeId, nodeValue.id);
@@ -58,8 +55,7 @@ namespace BehaviorTree
         {
             if (nodeValue.childNodeList.Count > 0)
             {
-                string syncMoveChild = Localization.GetInstance().Format("SyncMoveChild");
-                nodeValue.moveWithChild = EditorGUILayout.Toggle(new GUIContent(syncMoveChild), nodeValue.moveWithChild);
+                nodeValue.moveWithChild = EditorGUILayout.Toggle(new GUIContent("同步移动子节点"), nodeValue.moveWithChild);
             }
         }
 
@@ -68,17 +64,11 @@ namespace BehaviorTree
             if ((nodeValue.NodeType != (int)NODE_TYPE.CONDITION && nodeValue.NodeType != (int)NODE_TYPE.ACTION))
             {
                 GUILayout.Space(5);
-                string functionComposite = Localization.GetInstance().Format("FunctionComposite");
-                EditorGUILayout.LabelField(functionComposite);
-                //nodeValue.function = EditorGUILayout.TextArea(nodeValue.function, GUILayout.Height(250), GUILayout.Width(300));
-
+                EditorGUILayout.LabelField("组合节点功能描述");
                 string functionDescript = NodeDescript.GetFunction((NODE_TYPE)nodeValue.NodeType);
-                functionDescript = Localization.GetInstance().Format(functionDescript);
                 functionDescript = functionDescript.Replace("\\n", "\n");
                 EditorGUILayout.TextArea(functionDescript, GUILayout.Height(350), GUILayout.Width(300));
             }
         }
-
     }
-
 }
