@@ -1,8 +1,17 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
+using UnityEditor;
+using BehaviorTree;
 
 public class GameController : MonoBehaviour
 {
     public static GameController Instance;
+
+    private List<string> fileList = new List<string>() {
+        "EneryEnougthSubTree",
+        "Player",
+    };
+
     void Start()
     {
         Instance = this;
@@ -12,24 +21,30 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-
         SpriteManager.GetInstance().Update();
-
         BulletManager.GetInstance().Update();
     }
 
     private void Init()
     {
+        LoadData();
         // create Sprite
         Player sprite = new Player();
         sprite.Init(Vector3.zero);
         SpriteManager.GetInstance().AddSprite(sprite);
         // create Npc
         CheckNpc();
+    }
 
-        NumberSprite numberSprite = new NumberSprite();
-        numberSprite.Init(Vector3.zero);
-        SpriteManager.GetInstance().AddSprite(numberSprite);
+    private void LoadData()
+    {
+        foreach(var fileName in fileList)
+        {
+            string filePath = $"Assets/SubAssets/GameData/BehaviorTree/{fileName}.bytes";
+            TextAsset asset = AssetDatabase.LoadAssetAtPath<TextAsset>(filePath);
+            BehaviorTreeData data = LitJson.JsonMapper.ToObject<BehaviorTreeData>(asset.text);
+            BehaviorData.AddData(data);
+        }
     }
 
     private void OnGUI()

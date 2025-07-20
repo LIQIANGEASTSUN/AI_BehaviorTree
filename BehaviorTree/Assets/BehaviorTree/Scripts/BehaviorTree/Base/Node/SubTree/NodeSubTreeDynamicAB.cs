@@ -93,7 +93,7 @@ namespace BehaviorTree
 
         private DynamicData AddDynamicTree(string aiConfig)
         {
-            BehaviorTreeData data = BehaviorData.GetBehaviorInfo(aiConfig);
+            BehaviorTreeData data = BehaviorData.GetData(aiConfig);
             long aiFunction = AIFunction();
             NodeBase subTreeNode = BehaviorAnalysis.Instance.Analysis(EntityId, aiFunction, data, _iconditionCheck, null);
             TreeSetOwner(subTreeNode);

@@ -68,11 +68,11 @@ namespace BehaviorTree
             if (nodeValue.NodeType == (int)NODE_TYPE.SUB_TREE && nodeValue.subTreeType == (int)SUB_TREE_TYPE.CONFIG)
             {
                 //BehaviorTreeData subTreeData = _loadConfigInfoEvent(nodeValue.subTreeConfig);
-                BehaviorTreeData subTreeData = BehaviorData.GetBehaviorInfo(nodeValue.subTreeConfig);
+                BehaviorTreeData subTreeData = BehaviorData.GetData(nodeValue.subTreeConfig);
                 if (null != subTreeData)
                 {
                     NodeBase subTreeNode = AnalysisTree(entityId, aiFunction, subTreeData, iConditionCheck, InvalidSubTreeCallBack);
-                    NodeComposite composite = (NodeComposite)(nodeBase);
+                    NodeComposite composite = (NodeComposite)nodeBase;
                     composite.AddNode(subTreeNode);
                 }
             }

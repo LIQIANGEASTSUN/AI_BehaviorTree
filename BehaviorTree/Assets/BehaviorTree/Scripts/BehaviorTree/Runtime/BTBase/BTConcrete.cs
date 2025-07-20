@@ -18,7 +18,7 @@ public class BTConcrete : IAIPerformer
     protected void Init(IBTOwner owner, long aiFunction, string aiConfig)
     {
         _owner = owner;
-        _data = BehaviorData.GetBehaviorInfo(aiConfig);
+        _data = BehaviorData.GetData(aiConfig);
         SetData(aiFunction, _data);
         BTActionOwnerTool.NodeSetOwner(owner, _btEntity.RootNode);
         if (null == _behaviorTreeDebug && _owner.SpriteGameObject)
